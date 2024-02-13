@@ -36,6 +36,8 @@ def make_html_from_lines(input_contents: str) -> str:
     line_no = 0
     decl_map: dict[str, Declaration] = {}
     checklist_items: dict[str, list[str]] = {}
+    reading_ul = False
+    ul_element = None
     for line in lines:
         line_no += 1
         if line.strip() == "":
@@ -76,24 +78,45 @@ def make_html_from_lines(input_contents: str) -> str:
                 checklist_ul.append(section_ol)
             body_tag.append(checklist_ul)
             checklist_items.clear()
+        elif line.startswith(R"\begin{ul}"):
+            reading_ul = True
+            ul_element = html.new_tag("ul")
+        elif line.startswith(R"\end{ul}"):
+            reading_ul = False
+            assert ul_element is not None
+            body_tag.append(ul_element)
+            ul_element = None
         else:
-            p = html.new_tag("p")
-            for part in parse_line(line, line_no):
-                if part.part_type == PartType.TEXT:
-                    p.append(part.part)
-                elif part.part_type == PartType.CHECK_ITEM:
-                    if part.tag_name not in decl_map:
-                        print(f"Invalid collectible {part.tag_name} on line {line_no}")
-                    else:
-                        label_tag = html.new_tag("label")
-                        checkbox_tag = html.new_tag("input", type="checkbox")
-                        label_tag.string = part.part
-                        p.append(checkbox_tag)
-                        p.append(label_tag)
-                        checklist_items.setdefault(part.tag_name, []).append(
-                            part.rollup_name or part.part
-                        )
-            body_tag.append(p)
+
+            if reading_ul:
+                assert ul_element is not None
+                if not line.strip().startswith(R"\item"):
+                    print(f"Warning: on line {line_no}, while parsing ul, no item")
+                    continue
+                element = ul_element
+                li = html.new_tag("li")
+                li.append(line.split(R"\item")[1])
+                element.append(li)
+            else:
+                element = html.new_tag("p")
+                for part in parse_line(line, line_no):
+                    if part.part_type == PartType.TEXT:
+                        element.append(part.part)
+                    elif part.part_type == PartType.CHECK_ITEM:
+                        if part.tag_name not in decl_map:
+                            print(
+                                f"Invalid collectible {part.tag_name} on line {line_no}"
+                            )
+                        else:
+                            label_tag = html.new_tag("label")
+                            checkbox_tag = html.new_tag("input", type="checkbox")
+                            label_tag.string = part.part
+                            element.append(checkbox_tag)
+                            element.append(label_tag)
+                            checklist_items.setdefault(part.tag_name, []).append(
+                                part.rollup_name or part.part
+                            )
+                    body_tag.append(element)
     return html.prettify()
 
 

@@ -316,10 +316,12 @@ Inside the break room, collect clues from the bulletin board. You can pick up a 
 Try to take the Clicker. On the floor is [manpage|Manuscript Page: Saga Fights Taken At The Workshop|Saga Fights Taken At The Workshop]. Go ahead and profile the deputies. Go upstairs and kill the Taken. Outside, find [manpage|Manuscript Page: The Koskela's Parade Float|The Koskela's Parade Float] on the ground in front of the float. On the nearby table, find a legal pad with some clues. Profile the Koskelas. 
 
 We need to collect several objects to proceed:
-	- The Cassette Tape, in the Fair trade area, behind a laughing sign
-	- The Toy Knife in gift shop
-	- The Circuit Board, at the Espresso Express. Use the fuse from the workshop and then go underneath by stopping the ride at the right time.
-	- The Moose Mask, at the well
+\begin{ul}
+	\item The Cassette Tape, in the Fair trade area, behind a laughing sign
+	\item The Toy Knife in gift shop
+	\item The Circuit Board, at the Espresso Express. Use the fuse from the workshop and then go underneath by stopping the ride at the right time.
+	\item The Moose Mask, at the well
+\end{ul}
 
 Make sure to take [manpage|Manuscript Page: Deputies Corrupted|Deputies Corrupted] on the ground exiting the Espresso Express after getting the Circuit Board. 
 
