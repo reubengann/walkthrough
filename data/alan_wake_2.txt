@@ -1,0 +1,546 @@
+\declare{map}{Map}{Maps}
+\declare{lunchbox}{Lunch Box}{Lunch Boxes}
+\declare{deerhead}{Dear Head}{Deer Heads}
+\declare{cultstash}{Cult Stash}{Cult Stashes}
+\declare{manpage}{Manuscript Page}{Manuscript Pages}
+\declare{key}{Key}{Keys}
+\declare{clue}{Clue}{Clues}
+\declare{radio}{Radio}{Radios}
+\declare{settersign}{Setter Sign}{Setter Signs}
+\declare{television}{Television}{Televisions}
+\declare{invexp}{Inventory Expansion}{Inventory Expansions}
+\declare{weapon}{Weapon}{Weapons}
+\declare{rhyme}{Nursery Rhyme}{Nursery Rhymes}
+\declare{doll}{Doll}{Dolls}
+\declare{charm}{Charm}{Charms}
+\declare{wopow}{Word of Power}{Words of Power}
+\declare{echo}{Echo}{Echoes}
+\declare{breaker}{Breaker Room}{Breaker Rooms}
+
+\title{Alan Wake 2}
+
+\section{Return 0}
+
+Simply walk ahead.
+
+\section{Return 1 - Invitation: Cauldron Lake}
+
+Walk straight ahead and collect the [map|Cauldron Lake Map].
+
+Follow Casey. Talk to the deputy by the fence (Deputy Mulligan). Proceed through the fence and down the path a little ways, until you come to the case board tutorial.
+
+Follow Casey. Jump down and check out the Mirror Peak sign if you want. Continue down until you see a big Cauldron Campsite welcome sign. Casey will head left, but go right and head to the Mortar Falls overlook (marked by an icon on your map). You'll see little dreamcatchers hanging on the trees. Look around to find a [lunchbox|Lunch Box|Near the Cauldron Lake campground].
+
+Rejoin Casey and follow him to the crime scene. Follow Deputy Thornton to the body. Interact with the body and go to the Mind Place to start a new case The Previous Murders. While you're at it, you can also start the Alex Casey Lunchboxes case.
+
+Interact with the body and find 3 new clues. Place them on the board, then talk to Thornton, and then Casey. Look at the end of the table to see blood. Look at the ground (markers 2 and 3) and on the table (marker 4). Head around to the other side of the building and enter it. Look at the table to find a [clue|clue|Photo in the general store]. Return to the crime scene and place items on The Previous Murders board. 
+
+Profile Nightingale and place the new clue on the board. Saga will say you should go to the lake.
+
+Time to collect some stuff. Head south of the crime scene to find a trailer. Observe a twig sculpture on the ground, and a locked box. Inside, pet a [deerhead|Deer Head|Inside the trailer near the crime scene]. Use the clue on the box to find the code (^\/ 8 <||>) and then open the box [cultstash|Cult Stash|Outside the trailer near the crime scene]. Head to a campsite southwest of the crime scene to find [lunchbox|Lunch Box|Near the waterfall vista].
+
+Go to Witch's Ladle with Casey. Look at the sign, and then at the tree. You'll get a [clue|clue|Footprints at Witch's Ladle] and a page [manpage|Manuscript Page: The Message|The Message]. Profile Nightingale. Place all the clues on the board.
+
+Before leaving, head to Witch's Hut, then go across a small bridge to the west to find [lunchbox|Lunch Box|Near the Witch's Hut]. If you're playing the Final Draft, you can find [manpage|Manuscript Page: Saga Anderson's Deja Vu|Saga Anderson's Deja Vu (Final Draft only)] on a rock before the climb up.
+
+You can find [lunchbox|Lunch Box|At the landslide] at the landslide dead end west of Bony Legged Path.
+
+Return to the crime scene and talk to Thornton. You'll get the [key|Shortcut Key]. On your way out, when you see a watch station, walk to the left to find [lunchbox|Lunch Box|By the FBC Monitoring station].
+
+\checklist
+
+\section{Return 1 - Invitation: Bright Falls}
+
+Turn to the left and walk around a white moving van. This will start [radio|Radio: Tapio's weather report|Tapio's weather report]. Here you'll find [cultstash|Cult Stash|In front of the Elderwood Palace Lodge], which can be solved by Simon Says. Head inside the Elderwood Palace Lodge. Inside you'll find the [map|Great Falls Map] near the door, and [deerhead|Deer Head|Inside the Elderwood Palace Lodge] inside a room marked "Private".
+
+Across from the Oh Deer diner is a sign for a mayoral candidate [settersign|Setter Sign|Across from the Oh Deer diner], which you can read. At a nearby park, look at the base of a tree to find a [lunchbox|Lunch Box|In the Bright Falls Park].
+
+Head into the Oh Deer diner. In the back, behind a door labeled "Employees only" you'll find [deerhead|Deer Head|Inside the Oh Deer diner]. Talk to the Bookers about all topics. You should not be able to close The Previous Murders case and start Cult of the Tree. While heading to the police station, go around the back of the diner and look at the electrical box to find a [clue|Clue|Cult of the Tree: Triangle Graffiti Found around Town]. 
+
+Inside the station, head behind the counter and find the [map|Sheriff's station map|Sheriff's station map]. In a lounge on the first floor, find [television|Television: Adventure tours|Adventure tours].
+
+Head downstairs. Feel free to loot the lockers at any time, then head into the morgue. Look at the body and follow the prompts. Get [manpage|Manuscript Page: Saga Fights Nightingale With the Light|Saga Fights Nightingale With the Light] from the body.
+
+Head into the light. Wait for Nightingale to go into the room on the left, then go the other way and get your gun. Shoot Nightingale.
+
+Afterward, talk to Casey, then pick up [manpage|Manuscript Page: Saga Pursues Nightingale|Saga Pursues Nightingale] on the floor. Use the Mind Place board until you can talk to Casey and say you want to go back to Cauldron Lake. Exit the Sheriff's station.
+
+Across the street, find [radio|Radio: Donna's Jerky review|Donna's Jerky review] playing outside a hardware store. On Coal St find a [settersign|Setter Sign|On Coal St]. Once you're ready, head to the car and drive back to Cauldron Lake.
+
+\checklist
+
+\section{Return 2: Cauldron Lake}
+
+Follow Casey down the path, and talk to the men at the Watch Station. When done, head to the crime scene and look at the table. Then, a little ways west, some footprints. Saga and Casey will split up, so walk down to Witch's Ladle and look at the tree again. You can look at footprints, then approach the tree and burn the darkness away. Take [manpage|Manuscript Page: Saga Finds a Safe Haven|Saga Finds a Safe Haven]. Head to Witch's Hut and observe the fuse box (it wasn't there before). Walk across the bridge to find a fuse in a blue bin, and place this in the fuse box. You can now enter the Witch's Hut and save your game.
+
+Inside the hut, find [manpage|Manuscript Page 6/: Saga Opens the Cauldron Lake Overlap|Saga Opens the Cauldron Lake Overlap] on a bookshelf and [manpage|Manuscript Page: Dark Poem 1 (Final Draft Only)|Dark Poem 1 (Final Draft Only)] on the table. Use the Mind Palace board and profile Nightingale.
+
+Head to the General Store, and get ready for a fight. After you take out the Taken, you'll find the heart in a refrigerator. On the floor next to a shelf, pick up [manpage|Manuscript Page: Saga at the General Store|Saga at the General Store]. Under a shotgun on the wall, find [invexp|Inventory Expansion 1|In the general store]. To get the shotgun, you have to solve a puzzle. Give it a shot, or read on for the solution.
+
+------Solution-------
+
+Look behind the cash register to find lotto numbers and a notepad. If you look at the lotto numbers, 705, 713, 717, and 723 have all already been used. Since the numbers all start with 7, and it says to update it, and since the next number is 39, the combination is 739.
+
+------/Solution-------
+
+You can now pick up [weapon|Shotgun]. Save your game if you want, then head back to Witch's Ladle. Here you'll be attacked by two Taken. After handling them, put the heart into the hole in the sign, and enter the Overlap.
+
+\checklist
+
+\section{Return 2: Overlap}
+
+Head forward until you walk into a tree and loop back around. Turning right, you should see a darkness patch on a big rock. Burn it away to get [manpage|Manuscript Page: Nightingale Enters the Lake|Nightingale Enters the Lake]. Continue on, and when the place is very red, you can find [manpage|Manuscript Page: Nightingale in the Dark Place|Nightingale in the Dark Place] on the ground near a tree before dropping down to enter a cave. If you miss this one, you can get it later.
+
+Continue until Saga passes through a narrow gap in rock. When Nightingale attacks, hit him with your flashlight and unload into him with your shotgun. After you hurt him, you need to turn around and run away from a tornado. Now you need to continue walking and shooting him until he dies. Keep a look out for supplies on the ground if you need them.
+
+\checklist
+
+\section{Return 2: Cauldron Lake}
+
+After Casey takes Alan away, it's time to do some item collection.
+
+You can close the Murder at Cauldron Lake case.
+
+Note that you can now be attacked at any time by Taken or other creatures. Always be prepared. Do what the game says: save often, as the game won't autosave during this part.
+
+Head south along the shore, then east. Hidden in the northeast side of a little bend is [manpage|Manuscript Page: The Overlap|The Overlap]. Cut around, all the way south under a tree branch to find [cultstash|Cult Stash|At the lake shore] with a Simon Says solution.
+
+At a campsite west of Witch's Hut, find [manpage|Manuscript Page: Saga Burns Away the Dark Substance|Saga Burns Away the Dark Substance] and then follow the glowing arrows to find the [key|Streamside Stash Key] which opens a nearby [cultstash|Cult Stash|By a bridge] near the table.
+
+From Witch's Hut, head southeast and then northwest to a stream. Following it up to the east you'll find [lunchbox|Lunch Box|At the bottom of a waterfall] by a waterfall. Continue heading west along the stream until it dead-ends. You should see numbers that glow under light. Head up a small ledge and open [cultstash|Cult Stash|Creek], code 658.
+
+Ignore the private cabin for now and head to Witchfinder station. Once you go up the steps, go to a table nearby to find [manpage|Manuscript Page: The Murder Sites|The Murder Sites]. Follow a nearby path a little ways east to find a [lunchbox|Lunch Box|Outside the ranger cabin].
+
+Approach the front of the station and observe the ground [rhyme|Nursery Rhyme|Outside the ranger cabin], to begin the Nursery Rhyme case. Interact with the computer and input the code on the post-it to get [clue|Clue: Note from a researcher|Note from a researcher]. On the wall find [deerhead|Deer Head|Inside the ranger cabin]. Upstairs, find [doll|Wolf Doll] and [doll|Hero Doll] and [clue|Clue: FBC File listing test sites in cauldron lake|FBC File listing test sites in cauldron lake] and [clue|Clue: FBI file on reality altering effects|FBC file on reality altering effects].
+
+Solve the nursery rhyme puzzle by placing the dolls to match what the rhyme suggests.
+
+-----Solution------
+
+Put the hero on the boat and the wolf on the tree.
+
+-----/Solution------
+
+Remember to pick up the dolls when finished, then look at the footprints near the stairs [clue|Clue|Re-enacting the rhyme]. Go back to the second floor and find [charm|Coffee Mug World Charm].
+
+Go to the Private Cabin by ducking under a tree trunk. On the left is a generator that will turn on the lights and unlock a break room. Inside you'll find [manpage|Manuscript Page: The Cult of the Tree|The Cult of the Tree]. On a bench outside you will find [doll|Crow Doll] and around the other side [rhyme|Rhyme|Near the bridge].
+
+-----Solution------
+
+Hero on heart, wolf on the house, crow on the hatchling.
+
+-----/Solution------
+
+Follow the tracks to find [charm|Kalevala Knights Charm] near a big tree.
+
+Head west from the Private Cabin to a picnic site where you'll find a [rhyme|Rhyme|At the river]
+
+-----Solution------
+
+Put the crow on the sun.
+
+-----/Solution------
+
+The [charm|Hammer Charm] is on the table.
+
+That's it for this segment. Head back to the car and drive to Bright Falls.
+
+\checklist
+
+\section{Initiation 1: Backstage}
+
+Try to leave the room, then go to the TV and follow the prompt.
+
+Exit the stage through the curtain. On your left is a door we can't go through. At the end of the hall is a door that needs a combination. You can find it inside the first room on the left. (665).
+
+Inside a store room, you'll find [television|Television: Spiral|Spiral]. Exit across from where you entered, go into the door on the right and toward a door lit in red.
+
+In the attic, look around if you want. Then, use the typewriter.
+
+Interact with the TV again. Exit the stage, following the same path as before. This time the code is spelled out in the blinking numbers (565). Go through the door you went through before and enter the cafeteria. You should hear the janitor singing. Enter the Janitor's Office and talk to Ahti to get [key|Janitor's Key].
+
+For a hallway nearby that says it goes to the stage and take the [map|Map: Talk show studio|Talk show studio map]. Head forward to open the door to the Basement. Head downstairs and find a lit room and take the Lamp.
+
+Use the lamp to take the light overhead, and go down the newly revealed path. Near a chain-link fence, put the light into the bulb, which will open a new way. Go through the fence and take the light again. Open the door and go up on flight of stairs. Head around this hallway, open a two doors in succession and find a TV. Put the light in the TV. You can now save your game.
+
+\checklist
+
+\section{Initiation 2: Caldera Street}
+
+Head upstairs and answer the ringing phone. Nearby you'll find the [map|The Dark Place Map: Caldera Plaza].
+
+Head north on Ocean Ave and find the Vision TV Shop on the left with a [television|Television: Writing].
+
+Head to the flashing subway lamp, and Alan says we need a light. Look west to see a lit up alley. Head down and after the scene take the gun and flashlight.
+
+A nearby light will turn on, so use the lamp and take it.
+
+A path will open up to the southwest with a glowing arrow. These arrows lead to collectibles, so follow it, ducking under a board, and aim up at the circle above the door to get [wopow|Word of Fix]. Going through the door at the end will just loop around.
+
+Head back toward main area. You'll now encounter the main enemy of this section, which are the shadows. Most of the shadows are not hostile; don't waste your flashlight burning them all away. Only use it if they are blocking your way. However, some hide actual enemies that need to be killed. These will attack you, so burn away the shadow and dispatch them.
+
+Go back to Wheeler St., just northwest of the TV Studio. To the right of some phone booths, you should see an arrow pointing to [wopow|Word of Fix]. Head to Draft St, east of the plaza, and look up to the overpass to see [wopow|Word of Action].
+
+You can try putting the light into the subway station, but it won't help, because we need two lights to proceed. Instead, head to another flashing light nearby that leads to a stairway going up, and put the light there. Head upstairs. Once on the tracks, go east and climb up a ladder.
+
+To your right, you should see a ladder leading up to a billboard. Align the cicles to get [echo|Echo: Cold Case]. Go back down and through a door leading down some stairs. Here you'll find a break room where you can save. Looking southeast you should see a glowing arrow leading to [wopow|Word of Light]. Head southeast up a small flight of stairs and you should hear someone humming. Enter the door to find [breaker|Breaker Room]. Inside find [map|The Dark Place Street Map].
+
+Go across a little bridge. Turn and go up a ladder, then look at the billboard and line up the dots to find [echo|Echo: Hard Case].
+
+Back down the ladder and through the door to back to street level. To the west is a door you can unlock for a shortcut back. Head south to a taxi with its light on. You can take this light, but in doing so the taxi will morph into a police car with its sirens on. This will attract shadows. Either run away or burn them. There's a suitcase nearby hiding near the front of a car with a flashbang if you're having issues. Before going back to the street, go to a little hallway on the east and look up to find [wopow|Word of Gun].
+
+Look around for more supplies if you want, then grab the light you put into the stairway. Use the lights to enter the subway, then use your ticket.
+
+Checklist:
+
+Maps:
+[] The Dark Place: Caldera Plaza
+[] The Dark Place: Street
+
+Television:
+[] Writing
+
+Words of Power:
+[] Word of Fix, near where you get the gun
+[] Word of Fix, Wheeler St. just northwest of the TV Studio
+[] Word of Action, Draft St, east of the plaza
+[] Word of Light, on the rooftops
+[] Word of Gun, near the police car
+
+Echos:
+[] Cold Case
+[] Hard Casey
+
+Breaker Rooms:
+[] On the rooftops
+
+Initiation 2: Subway
+
+Align the dots to get a scene. Use the new story thread the location to open the way. In a subway car to the right of where you came in, find [wopow|Word of Gun]. Now head down the tunnel to a door on your left leading downstairs and find a break room on the right.
+
+Outside, on the right, find the [map|Subway Map]. Facing out of the break room you should see a large "Find Alice" graffiti. Approach it and you should see a glowing arrow pointing to [wopow|Word of Aid].
+
+Go towards the Main Tunnel by passing through a subway car. Here you'll find the Collapsed Tunnel scene. Place the Missing FBI Agent thread on this scene, then view the new scene. Turn north to where the light is and pass through to a storage room. Behind some shelves on the east wall is [wopow|Word of Lamp].
+
+Take the light and view the new scene, to unlock the Murder Cult thread. Place Murder Cult on the Collapsed tunnel.
+
+Slightly east, you'll find a flooded hallway with a lightbulb, so place the light there so you can pass through. Follow the hallway and enter a door to your right when you hear humming to find [breaker|Breaker Room]. Inside you can find another [map|Subway Map] with more points of interest labeled.
+
+Continue down the hall, and when you open the door a shadow will knock you down. Kill him and keep moving into a break room, where you'll find [television|Television: Murder Sites]. Go up the ladder to find The Derailed Train scene. Turn around and head south, under some scaffolding, and around to where you should see some glowing arrows leading to [wopow|Word of War] on the ceiling.
+
+Add the Murder Cult thread to the scene to open a way west. View a scene and get Torchbearers thread. Use it on the Derailed Train so you can pass through. On the other side, you can turn right to unlock a door. Head the other way and down a ladder. Turn around and go into the room and shoot the cardboard to find [wopow|Word of Action]. Then go down a small stairway. On your left is a room behind bars with several enemies. Clear them out and claim the [wopow|Word of Fix] above the booth.
+
+Head down into the flooded tunnel with a break room. Take the two lights, then go into a little gated part that used to be fully enclosed and put one of the lights back. Head through the hall and put a light in at the end, then backtrack. Take this light again and you can pass into Shrine St. Station.
+
+Turn left and head west as far as you can. You find [wopow|Word of Lamp] on a wall to the left.
+
+While heading back east, look for a lit car in the center of the station, which has [wopow|Word of Gun] on it. Now head all the way east to End of the Line. Place Murder cult, then watch the scene and place Summoning Ritual. Head back west and take the light. In a room to the north, slightly west of the exit, find [wopow|Word of ??]. Head north through the exit with some enemies, and take the stairway up. There's a [wopow|Word of Fix] behind the closed gate at the top. Continue, using the break room if you want, then head north back into the main tunnel.
+
+We're about to leave, so make sure you got everything.
+
+Checklist:
+
+Words of Power:
+[] Word of Gun, in a subway car to the right of where you came in
+[] Word of Aid, in the main tunnel
+[] Word of Lamp, in a storage room Behind some shelves
+[] Word of War, on the ceiling in the Derailed Train scene
+[] Word of Action, down a ladder after Derailed Train
+[] Word of Fix, above the booth
+[] Word of Lamp, in a flooded part of Shrine St. Station.
+[] Word of Gun, in a lit car in the center of Shrine St. Station
+[] Word of ??, a room to the north of Shrine St. Station
+[] Word of Fix, behind the closed gate while exiting Shrine St. Station
+
+Breaker Rooms:
+[] After the flooded hallway
+
+Maps:
+[] Subway Map outside of the break room
+[] Subway Map in the Breaker Room
+
+Television:
+[] Murder Sites, after the flooded hallway
+
+---
+
+You might want to save your game here. Then head back to Collapsed Tunnel scene and use the Summoning thread on it. You now need to run back to the break room. Once the Dark Presence disappears, return to the tunnel and head through.
+
+Approach the heart and interact with it.
+
+Head through the tunnel, watching the scene, and then back out onto the main street. Parliament Tower is ahead.
+
+On the right side of the plaza the same phone will be ringing, so go pick it up. Head into the tower and up the elevator. 
+
+Initiation 3
+
+Use the memory card in the kitchen on the projector in the living room to get [television|Television: Part 1]. Then interact with the screen.
+
+Return 2: The Heart
+
+You can now start case The Story. Talk to Alan, then profile him. Speak with him again to get [manpage|Manuscript Page: The Trailer]. Use the page on the board. Talk to Alan again. Nearby is a break room where you can save or switch characters, but let's stay as Saga.
+
+Head into the lobby. On the TV will be playing [television|Television: Coffee World]. In a nearby hallway, enter room 107 to find [manpage|Manuscript Page: Ed Returns tO Cauldron Lake] and [manpage|Manuscript Page: Tammy Rides the Ferry].
+
+Head to the Oh Deer and look at the [television|Television: Ahma Beer] on the wall. Use the car to head to Watery.
+
+Checklist:
+
+Manuscript Pages:
+[] The Trailer
+[] Ed Returns tO Cauldron Lake
+[] Tammy Rides the Ferry
+
+Television:
+[] Coffee World
+[] Ahma Beer
+
+Local Girl:
+
+Right nearby is a [settersign|Setter Sign]. Head inside Suomi Hall and get the [map|Watery Map] inside the door. Head back into the breakroom to find [deerhead|Deer Head].
+
+Outside, you can talk to a man near a nursing home bus.
+
+Head past the "Road Closed" sign and talk to the man. This starts the case Fact vs Fiction. Go ahead and profile, and finish the conversation.
+
+We need to head north along the trail. You will be attacked by a taken who throws axes. Shoot him and continue.
+
+Head right at the fork, then another right. You'll find [rhyme|Nursery Rhyme: found near the shooting range]. Pick up the [doll|Deer Doll] and [doll|Moose Doll] here and then solve the puzzle. Put the moose on the woods. The [charm|Charm] is on a big wooden moose back the way you came.
+
+Continue on the path and go right when you see a sign, to duck under a fallen log. Up the ledge you'll find [manpage|Manuscript Page: Watery] and a [cultstash|Cult Stash: found in the woods near watery] that requires Simon Says input.
+
+Proceed on the original path until you come to a hunting shack you can power up to use as a break room. Inside you'll find [manpage|Manuscript Page: Saga in the Watery Woods]. Outside is a [cultstash|Cult Stash: found at the shooting range near watery]. The code is 527.
+
+Head east up toward the Radio Tower. You'll hear [radio|Radio: Terry's Cuckoo Clocks]. Nearby is a picnic area with a [rhyme|Rhyme: found by the radio tower]. Put the deer on the house. The [charm|Charm] is on a nearby dead deer next to the radio tower. From here you should see the dreamcatchers signaling a [lunchbox|Lunch Box: next to the radio tower].
+
+Go back and continue on the main path, down some steps and drop off a ledge and across a bridge. On the right you should see dreamcatchers and a [lunchbox|Lunch Box: on the way to coffee world] near a picnic site. The next area area is flooded, so we can't get to the Ranger station right now. Just proceed up some ledges into the park.
+
+In a break room you'll find [manpage|Manuscript Page: Scratch on the Hunt]. Head to the gift shop. Go around to the front door, and check the bulletin board next to it to find 2 clues. Next to the Slow Roaster is a [cultstash|Cult Stash]. The code is found by entering the numbers of the striped cups (147).
+
+Go to the Percolator and kill the Taken. Go around to the other side and pick up the Screwdriver. Return to the gift shop and open it up. Inside, find [manpage|Manuscript Page: Coffee World Attacked] on a table. Look at the safe and profile Ilmo again. Solve the puzzle to open the safe.
+
+----
+
+The puzzle says Tracker, Lookout, Cleaner. Looking at the staff board, the closest to Tracker is Lost and Found, and she has 1 sticker. Lookout might be Security, with 4 stickers, and Janitor is cleaner, with 6 stickers. The code is 146.
+
+---
+
+Before moving on let's collect some stuff. Head due south from the gift shop to find a [settersign|Setter Sign] near a huge statue of a coffee pot in a bowtie. Walk all the way around this statue and pick up the [key|Coffee World Stash Key]. Go slightly northwest to find Huotari well. In the grass behind it you'll find [cultstash|Cult Stash: Near the wishing well] with a [clue|Clue: M and T].
+
+Head southeast to the exit to the road. Inside the giant yellow coffee pot on your left is [lunchbox|Lunch Box: found in the Coffee World Parking].
+
+Head up the path to the Watery Lighthouse. There's a break room on the way, and just outside a [lunchbox|Lunch Box: near the lighthouse]. Up a ways, and turning right at the truck, up a ledge is a [cultstash|Cult Stash].
+
+Solution------
+
+A II has two stacked triangles facing up. III has two side-by-side triangles facing down. Stand on the triangle and look down to see I which is two triangles stacked facing down.
+
+/Solution------
+
+On the lighthouse stoop you'll find [doll|Mother Doll], [doll|Wise Elder Doll], and [doll|Trickster Doll]. On the side of the lighthouse is [rhyme|Rhyme].
+
+Solution------
+
+Old watcher (Wise Elder on eye) plays trick on ocean (Trickster on waves).
+
+/Solution------
+
+The [charm|Charm] appears all the way down in the flooded area below. You have to go back to the road and duck under a fallen tree to get it.
+
+Back at the lighthouse, head west to get [radio|Radio: Jim's Mayoral Candidacy] at a gazebo.
+
+Time to head to the trailer park.
+
+Checklist:
+
+Setter Sign:
+[] in front of Suomi Hall
+[] in Coffee World 
+
+Maps:
+[] Watery Map
+
+Deer Heads:
+[] Inside Suomi Hall
+
+Nursery Rhymes:
+[] Found near the shooting range
+[] found by the radio tower
+[] near the lighthouse
+
+Dolls:
+[] Deer Doll
+[] Moose Doll
+[] Mother Doll
+[] Wise Elder Doll
+[] Trickster Doll
+
+Charms:
+[] Coffee Mug Charm
+[] Deer Charm
+[] Lighthouse Charm
+
+Manuscript Pages:
+[] Watery
+[] Saga in the Watery Woods
+[] Scratch on the Hunt
+[] Coffee World Attacked
+
+Cult Stashes:
+[] found in the woods near watery
+[] found at the shooting range near watery
+[] by the Ferris Wheel
+[] Near the wishing well
+[] at the lighthouse
+
+Radio:
+[] Terry's Cuckoo Clocks
+[] Jim's Mayoral Candidacy
+
+Lunch Boxes:
+[] next to the radio tower
+[] on the way to coffee world
+[] found in the Coffee World Parking
+[] near the lighthouse
+
+Clues:
+[] M and T
+
+-------
+
+Head down the hill to the break room with a [settersign|Setter Sign] in front of it. Then enter the park.
+
+Next to Odin and Thor you should see some dreamcatchers, so look around for a [lunchbox|Lunch Box: Found in the Watery Trailer Park]. Inside trailer #1 you can find [television|Television: Parade Floats] and [deerhead|Deer Head].
+
+Investigate Saga's trailer, picking up all the clues. Pursue the new Taken to the Kavela Knights Workshop.
+
+Before going inside, look around the far side for a derelict boat with dreamcatchers to find [lunchbox|Lunch Box]. Going inside, on the left side of the workshop, find [manpage|Manuscript Page: Deputies Make A Grave Mistake] on a workbench. In the back of the workshop, find a [deerhead|Deer Head].
+
+Go inside the office to find a lock. Look at the computer and read all the messages to get [clue|Clue: OOP] and to see that the combination is inside the giant smiling coffee cup. Standing behind the cup will reveal the combination (up triangle/down triangle stacked, up down left to right but overlapping, down up stacked). Use the combination to open the lock.
+
+Inside the break room, collect clues from the bulletin board. You can pick up a fuse from the table. Then head down into the basement.
+
+Try to take the Clicker. On the floor is [manpage|Manuscript Page: Saga Fights Taken At The Workshop]. Go ahead and profile the deputies. Go upstairs and kill the Taken. Outside, find [manpage|Manuscript Page: The Koskela's Parade Float] on the ground in front of the float. On the nearby table, find a legal pad with some clues. Profile the Koskelas. 
+
+We need to collect several objects to proceed:
+	- The Cassette Tape, in the Fair trade area, behind a laughing sign
+	- The Toy Knife in gift shop
+	- The Circuit Board, at the Espresso Express. Use the fuse from the workshop and then go underneath by stopping the ride at the right time.
+	- The Moose Mask, at the well
+
+Make sure to take [manpage|Manuscript Page: Deputies Corrupted] on the ground exiting the Espresso Express after getting the Circuit Board. 
+
+Checklist:
+
+Setter Signs:
+[] in front of the trailer park
+
+Lunch Boxes:
+[] Found in the Watery Trailer Park
+[] Near the workshop
+
+Television:
+[] Parade Floats
+
+Deer Head
+[] Trailer #1
+[] Inside the workshop
+
+Manuscript Pages:
+[] Deputies Make A Grave Mistake
+[] Saga Fights Taken At The Workshop
+[] The Koskela's Parade Float
+[] Deputies Corrupted
+
+Clues:
+[] OOP
+
+----
+
+Once you have all the items, place them in the float to open the Overlap.
+
+Watery Overlap
+
+Proceed forward through a tunnel.
+
+Inside the cabin, pick up [manpage|Manuscript Page: Deputies In The Morgue]. Follow the boards here behind the cabin to another well, and go down the ladder. In the second loop, pick up [manpage|Manuscript Page: Mocha's Funeral] from the table. Continue forward to the well again, and after interacting with it, take the path behind it. Continue following Ahti's voice, which will cut out when you reach the right place. Eventually you will be confronted by 3 enemies. Proceed through a nearby cave tunnel and down the well again.
+
+Continue on the only path for a boss fight. Try not to shoot the enemies any more than you need to. The real goal is to run around the arena and use your flashlight on the dark orbs. If you kill the deputies before getting rid of all the orbs, they will respawn.
+
+This closes the "Trail of the Cult" case.
+
+Checklist:
+
+Manuscript Pages:
+[] Deputies In The Morgue
+[] Mocha's Funeral
+
+-----
+
+Watery
+
+Time for some cleanup
+
+Head to Latte Lagoon and look for a [rhyme|Nursery Rhyme] on the pier. Solve the puzzle
+
+Solution------
+
+Trickster on necklace, moose on waves, deer on boat.
+
+/Solution------
+
+Pick up the [charm|Mr Drippy Charm] from a nearby bumper boat. Now go to the Ranger's Cabin, and break in with the screwdriver. There's a [deerhead|Deer Head] in the dining room on the first floor. Upstairs collect the [doll|Maiden Doll], [doll|Bear Doll], and [doll|Monster Doll]. Also on the second floor is [clue|Clue: Field notes about the environment for nursery rhymes]. Go behind the cabin and solve a [rhyme|Nursery Rhyme].
+
+Solution------
+
+Bear on heart, maiden on tree.
+
+/Solution------
+
+Find the [charm|FBI Charm] on a bed upstairs.
+
+Return to the trailer park, which has dried up. On a pier at the back, find a [doll|Child Doll] on a bench and a [rhyme|Nursery Rhyme] at the end.
+
+Solution------
+
+Wise man on waves, bear on candy.
+
+/Solution------
+
+An enemy will be guarding the [charm|Coffee World Token Charm] on a nearby fish cleaning station. In the trailer furthest east is  [radio|Radio: Gil's weird joke]. Behind Trailer #4 is a [cultstash|Cult Stash] and the [key|Trailer Park Stash Key] for it is obtained by walking up a small ramp near the grill and taking it off the electrical box.
+
+Use the newly repaired bridge to walk east back into the town. At the end of the westernmost pier is [manpage|Manuscript Page: The Dark Presence Attacks]. The easternmost pier has a [cultstash|Cult Stash], which you can get by solving a short math puzzle.
+
+Solution------
+
+1600 amps. B2 has 128 amps more than B3. B1 has twice as much as B3.
+
+B1 + B2 + B3 = 1600
+B2 = B3 + 128
+B1 = 2 B3
+
+Find B2.
+
+{3 B3 + B2 = 1600
+{B2 = B3 + 128
+=>
+3 (B2 - 128) + B2 = 1600
+=> 4 B2 = 1600 + 3 * 128
+=> B2 = 1984 / 4 = 496.
+
+/Solution------
+
+Use the screwdriver to jimmy open the lock to the building behind Suomi hall. On the computer, find [clue|Clue: An email exchange between FBC Researchers] and [clue|Clue: Fake correspondence] on the counter. Go to the end of the hall and solve [rhyme|Nursery Rhyme].
+
+Solution------
+
+Trickster on light, Maiden on necklace.
+
+/Solution------
+
+Pick up the [charm|Coffee Mug Charm] from the porch.
+
+That's it for items. Use the janitor room to switch to Alan.
+
+Checklist:
+
