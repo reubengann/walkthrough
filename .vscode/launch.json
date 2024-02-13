@@ -4,12 +4,12 @@
   "configurations": [
     {
       "name": "Run Main",
-      "type": "python",
+      "type": "debugpy",
       "request": "launch",
       "program": "walkthrough.py",
       "console": "integratedTerminal",
       "justMyCode": true,
-      "args": ["cmd1"]
+      "args": ["compile", "data\\alan_wake_2.txt"]
     }
   ]
 }
