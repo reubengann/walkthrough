@@ -408,3 +408,39 @@ That's it for items. Use the janitor room to switch to Alan.
 
 \checklist
 
+\section{Initiation 4: We Sing}
+
+Enter the TV. Follow the arrows up some stairs, around, and eventually down some more stairs. Sometimes you may have to wait while the song catches up. At the end, interact with a TV.
+
+Grab the lamp and head up the ladder at the far end of the dining hall. Use the lamp at the dead end of the catwalk and then proceed down the ladder and stairs. Run around to a far corner and take the light, then place it in the center section with the blinking car. Enter the TV.
+
+Ride the ferry, follow the path, and take the [weapon|Flare Gun]. Continue on, fighting enemies or bypassing them, until you get to another TV.
+
+Back in the green room, enter the door and align the orbs. Climb a long ladder and use the Song's End story thread on the board. Enter one last TV for the finale.
+
+Back on the stage, go past Ahti to reach the exit. Pick up the ringing phone again. You'll get [key|Room 665 Key].
+
+Head north back to the Vision Shop again to see [television|Television: The Dark Presence|The Dark Presence].
+
+Try entering the Oceanview Hotel. When you end up outside, turn right to see a huge neon arrow. Follow it, and head down the alley toward the Mirror Peak bar entrance. There will be a scene.
+
+\checklist
+
+\section{Initiation 5: Room 665}
+
+Enter the Mirror Peak Bar door and head down to the roof (surprisingly). Climb down a ladder and then up a stairway. Take the light. Go under a scaffold and up a ladder. Burn away the orbs and kill the resulting enemies. Then enter the door. Climb up the stairs right in front of you and crawl through a cardboard tent to reach a break room. Head to the south end of the roof and you will see a [wopow|Word of Aid|On the south end of the roof on a propped up piece of metal] on a propped up piece of metal.
+
+Heading up two ladders, you should see [wopow|Word of Lamp|On a water tower] on a water tower. Rather than open this door, go the left and down some stairs. Ducking under a nearby stairway, you eventually you should see a [wopow|Word of Gun|On the underside of a stairway landing] on the underside of a stairway landing. Go the other way and down a ladder, and on your left is a [breaker|Breaker Room|On the rooftops]. Take another [map|Dark Place Map|In a Breaker Room on the roof].
+
+Place the light in the door and pass through. Return, and take the light again. Go through the door and on the other side, with the water tower, place the light to remove it. Return and put the light in again. You can now pass through and walk around to the hotel room entrance.
+
+We need a code to enter. Head to a nearby rooftop bar and put the light in through the barrier. Look at the board to see that the Oceanview Cocktail is 25.50. Before you go, take the light out while inside the bar for some loot.
+
+Enter the code 2550 into the door to proceed. Use the key, turn on the projector, and interact with the picture.
+
+\checklist
+
+Walk to a balcony off the hall and align the orbs. Go down the elevator. Here you'll find the Entrance Hall scene and align the orbs to get the Pre-Show Ritual story thread. Run around the nearby hallway to find the [map|Oceanview Hotel Map] from the wall.
+
+In the Entrance hall, head toward the exit and go outside. Across Ocean Avenue, high up on a brick building, you'll see a [wopow|Word of Aid|High up on a brick building outside the hotel].
+

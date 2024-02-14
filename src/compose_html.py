@@ -193,4 +193,7 @@ def parse_checklist_item(s: str, line_no: int) -> LinePart | None:
     list_content = None
     if "|" in content:
         content, list_content = content.split("|", 1)
+    else:
+        list_content = content
+
     return LinePart(PartType.CHECK_ITEM, content, list_content, tag_name)
