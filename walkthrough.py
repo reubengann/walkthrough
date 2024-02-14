@@ -1,6 +1,8 @@
 import argparse
 from pathlib import Path
 import sys
+import time
+from watchfiles import Change, watch
 
 from src.compose_html import make_html_from_lines
 
@@ -12,9 +14,12 @@ def main() -> int:
         help="Your help message",
     )
 
-    cmd1_p = subp.add_parser("compile", help="Compile walkthrough")
-    cmd1_p.add_argument("infile")
-    cmd1_p.add_argument("-o", "--outfile")
+    compile_p = subp.add_parser("compile", help="Compile walkthrough")
+    compile_p.add_argument("infile")
+    compile_p.add_argument("-o", "--outfile")
+    watch_p = subp.add_parser("watch", help="Compile walkthrough")
+    watch_p.add_argument("infile")
+    watch_p.add_argument("-o", "--outfile")
     args = parser.parse_args()
     match args.subparser_name:
         case "compile":
@@ -29,6 +34,26 @@ def main() -> int:
             print(f"Compiling {infile} to {outfile}")
 
             outfile.write_text(make_html_from_lines(infile.read_text()))
+            return 0
+        case "watch":
+            infile = Path(args.infile)
+            if not infile.exists():
+                print(f"Cannot find file {infile}")
+                return 1
+            if args.outfile is not None:
+                outfile = Path(args.outfile)
+            else:
+                outfile = infile.parent / f"{infile.stem}.html"
+            outfile.write_text(make_html_from_lines(infile.read_text()))
+            print(f"Watching {infile}. Press Ctrl+C to stop.")
+            try:
+                for changes in watch(infile.parent):
+                    for change, file in changes:
+                        if Path(file) == infile.resolve() and change == Change.modified:
+                            print("Recompiling.")
+                            outfile.write_text(make_html_from_lines(infile.read_text()))
+            except KeyboardInterrupt:
+                pass
             return 0
         case _:
             parser.print_help()
