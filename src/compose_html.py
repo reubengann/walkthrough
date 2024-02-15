@@ -1,7 +1,8 @@
 from dataclasses import dataclass
 from enum import Enum
 import re
-from bs4 import BeautifulSoup
+import uuid
+from bs4 import BeautifulSoup, Tag
 
 
 class PartType(Enum):
@@ -23,15 +24,21 @@ def make_html_from_lines(input_contents: str) -> str:
     html.append(html_tag)
     head_tag = html.new_tag("head")
     html_tag.append(head_tag)
-
-    body_tag = html.new_tag("body")
-    html_tag.append(body_tag)
+    actual_body_tag = html.new_tag("body")
+    main_container = html.new_tag("div")
+    main_container.attrs["id"] = "main_container"
+    main_container.attrs["class"] = "mx-auto max-w-7xl px-6 lg:px-8"
+    html_tag.append(actual_body_tag)
+    actual_body_tag.append(main_container)
 
     # Add some content
 
     title_tag = html.new_tag("title")
     title_tag.string = "Sample HTML File"
     head_tag.append(title_tag)
+    script = html.new_tag("script")
+    script.attrs["src"] = "https://cdn.tailwindcss.com"
+    head_tag.append(script)
     lines = input_contents.split("\n")
     line_no = 0
     decl_map: dict[str, Declaration] = {}
@@ -48,35 +55,46 @@ def make_html_from_lines(input_contents: str) -> str:
                 title_tag.string = title
                 h1_tag = html.new_tag("h1")
                 h1_tag.string = title
-                body_tag.append(h1_tag)
+                h1_tag.attrs["class"] = (
+                    "mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
+                )
+                main_container.append(h1_tag)
         elif line.startswith(R"\section"):
             section_title = read_between_braces(line)
             if section_title is not None:
                 h2_tag = html.new_tag("h2")
+                h2_tag.attrs["class"] = (
+                    "mt-8 text-2xl font-bold tracking-tight text-gray-900"
+                )
                 h2_tag.string = section_title
-                body_tag.append(h2_tag)
+                main_container.append(h2_tag)
         elif line.startswith(R"\declare"):
             decl = parse_declaration(line, line_no)
             if decl is not None:
                 decl_map[decl.name] = decl
         elif line.startswith(R"\checklist"):
+            checklist_container = html.new_tag("div")
             checklist_ul = html.new_tag("ul")
+            checklist_ul.attrs["class"] = "mt-8 space-y-8 text-gray-600"
             for tag_name in checklist_items:
                 decl = decl_map[tag_name]
                 section_ol = html.new_tag("li")
-                section_header = html.new_tag("h3")
+                section_header = html.new_tag(
+                    "h3",
+                    attrs={"class": "text-base font-semibold leading-6 text-gray-900"},
+                )
                 section_header.string = decl.plural
                 section_ol.append(section_header)
                 section_ul = html.new_tag("ul")
 
                 for ci in checklist_items[tag_name]:
                     item_li = html.new_tag("li")
-                    item_li.append(html.new_tag("input", type="checkbox"))
-                    item_li.append(ci)
+                    item_li.append(make_checklist_tag(html, ci))
                     section_ul.append(item_li)
                 section_ol.append(section_ul)
                 checklist_ul.append(section_ol)
-            body_tag.append(checklist_ul)
+            checklist_container.append(checklist_ul)
+            main_container.append(checklist_container)
             checklist_items.clear()
         elif line.startswith(R"\begin{ul}"):
             reading_ul = True
@@ -84,7 +102,7 @@ def make_html_from_lines(input_contents: str) -> str:
         elif line.startswith(R"\end{ul}"):
             reading_ul = False
             assert ul_element is not None
-            body_tag.append(ul_element)
+            main_container.append(ul_element)
             ul_element = None
         else:
 
@@ -99,6 +117,7 @@ def make_html_from_lines(input_contents: str) -> str:
                 element.append(li)
             else:
                 element = html.new_tag("p")
+                element.attrs["class"] = "mt-4"
                 for part in parse_line(line, line_no):
                     if part.part_type == PartType.TEXT:
                         element.append(part.part)
@@ -116,7 +135,7 @@ def make_html_from_lines(input_contents: str) -> str:
                             checklist_items.setdefault(part.tag_name, []).append(
                                 part.rollup_name or part.part
                             )
-                    body_tag.append(element)
+                    main_container.append(element)
     return html.prettify()
 
 
@@ -197,3 +216,27 @@ def parse_checklist_item(s: str, line_no: int) -> LinePart | None:
         list_content = content
 
     return LinePart(PartType.CHECK_ITEM, content, list_content, tag_name)
+
+
+def make_checklist_tag(html: BeautifulSoup, s: str) -> Tag:
+    this_id = str(uuid.uuid4())
+    container = html.new_tag("div", attrs={"class": "relative flex items-start"})
+    input_container = html.new_tag("div", attrs={"class": "flex h-6 items-center"})
+    input_tag = html.new_tag(
+        "input",
+        attrs={
+            "id": this_id,
+            "type": "checkbox",
+            "class": "h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600",
+        },
+    )
+    input_container.append(input_tag)
+    label_container = html.new_tag("div", attrs={"class": "ml-3 text-md leading-6"})
+    label_tag = html.new_tag(
+        "label", attrs={"for": this_id, "class": "font-medium text-gray-900"}
+    )
+    label_tag.string = s
+    label_container.append(label_tag)
+    container.append(input_container)
+    container.append(label_container)
+    return container

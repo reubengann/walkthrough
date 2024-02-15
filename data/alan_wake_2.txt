@@ -440,7 +440,63 @@ Enter the code 2550 into the door to proceed. Use the key, turn on the projector
 
 \checklist
 
-Walk to a balcony off the hall and align the orbs. Go down the elevator. Here you'll find the Entrance Hall scene and align the orbs to get the Pre-Show Ritual story thread. Run around the nearby hallway to find the [map|Oceanview Hotel Map] from the wall.
+Walk to a balcony off the hall and align the orbs. Go down the elevator. Here you'll find the Entrance Hall scene and align the orbs to get the Pre-Show Ritual story thread. Run around the nearby hallway to find the [map|Oceanview Hotel Map] from the wall and find the Final Scene.
 
-In the Entrance hall, head toward the exit and go outside. Across Ocean Avenue, high up on a brick building, you'll see a [wopow|Word of Aid|High up on a brick building outside the hotel].
+In the Entrance hall, head toward the exit and go outside. Across Ocean Avenue, high up on a brick building, you'll see a [wopow|Word of Aid|Word of Aid High up on a brick building outside the hotel].
+
+Use the Pre-Show Ritual on the Final Scene. Pick up [key|Room 104 Key] from a nearby box. Open Room 104 and go through the bathroom to be teleported to the second floor break room.
+
+In Room 224, go into the back room find [television|Television: Night Springs Intro|Night Springs Intro]. Shoot a piece of cardboard and head back. There's a [wopow|Word of War|Word of War in Room 224] in the shower. In the second floor hallway, look up at an exit sign to see a [wopow|Word of War|Word of War on the ceiling behind glass on the second floor hallway].
+
+In Room 205 you can see [television|Television: Signals|Signals]. Enter Room 216 to find [key|Room 209 Key]. Entering there to find a [breaker|Breaker Room|In Room 209]. Here is another [map|Oceanview Hotel Map|Oceanview Hotel Map in the Breaker Room]
+
+Enter the ballroom and find a break room with [key|Room 101 Key]. On the ceiling behind the bar is a [wopow|Word of Stuff|Word of Stuff in the Ballroom]. Use the Pre-show Ritual scene here and check out the mask and board.
+
+Go back downstairs and enter room 101 using your key to see [television|Television: Visions|Visions]
+
+Go into Room 219 and take the light. Go through the new door and you can now enter Room 202 to find a new scene Rehearsal Room. Stand near the whiteboards and use the story thread. Align the orbs to get the Haunted story thread, and then use it here.
+
+Use the Haunted thread back in the ballroom, and then align the orbs from the stage to get the Devil thread. Kill all the enemies, and then head back to the first floor. In the Entrance Room scene, put the Devil thread and get ready for a fight. (The flare gun is useful here.)
+
+After you've killed the new enemies, travel up the stairs until you find an echo, then align the orbs to get [echo|Echo: Room 666|Room 666]. Continue up the 6th floor. Up here, just walk to the other end of the floor with all the dead bodies, and enter the door. Align the orbs to get The Climax story thread.
+
+The dark presence will show up to chase you. Take either side and run until it shows up in the front of you. On your way back, turn into the center of the corridor, and then turn back to the stairs. Avoid the shadows and find a safe room. (There's a high chance you'll die for no reason ... just keep trying.)
+
+Back on the first floor, put the Climax thread on the Final Scene. Walk ahead and interact with the tub.
+
+Exit the hotel. Straight ahead is [echo|an echo|Right outside the hotel]. Use the break room ahead of you to return to Saga.
+
+\checklist
+
+ Use the car to head back to Bright Falls, and watch a scene.
+
+\section{Return 4: No chance}
+
+Walk through the kitchen and get the shotgun. Run up the path, following the gunfire and killing Taken along the way. Cross a small bridge to a cabin. Inside, as Saga, find [manpage|Manuscript Page: The History Of The Valhalla Nursing Home|The History Of The Valhalla Nursing Home].
+
+Follow the path to the north to find a [rhyme|Nursery Rhyme|North of the break room in the woods]. Also nearby is a [cultstash|Cult Stash|North of the break room in the woods] with Simon Says.
+
+solution
+
+Mother on home, child on trees
+
+/solution
+
+Get the [charm|Lantern Charm] on the path we just came up. 
+
+Head south from the break room and you'll see dreamcatchers on the right side leading to a [lunchbox|Lunch Box|South of the break room in Bunker Woods]. Head south, down some stairs, to a campsite to find [radio|Radio: Technical Issues|Technical Issues]. Back up the stairs and down a little hill to the east is a truck with a [cultstash|Cult Stash|On a truck in Bunker Woods].
+
+solution
+
+B + C = 200
+2 * B + 4 * C = 754
+=> B + 2 C = 377
+=> 200 - C + 2 C = 377
+=> C = 177
+
+The code is 177
+
+/solution
+
+\checklist
 

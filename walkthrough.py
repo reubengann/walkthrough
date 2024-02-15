@@ -1,4 +1,5 @@
 import argparse
+from datetime import datetime
 from pathlib import Path
 import sys
 import time
@@ -50,7 +51,7 @@ def main() -> int:
                 for changes in watch(infile.parent):
                     for change, file in changes:
                         if Path(file) == infile.resolve() and change == Change.modified:
-                            print("Recompiling.")
+                            print(f"[{datetime.now()}] Recompiling.")
                             outfile.write_text(make_html_from_lines(infile.read_text()))
             except KeyboardInterrupt:
                 pass
