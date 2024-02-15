@@ -77,11 +77,11 @@ Inside the hut, find [manpage|Manuscript Page 6/: Saga Opens the Cauldron Lake O
 
 Head to the General Store, and get ready for a fight. After you take out the Taken, you'll find the heart in a refrigerator. On the floor next to a shelf, pick up [manpage|Manuscript Page: Saga at the General Store|Saga at the General Store]. Under a shotgun on the wall, find [invexp|Inventory Expansion 1|In the general store]. To get the shotgun, you have to solve a puzzle. Give it a shot, or read on for the solution.
 
-------Solution-------
+\begin{spoiler}
 
 Look behind the cash register to find lotto numbers and a notepad. If you look at the lotto numbers, 705, 713, 717, and 723 have all already been used. Since the numbers all start with 7, and it says to update it, and since the next number is 39, the combination is 739.
 
-------/Solution-------
+\end{spoiler}
 
 You can now pick up [weapon|Shotgun]. Save your game if you want, then head back to Witch's Ladle. Here you'll be attacked by two Taken. After handling them, put the heart into the hole in the sign, and enter the Overlap.
 
@@ -115,31 +115,31 @@ Approach the front of the station and observe the ground [rhyme|Nursery Rhyme|Ou
 
 Solve the nursery rhyme puzzle by placing the dolls to match what the rhyme suggests.
 
------Solution------
+\begin{spoiler}
 
 Put the hero on the boat and the wolf on the tree.
 
------/Solution------
+\end{spoiler}
 
 Remember to pick up the dolls when finished, then look at the footprints near the stairs [clue|Clue|Re-enacting the rhyme]. Go back to the second floor and find [charm|Coffee Mug World Charm].
 
 Go to the Private Cabin by ducking under a tree trunk. On the left is a generator that will turn on the lights and unlock a break room. Inside you'll find [manpage|Manuscript Page: The Cult of the Tree|The Cult of the Tree]. On a bench outside you will find [doll|Crow Doll] and around the other side [rhyme|Rhyme|Near the bridge].
 
------Solution------
+\begin{spoiler}
 
 Hero on heart, wolf on the house, crow on the hatchling.
 
------/Solution------
+\end{spoiler}
 
 Follow the tracks to find [charm|Kalevala Knights Charm] near a big tree.
 
 Head west from the Private Cabin to a picnic site where you'll find a [rhyme|Rhyme|At the river]
 
------Solution------
+\begin{spoiler}
 
 Put the crow on the sun.
 
------/Solution------
+\end{spoiler}
 
 The [charm|Hammer Charm] is on the table.
 
@@ -237,7 +237,7 @@ Use the memory card in the kitchen on the projector in the living room to get [t
 
 You can now start case The Story. Talk to Alan, then profile him. Speak with him again to get [manpage|Manuscript Page: The Trailer|The Trailer]. Use the page on the board. Talk to Alan again. Nearby is a break room where you can save or switch characters, but let's stay as Saga.
 
-Head into the lobby. On the TV will be playing [television|Television: Coffee World|Coffee World]. In a nearby hallway, enter room 107 to find [manpage|Manuscript Page: Ed Returns tO Cauldron Lake|Ed Returns tO Cauldron Lake] and [manpage|Manuscript Page: Tammy Rides the Ferry|Tammy Rides the Ferry].
+Head into the lobby. On the TV will be playing [television|Television: Coffee World|Coffee World]. In a nearby hallway, enter room 107 to find [manpage|Manuscript Page: Ed Returns to Cauldron Lake|Ed Returns to Cauldron Lake] and [manpage|Manuscript Page: Tammy Rides the Ferry|Tammy Rides the Ferry].
 
 Head to the Oh Deer and look at the [television|Television: Ahma Beer|Ahma Beer] on the wall. Use the car to head to Watery.
 
@@ -267,11 +267,11 @@ In a break room you'll find [manpage|Manuscript Page: Scratch on the Hunt|Scratc
 
 Go to the Percolator and kill the Taken. Go around to the other side and pick up the Screwdriver. Return to the gift shop and open it up. Inside, find [manpage|Manuscript Page: Coffee World Attacked|Coffee World Attacked] on a table. Look at the safe and profile Ilmo again. Solve the puzzle to open the safe.
 
-----
+\begin{spoiler}
 
 The puzzle says Tracker, Lookout, Cleaner. Looking at the staff board, the closest to Tracker is Lost and Found, and she has 1 sticker. Lookout might be Security, with 4 stickers, and Janitor is cleaner, with 6 stickers. The code is 146.
 
----
+\end{spoiler}
 
 Before moving on let's collect some stuff. Head due south from the gift shop to find a [settersign|Setter Sign|In Coffee World] near a huge statue of a coffee pot in a bowtie. Walk all the way around this statue and pick up the [key|Coffee World Stash Key]. Go slightly northwest to find Huotari well. In the grass behind it you'll find [cultstash|Cult Stash|Near the wishing well] with a [clue|Clue: M and T|M and T].
 
@@ -279,19 +279,19 @@ Head southeast to the exit to the road. Inside the giant yellow coffee pot on yo
 
 Head up the path to the Watery Lighthouse. There's a break room on the way, and just outside a [lunchbox|Lunch Box|Near the lighthouse]. Up a ways, and turning right at the truck, up a ledge is a [cultstash|Cult Stash|At the lighthouse].
 
-Solution------
+\begin{spoiler}
 
 A II has two stacked triangles facing up. III has two side-by-side triangles facing down. Stand on the triangle and look down to see I which is two triangles stacked facing down.
 
-/Solution------
+\end{spoiler}
 
 On the lighthouse stoop you'll find [doll|Mother Doll], [doll|Wise Elder Doll], and [doll|Trickster Doll]. On the side of the lighthouse is [rhyme|Rhyme|Near the lighthouse].
 
-Solution------
+\begin{spoiler}
 
 Old watcher (Wise Elder on eye) plays trick on ocean (Trickster on waves).
 
-/Solution------
+\end{spoiler}
 
 The [charm|Charm|Lighthouse Charm] appears all the way down in the flooded area below. You have to go back to the road and duck under a fallen tree to get it.
 
@@ -347,35 +347,35 @@ Time for some cleanup.
 
 Head to Latte Lagoon and look for a [rhyme|Nursery Rhyme|At Latte Lagoon] on the pier. Solve the puzzle
 
-Solution------
+\begin{spoiler}
 
 Trickster on necklace, moose on waves, deer on boat.
 
-/Solution------
+\end{spoiler}
 
 Pick up the [charm|Mr Drippy Charm] from a nearby bumper boat. Now go to the Ranger's Cabin, and break in with the screwdriver. There's a [deerhead|Deer Head|In the Ranger's Cabin] in the dining room on the first floor. Upstairs collect the [doll|Maiden Doll], [doll|Bear Doll], and [doll|Monster Doll]. Also on the second floor is [clue|Clue: Field notes about the environment for nursery rhymes|Field notes about the environment for nursery rhymes]. Go behind the cabin and solve a [rhyme|Nursery Rhyme|Behind the Ranger's Cabin].
 
-Solution------
+\begin{spoiler}
 
 Bear on heart, maiden on tree.
 
-/Solution------
+\end{spoiler}
 
 Find the [charm|FBI Charm] on a bed upstairs.
 
 Return to the trailer park, which has dried up. On a pier at the back, find a [doll|Child Doll] on a bench and a [rhyme|Nursery Rhyme|In the trailer park] at the end.
 
-Solution------
+\begin{spoiler}
 
 Wise man on waves, bear on candy.
 
-/Solution------
+\end{spoiler}
 
 An enemy will be guarding the [charm|Coffee World Token Charm] on a nearby fish cleaning station. In the trailer furthest east is  [radio|Radio: Gil's weird joke|Gil's weird joke]. Behind Trailer #4 is a [cultstash|Cult Stash|Trailer park, behind Trailer #4] and the [key|Trailer Park Stash Key] for it is obtained by walking up a small ramp near the grill and taking it off the electrical box.
 
 Use the newly repaired bridge to walk east back into the town. At the end of the westernmost pier is [manpage|Manuscript Page: The Dark Presence Attacks|The Dark Presence Attacks]. The easternmost pier has a [cultstash|Cult Stash|Downtown Watery, the easternmost pier], which you can get by solving a short math puzzle.
 
-Solution------
+\begin{spoiler}
 
 1600 amps. B2 has 128 amps more than B3. B1 has twice as much as B3.
 
@@ -392,15 +392,15 @@ Find B2.
 => 4 B2 = 1600 + 3 * 128
 => B2 = 1984 / 4 = 496.
 
-/Solution------
+\end{spoiler}
 
 Use the screwdriver to jimmy open the lock to the building behind Suomi hall. On the computer, find [clue|Clue: An email exchange between FBC Researchers|An email exchange between FBC Researchers] and [clue|Clue: Fake correspondence|Fake correspondence] on the counter. Go to the end of the hall and solve [rhyme|Nursery Rhyme|In a trailer behind Suomi Hall].
 
-Solution------
+\begin{spoiler}
 
 Trickster on light, Maiden on necklace.
 
-/Solution------
+\end{spoiler}
 
 Pick up the [charm|Coffee Mug Charm] from the porch.
 
@@ -476,17 +476,17 @@ Walk through the kitchen and get the shotgun. Run up the path, following the gun
 
 Follow the path to the north to find a [rhyme|Nursery Rhyme|North of the break room in the woods]. Also nearby is a [cultstash|Cult Stash|North of the break room in the woods] with Simon Says.
 
-solution
+\begin{spoiler}
 
 Mother on home, child on trees
 
-/solution
+\end{spoiler}
 
 Get the [charm|Lantern Charm] on the path we just came up. 
 
 Head south from the break room and you'll see dreamcatchers on the right side leading to a [lunchbox|Lunch Box|South of the break room in Bunker Woods]. Head south, down some stairs, to a campsite to find [radio|Radio: Technical Issues|Technical Issues]. Back up the stairs and down a little hill to the east is a truck with a [cultstash|Cult Stash|On a truck in Bunker Woods].
 
-solution
+\begin{spoiler}
 
 B + C = 200
 2 * B + 4 * C = 754
@@ -496,7 +496,7 @@ B + C = 200
 
 The code is 177
 
-/solution
+\end{spoiler}
 
 \checklist
 

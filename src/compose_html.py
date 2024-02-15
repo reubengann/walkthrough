@@ -36,15 +36,23 @@ def make_html_from_lines(input_contents: str) -> str:
     title_tag = html.new_tag("title")
     title_tag.string = "Sample HTML File"
     head_tag.append(title_tag)
-    script = html.new_tag("script")
-    script.attrs["src"] = "https://cdn.tailwindcss.com"
-    head_tag.append(script)
+    head_tag.append(
+        html.new_tag("script", attrs={"src": "https://cdn.tailwindcss.com"})
+    )
+    head_tag.append(
+        html.new_tag(
+            "script", attrs={"src": "https://unpkg.com/alpinejs", "defer": "defer"}
+        )
+    )
+
     lines = input_contents.split("\n")
     line_no = 0
     decl_map: dict[str, Declaration] = {}
     checklist_items: dict[str, list[str]] = {}
     reading_ul = False
     ul_element = None
+    reading_spoiler = False
+    spoiler_element = None
     for line in lines:
         line_no += 1
         if line.strip() == "":
@@ -98,12 +106,20 @@ def make_html_from_lines(input_contents: str) -> str:
             checklist_items.clear()
         elif line.startswith(R"\begin{ul}"):
             reading_ul = True
-            ul_element = html.new_tag("ul")
+            ul_element = html.new_tag("ul", attrs={"class": "list-disc ml-6"})
         elif line.startswith(R"\end{ul}"):
             reading_ul = False
             assert ul_element is not None
             main_container.append(ul_element)
             ul_element = None
+        elif line.startswith(R"\begin{spoiler}"):
+            reading_spoiler = True
+            spoiler_element = html.new_tag("div")
+        elif line.startswith(R"\end{spoiler}"):
+            reading_spoiler = False
+            assert spoiler_element is not None
+            main_container.append(make_collapsible(html, spoiler_element))
+            spoiler_element = None
         else:
 
             if reading_ul:
@@ -112,9 +128,15 @@ def make_html_from_lines(input_contents: str) -> str:
                     print(f"Warning: on line {line_no}, while parsing ul, no item")
                     continue
                 element = ul_element
-                li = html.new_tag("li")
+                li = html.new_tag("li", attrs={"class": "mb-2"})
                 li.append(line.split(R"\item")[1])
                 element.append(li)
+            elif reading_spoiler:
+                assert spoiler_element is not None
+                element = spoiler_element
+                tag = html.new_tag("p")
+                tag.string = line
+                element.append(tag)
             else:
                 element = html.new_tag("p")
                 element.attrs["class"] = "mt-4"
@@ -240,3 +262,41 @@ def make_checklist_tag(html: BeautifulSoup, s: str) -> Tag:
     container.append(input_container)
     container.append(label_container)
     return container
+
+
+def make_collapsible(html: BeautifulSoup, content: Tag):
+    container_div = html.new_tag("div", attrs={"x-data": "{ open: false }"})
+    button = html.new_tag(
+        "button",
+        attrs={
+            "type": "button",
+            "class": "flex w-full items-start justify-between text-left text-gray-900",
+            "@click": "open = !open",
+        },
+    )
+    sp = html.new_tag("span", attrs={"class": "text-base font-semibold leading-7"})
+    sp.string = "Click to show solution"
+    button.append(sp)
+    container_div.append(button)
+    button.append(
+        BeautifulSoup(
+            """
+
+<span class="ml-6 flex h-7 items-center">
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" x-bind:class="{ 'hidden': open }">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
+          </svg>
+          <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" x-bind:class="{ 'hidden': !open }">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
+          </svg>
+        </span>
+""",
+            "html.parser",
+        )
+    )
+    content_div = html.new_tag(
+        "div", attrs={"x-show": "open", "class": "text-gray-900"}
+    )
+    content_div.append(content)
+    container_div.append(content_div)
+    return container_div
