@@ -31,7 +31,7 @@ def make_html_from_lines(input_contents: str) -> str:
     head_tag = html.new_tag("head")
     html_tag.append(head_tag)
     actual_body_tag = html.new_tag("body")
-    main_container = html.new_tag("div")
+    main_container = html.new_tag("div", attrs={"x-data": "checklistItems"})
     main_container.attrs["id"] = "main_container"
     main_container.attrs["class"] = "mx-auto max-w-7xl px-6 lg:px-8"
     html_tag.append(actual_body_tag)
@@ -56,6 +56,7 @@ def make_html_from_lines(input_contents: str) -> str:
     decl_map: dict[str, Declaration] = {}
     checklist_counters: dict[str, int] = {}
     checklist_items: dict[str, list[ChecklistItem]] = {}
+    store_lines = []
     reading_ul = False
     ul_element = None
     reading_spoiler = False
@@ -161,16 +162,28 @@ def make_html_from_lines(input_contents: str) -> str:
                             checklist_counters[part.tag_name] += 1
                             label_tag = html.new_tag("label", attrs={"for": this_id})
                             checkbox_tag = html.new_tag(
-                                "input", type="checkbox", attrs={"id": this_id}
+                                "input",
+                                type="checkbox",
+                                attrs={
+                                    "id": this_id,
+                                    "x-model": this_id,
+                                },
                             )
                             label_tag.string = part.part
                             element.append(checkbox_tag)
                             element.append(label_tag)
+                            store_lines.append(f"'{this_id}': false")
                             citem = ChecklistItem(
                                 part.rollup_name or part.part, this_id
                             )
                             checklist_items.setdefault(part.tag_name, []).append(citem)
                     main_container.append(element)
+    store_script = html.new_tag("script")
+    store_script_text = "let checklistItems = {"
+    store_script_text += ",\n".join(store_lines)
+    store_script_text += "};"
+    store_script.append(store_script_text)
+    head_tag.append(store_script)
     return html.prettify()
 
 
@@ -261,6 +274,7 @@ def make_checklist_tag(html: BeautifulSoup, s: str, this_id: str) -> Tag:
         attrs={
             "id": this_id,
             "type": "checkbox",
+            "x-model": this_id,
             "class": "h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600",
         },
     )
