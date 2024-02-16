@@ -18,6 +18,12 @@ class Declaration:
     plural: str
 
 
+@dataclass
+class ChecklistItem:
+    content: str
+    item_id: str
+
+
 def make_html_from_lines(input_contents: str) -> str:
     html = BeautifulSoup()
     html_tag = html.new_tag("html")
@@ -48,7 +54,8 @@ def make_html_from_lines(input_contents: str) -> str:
     lines = input_contents.split("\n")
     line_no = 0
     decl_map: dict[str, Declaration] = {}
-    checklist_items: dict[str, list[str]] = {}
+    checklist_counters: dict[str, int] = {}
+    checklist_items: dict[str, list[ChecklistItem]] = {}
     reading_ul = False
     ul_element = None
     reading_spoiler = False
@@ -97,7 +104,7 @@ def make_html_from_lines(input_contents: str) -> str:
 
                 for ci in checklist_items[tag_name]:
                     item_li = html.new_tag("li")
-                    item_li.append(make_checklist_tag(html, ci))
+                    item_li.append(make_checklist_tag(html, ci.content, ci.item_id))
                     section_ul.append(item_li)
                 section_ol.append(section_ul)
                 checklist_ul.append(section_ol)
@@ -149,14 +156,20 @@ def make_html_from_lines(input_contents: str) -> str:
                                 f"Invalid collectible {part.tag_name} on line {line_no}"
                             )
                         else:
-                            label_tag = html.new_tag("label")
-                            checkbox_tag = html.new_tag("input", type="checkbox")
+                            count = checklist_counters.setdefault(part.tag_name, 0) + 1
+                            this_id = f"{part.tag_name}{count}"
+                            checklist_counters[part.tag_name] += 1
+                            label_tag = html.new_tag("label", attrs={"for": this_id})
+                            checkbox_tag = html.new_tag(
+                                "input", type="checkbox", attrs={"id": this_id}
+                            )
                             label_tag.string = part.part
                             element.append(checkbox_tag)
                             element.append(label_tag)
-                            checklist_items.setdefault(part.tag_name, []).append(
-                                part.rollup_name or part.part
+                            citem = ChecklistItem(
+                                part.rollup_name or part.part, this_id
                             )
+                            checklist_items.setdefault(part.tag_name, []).append(citem)
                     main_container.append(element)
     return html.prettify()
 
@@ -240,8 +253,7 @@ def parse_checklist_item(s: str, line_no: int) -> LinePart | None:
     return LinePart(PartType.CHECK_ITEM, content, list_content, tag_name)
 
 
-def make_checklist_tag(html: BeautifulSoup, s: str) -> Tag:
-    this_id = str(uuid.uuid4())
+def make_checklist_tag(html: BeautifulSoup, s: str, this_id: str) -> Tag:
     container = html.new_tag("div", attrs={"class": "relative flex items-start"})
     input_container = html.new_tag("div", attrs={"class": "flex h-6 items-center"})
     input_tag = html.new_tag(
