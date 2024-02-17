@@ -36,8 +36,6 @@ def make_html_from_lines(input_contents: str) -> str:
     html_tag.append(actual_body_tag)
     actual_body_tag.append(main_container)
 
-    # Add some content
-
     title_tag = html.new_tag("title")
     title_tag.string = "Sample HTML File"
     head_tag.append(title_tag)

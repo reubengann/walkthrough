@@ -6,6 +6,7 @@ import time
 from watchfiles import Change, watch
 
 from src.compose_html import make_html_from_lines
+from src.parse_document import parse_document
 
 
 def main() -> int:
@@ -18,9 +19,11 @@ def main() -> int:
     compile_p = subp.add_parser("compile", help="Compile walkthrough")
     compile_p.add_argument("infile")
     compile_p.add_argument("-o", "--outfile")
-    watch_p = subp.add_parser("watch", help="Compile walkthrough")
+    watch_p = subp.add_parser("watch", help="Compile walkthrough with watching")
     watch_p.add_argument("infile")
     watch_p.add_argument("-o", "--outfile")
+    parse_p = subp.add_parser("parse", help="Parse walkthrough")
+    parse_p.add_argument("infile")
     args = parser.parse_args()
     match args.subparser_name:
         case "compile":
@@ -55,6 +58,13 @@ def main() -> int:
                             outfile.write_text(make_html_from_lines(infile.read_text()))
             except KeyboardInterrupt:
                 pass
+            return 0
+        case "parse":
+            infile = Path(args.infile)
+            if not infile.exists():
+                print(f"Cannot find file {infile}")
+                return 1
+            parse_document(infile.read_text())
             return 0
         case _:
             parser.print_help()
