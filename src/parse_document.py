@@ -35,6 +35,16 @@ class ULLineItem(LineItem):
         return f"Unnumbered list: [{', '.join(self.items)}]"
 
 
+class SpoilerLineItem(LineItem):
+    items: list[str]
+
+    def __init__(self) -> None:
+        self.items = []
+
+    def __repr__(self) -> str:
+        return f"Unnumbered list: [{', '.join(self.items)}]"
+
+
 class ChecklistSection:
     items: list[RegularLineItem]
 
@@ -126,7 +136,28 @@ class WalkthroughParser:
                 ul = self.read_ul()
                 doc.checklist_sections[-1].append(ul)
                 continue
+            if line.startswith(R"\begin{spoiler}"):
+                spoiler = self.read_spoiler()
+                if spoiler is not None:
+                    doc.checklist_sections[-1].append(spoiler)
+                continue
         return doc
+
+    def read_spoiler(self) -> SpoilerLineItem | None:
+        item = SpoilerLineItem()
+        line = self.lines[self.line_no]
+        started = self.line_no
+        while not line.startswith(R"\end{spoiler}"):
+            if line.strip() != "":
+                item.items.append(line)
+            self.line_no += 1
+            if self.line_no == len(self.lines):
+                print(
+                    f"Error: Spoiler started on line {started} has no terminating \\end{{spoiler}}"
+                )
+                return None
+            line = self.lines[self.line_no]
+        return item
 
     def read_ul(self) -> ULLineItem:
         item = ULLineItem()
