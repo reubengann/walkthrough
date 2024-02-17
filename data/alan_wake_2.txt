@@ -17,6 +17,8 @@
 \declare{echo}{Echo}{Echoes}
 \declare{breaker}{Breaker Room}{Breaker Rooms}
 
+\version{1}
+
 \title{Alan Wake 2}
 
 \section{Return 0}

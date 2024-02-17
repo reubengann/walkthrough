@@ -60,6 +60,7 @@ def make_html_from_lines(input_contents: str) -> str:
     ul_element = None
     reading_spoiler = False
     spoiler_element = None
+    version = "1"
     for line in lines:
         line_no += 1
         if line.strip() == "":
@@ -74,6 +75,8 @@ def make_html_from_lines(input_contents: str) -> str:
                     "mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
                 )
                 main_container.append(h1_tag)
+        elif line.startswith(R"\version"):
+            version = read_between_braces(line)
         elif line.startswith(R"\section"):
             section_title = read_between_braces(line)
             if section_title is not None:
@@ -179,8 +182,8 @@ def make_html_from_lines(input_contents: str) -> str:
                             checklist_items.setdefault(part.tag_name, []).append(citem)
                     main_container.append(element)
     store_script = html.new_tag("script")
-    store_script_text = """
-    const currentVersion = "1";
+    store_script_text = f'const currentVersion = "{version}";'
+    store_script_text += """
     const storedVersion = localStorage.getItem("alan_wake_2_checked_storage_version");
     console.log("stored version:", storedVersion);
     let shouldInitialize = false;
