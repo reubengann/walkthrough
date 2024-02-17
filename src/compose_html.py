@@ -1,7 +1,6 @@
 from dataclasses import dataclass
 from enum import Enum
 import re
-import uuid
 from bs4 import BeautifulSoup, Tag
 
 
@@ -167,6 +166,7 @@ def make_html_from_lines(input_contents: str) -> str:
                                 attrs={
                                     "id": this_id,
                                     "x-model": this_id,
+                                    "@change": "storeStatuses()",
                                 },
                             )
                             label_tag.string = part.part
@@ -179,9 +179,41 @@ def make_html_from_lines(input_contents: str) -> str:
                             checklist_items.setdefault(part.tag_name, []).append(citem)
                     main_container.append(element)
     store_script = html.new_tag("script")
-    store_script_text = "let checklistItems = {"
+    store_script_text = """
+    const currentVersion = "1";
+    const storedVersion = localStorage.getItem("alan_wake_2_checked_storage_version");
+    console.log("stored version:", storedVersion);
+    let shouldInitialize = false;
+    if (storedVersion !== currentVersion) {
+      localStorage.removeItem('alan_wake_2_checked_statuses');
+      localStorage.setItem('alan_wake_2_checked_storage_version', currentVersion);
+      shouldInitialize = true;
+    }
+    else {
+      console.log("Up to date!")
+    }
+    let checklistItems;
+    if (localStorage.getItem('alan_wake_2_checked_statuses') == null)
+    {
+      shouldInitialize = true;
+    }
+    if (shouldInitialize) {
+    checklistItems = {
+"""
     store_script_text += ",\n".join(store_lines)
-    store_script_text += "};"
+    store_script_text += """};
+      localStorage.setItem('alan_wake_2_checked_statuses', JSON.stringify(checklistItems));
+      console.log("Initialized storage");
+    }
+    else {
+      checklistItems = JSON.parse(localStorage.getItem('alan_wake_2_checked_statuses'));
+      console.log("Loaded from storage.")
+    }
+
+    function storeStatuses() {
+      localStorage.setItem('alan_wake_2_checked_statuses', JSON.stringify(checklistItems));
+      console.log("saved");
+    }"""
     store_script.append(store_script_text)
     head_tag.append(store_script)
     return html.prettify()
@@ -276,6 +308,7 @@ def make_checklist_tag(html: BeautifulSoup, s: str, this_id: str) -> Tag:
             "type": "checkbox",
             "x-model": this_id,
             "class": "h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600",
+            "@change": "storeStatuses()",
         },
     )
     input_container.append(input_tag)
