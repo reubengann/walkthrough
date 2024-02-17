@@ -3,13 +3,22 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Run Main",
+      "name": "Compile",
       "type": "debugpy",
       "request": "launch",
       "program": "walkthrough.py",
       "console": "integratedTerminal",
       "justMyCode": true,
       "args": ["compile", "data\\alan_wake_2.txt"]
+    },
+    {
+      "name": "Parse",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "walkthrough.py",
+      "console": "integratedTerminal",
+      "justMyCode": true,
+      "args": ["parse", "data\\alan_wake_2.txt"]
     }
   ]
 }
