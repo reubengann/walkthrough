@@ -396,7 +396,7 @@ Find B2.
 
 \end{spoiler}
 
-Use the screwdriver to jimmy open the lock to the building behind Suomi hall. On the computer, find [clue|Clue: An email exchange between FBC Researchers|An email exchange between FBC Researchers] and [clue|Clue: Fake correspondence|Fake correspondence] on the counter. Go to the end of the hall and solve [rhyme|Nursery Rhyme|In a trailer behind Suomi Hall].
+Use the screwdriver to jimmy open the lock to the building behind Suomi hall. On the computer, find [clue|Clue: An email exchange between FBC Researchers|An email exchange between FBC Researchers] and [clue|Clue: Fake correspondence|Fake correspondence] on the counter. On a table, find [clue|Clue: FBC File listing sites in Watery|FBC File listing sites in Watery]. Go to the end of the hall and solve [rhyme|Nursery Rhyme|In a trailer behind Suomi Hall].
 
 \begin{spoiler}
 
@@ -474,7 +474,7 @@ Exit the hotel. Straight ahead is [echo|an echo|Right outside the hotel]. Use th
 
 \section{Return 4: No chance}
 
-Walk through the kitchen and get the shotgun. Run up the path, following the gunfire and killing Taken along the way. Cross a small bridge to a cabin. Inside, as Saga, find [manpage|Manuscript Page: The History Of The Valhalla Nursing Home|The History Of The Valhalla Nursing Home].
+Walk through the kitchen and get the shotgun. Run up the path, following the gunfire and killing Taken along the way. Cross a small bridge to a cabin. Inside, as Saga, find [manpage|Manuscript Page: The History Of The Valhalla Nursing Home|The History Of The Valhalla Nursing Home]. You can now start the case The Anderson Brothers.
 
 Follow the path to the north to find a [rhyme|Nursery Rhyme|North of the break room in the woods]. Also nearby is a [cultstash|Cult Stash|North of the break room in the woods] with Simon Says.
 
@@ -499,6 +499,189 @@ B + C = 200
 The code is 177
 
 \end{spoiler}
+
+Go to the nursing home. On the left, in front of the Wellness Center is the final [settersign|Setter Sign|In front of the Wellness Center]. Up a few steps, in front of the Nursing Home in the corner is [manpage|Manuscript Page: Saga At The Nursing Home|Saga At The Nursing Home]. Ring the doorbell.
+
+\checklist
+
+\section {Return 5: Old Gods}
+
+In the admin office to the right is the [map|Valhalla Nursing Home Map] and [lunchbox|Lunch Box|Inside the nursing home Admin Office]. Following Rose to get [television|Television: Bright Falls Blend|Bright Falls Blend]. Talk to the two residents, Ahti, and Rose. 
+
+Head upstairs. In the Rec Room find a [deerhead|Dear Head|In the Rec Room of the Nursing Home]. Look around Tor's room, then try talking to Odin. Profile him and use the board. Look at the picture on the wall before leaving for a [clue|Clue|A Painting of Mom and me with Odin and Tor].
+
+Talk to Rose and enter the Wellness Center. On the left is the [map|Wellness Center Map]. In room 102, find [manpage|Manuscript Page: Tor Is Bewitched|Tor Is Bewitched] on a desk. Investigate the bed at the end for two clues. Check the dispensary for a break room.
+
+Enter rehabilitation and try to follow Tor. Exit out the other door in this room and unlock the double doors leading back. Enter the office and exit through the other door to a hallway leading north. Exit into the Security Room. There are clues for this puzzle: one on the counter, one on the bulletin board, three in a filing cabinet drawer, and one on the computer. Solve the puzzle.
+
+\begin{spoiler}
+
+The ceremony takes place on the day after the next new moon. We can tell by the entry in the book that it's around the 16th of August. Looking at the calendar, the new moon is on the 16th, so the 17th is the day after that, and the Koskela brothers put dates in European style (day/month/year). The code is therefore 170823.
+
+\end{spoiler}
+
+On the computer's mail you can see a clue that the doorknob for the room at the end of the hall is "in a glassy cage where pretty flowers bloom near the greet". On the media tab you'll get a clue. Then use the security tab and unlock the doors. The nearby shortcut to the lobby is now open.
+
+Go into the newly available staff lounge and into the receptionist area to find the doorknob in a box. Use it to enter room 101 and claim the [weapon|Rifle]. Here you'll also find [manpage|Manuscript Page: The Cult Storms the Lodge|The Cult Storms the Lodge] and a [deerhead|Deer Head|In the Wellness Center, room 101]. In Exam Room 2, pick up [manpage|Manuscript Page: Gail Taken|Gail Taken]
+
+Fight an enemy in the rehabilitation room, then proceed to the dining hall. Through the kitchen, go outside and watch a scene.
+
+Talk to Rose. After profiling her, talk to her again to receive [key|Rose's Keyfob] and [manpage|Manuscript Page: Saga Opens The Valhalla Nursing Home Overlap|Saga Opens The Valhalla Nursing Home Overlap]. Make sure to talk to Rose about all topics.
+
+Across a bridge in the dark gazebo find [manpage|Manuscript Page: Odin Loses An Eye|Odin Loses An Eye]. Head inside the nursing home, and talk to the residents on the front porch if you want.
+
+On the landing between the first and second floors find [manpage|Manuscript Page: Odin Stuck In Bed|Odin Stuck In Bed]. In Room 207 investigate the record holder on the floor. Profile all topics.
+
+On the third floor, in Gail's room, find [manpage|Manuscript Page: Building The Valhalla Nursing Home|Building The Valhalla Nursing Home]. Try entering Cythia's room. We have to head to the basement.
+
+Go out to the back where Rose is, and fight some Taken. Around to the left is the basement entrance. Down here, follow the path till you see a big furnace with [manpage|Manuscript Page: Barry's Struggles With Artists|Barry's Struggles With Artists]. In an adjacent break room is a fuse box that needs a fuse. Continue on and duck under a board. To the left is [manpage|Manuscript Page: Emmett Taken|Emmett Taken]. Ahead of where you came in is a note saying the fuses are locked up and the code is in the laundry room. Head left of where you came in and duck through an open door.
+
+In front of you is a toolbox with a combination lock. Out in the laundry room, find [manpage|Manuscript Page: Cynthia Corrupted|Cynthia Corrupted] on a table. On the bulletin board it says the code is 273. Return to the toolbox and enter the code. You can unlock a door which is a shortcut back to the boiler room. Put the fuse in and restore power.
+
+If you want to, head back to the laundry room and turn on the projector. Then head back to Cynthia's room and unlock it.
+
+If you're playing on the Final Draft, you can find [manpage|Dark Poem 2] on the floor. On a side table is a heart shaped box with a [clue|Clue|a heart shaped box], and on another table a [clue|Clue]. In the bathroom is [manpage|Manuscript Page: Cynthia And Tor|Cynthia And Tor]. Kill the Taken downstairs and use the jukebox.
+
+\checklist
+
+Enter the Overlap. There are no Manuscript Pages here, so just keep going down the path. Kill a Taken and start a generator, then go back one room and flip a switch. Head through the chain link door.
+
+After a couple loops and dead ends you'll come to a room with another switch and a locked cabinet. Flip the switch, enter the door, then flip another switch, and check a nearby desk drawer for [key|Tool Cabinet Key]. Back in the previous room, turn the light back off and retrieve the Boltcutters from the cabinet. Now turn the light on again and re-enter the next room. Turn the light off and kill the Taken that appears. Then use the boltcutters to unlock the door. Down the ladder, in the third loop, continue till you reach a big flooded room.
+
+In here, do not stay in the water for long! Cynthia is down there and will kill you. Run into the center of the room. Try the panel. Use the platforms to make your way clockwise around the room to an opening. Here, in the outer ring, you need to make your way counterclockwise. In the third opening on the right, activate a generator. Directly across from you on a scaffold is a shortcut back to the center room.
+
+Get ready to fight Cythia, then hit the button. Go down the stairs. Don't worry about the water here, Cynthia is above water. Run around and shoot her with the rifle. She will throw damaging projectiles at you that you need to dodge, and eventually will close and attack you hand-to-hand. Keep your distance and keep shooting.
+
+Profile Tor. This closes the case The Anderson Brothers.
+
+Time for cleanup.
+
+\section{Bright Falls Cleanup}
+
+On the bridge near Tor is [manpage|Manuscript Page: Cynthia's Lamp|Cynthia's Lamp]. Cut the lock on the gate leading southwest. On the northern path find a [lunchbox|Lunch Box|Found in the bunker area near Bright falls (in the woods southwest of the nursing home)] and at the furthest west point, [manpage|Manuscript Page: Rose At Bingo Night|Rose At Bingo Night] and [radio|Terry's Guest Call]. Follow the path south a bit and under a sign with a downward facing arrow pick up the [key|Bunker Woods Stash key]. The corresponding [cultstash|Cult Stash|Found by a forest bunker] is just west of here on a little path, behind a boulder.
+
+Continue south, down the wooden stairs to a cabin, and activate the generator. On the floor of this break room is [manpage|Manuscript Page: Bright Falls|Bright Falls]. To the east, on the north side of the path, find a [cultstash|Cult Stash|Stash found in the woods near Bright Falls].
+
+\begin{spoiler}
+
+Two triangles, vertices facing away from each other left to right, Two adjacent triangles, vertices facing down, Two triangles, vertices facing toward each other like an hourglass.
+
+\end{spoiler}
+
+Inside is a [clue|Clue|Note instructing cultists to take the writer out].
+
+Head east along the main path. Turn onto a small beach to the south (the first beach of two before the Ranger Station) and get [manpage|Manuscript Page: Koskelas Break Into The FBC Lab|Koskelas Break Into The FBC Lab]
+
+Continue east to the Ranger Station. Look on the ground next to the chimney to find [key|Ranger Station Stash Key]. The [cultstash|Cult Stash|Found by the Ranger's Cabin] is on a hill to the west.
+
+Open the Ranger Station using the screwdriver. In a room on the first floor is a [rhyme|Nursery Rhyme|Inside a ranger cabin near Bright Falls].
+
+\begin{spoiler}
+
+Child on house, monster on candy.
+
+\end{spoiler}
+
+The [charm|Coffee Mug Charm] is upstairs on a bed. On a desk downstairs is a [clue|Clue|FBC File listing Test sites in Bright Falls]. At the top of the stairs is a [deerhead|Dear Head|Inside the Ranger Station].
+
+Exit the station and head northeast along the main path. On the shore is a [rhyme|Nursery Rhyme|Near the shoreline in the woods near Bright Falls].
+
+\begin{spoiler}
+
+Pretty, shiny rocks means the child goes on jewelry. Monster on water and mother on boat.
+
+\end{spoiler}
+
+Retrieve the [charm|Valhalla Nursing Home Charm]. Slightly north on a small hill is a [lunchbox|Lunch Box|Near the shore]. From here head north a little ways to the smaller path and slightly west to see a dreamcatcher. Nearby at the top of the hill is a [lunchbox|Lunch Box|Found in the woods near Bright Falls].
+
+Cross a small bridge to the east and notice some dreamcatchers. Head toward them and get [lunchbox|Lunch Box|In the flooded area] and [manpage|Manuscript Page: Rose Receives A Message|Rose Receives A Message]. On a dock is a [rhyme|Nursery Rhyme|At the Bright Falls pier]. Solve the puzzle and fight several Taken.
+
+\begin{spoiler}
+
+Mother on waves, Monster on boat.
+
+\end{spoiler}
+
+Collect the [charm|Anchor Charm] near the start of the other pier. Use the boltcutters to open the gate back into town.
+
+Use the boltcutters to open a door on the pier and enter a small shack to find a [cultstash|Cult Stash|In storage at the Bright Falls pier]. Solve the puzzle.
+
+\begin{spoiler}
+
+The drawing on the top shows that you have to look at the numbers on the nearby buoys. The code is 697.
+
+\end{spoiler}
+
+West of the Oh Deer diner is a gate you can cut with the boltcutters and find another [cultstash|Cult Stash|Behind the Bright Falls Sheriff Station].
+
+\begin{spoiler}
+
+Adjuacent triangles pointing up, facing away left-to-right, stacked pointing up.
+
+\end{spoiler}
+
+Drive to Watery.
+
+\checklist
+
+\section{Watery Cleanup}
+
+In the trailer park, use the boltcutters to open the gate to Trailer 5. Inside is a [rhyme|Nursery Rhyme].
+
+\begin{spoiler}
+
+Wise Elder Doll on the eye and the Deer Doll on the heart.
+
+\end{spoiler}
+
+Collect the [charm|Deerfest Charm] from a nearby table.
+
+Head to the Kavela Knights workshop and use the boltcutters to open a fence to the back. Behind here you'll find a [cultstash|Cult Stash] and several Taken will show up to defend it. Kill them and then solve the puzzle.
+
+\begin{spoiler}
+
+The code is found by counting the spare parts down here. The code is 542.
+
+\end{spoiler}
+
+Drive to Cauldron Lake.
+
+\checklist
+
+\section{Cauldron Lake Cleanup}
+
+Drive back to Cauldron Lake. We want to head north to the Rental Cabins. Cabin 1 is a break room with [manpage|Manuscript Page: Cauldron Lake|Cauldron Lake]. In the bathroom is a [cultstash|Cult Stash] we don't have the key for. Enter Cabin 3 and exit through the back, then duck under a fallen tree. Use the next cabin to pass back through to the front side, and head all the way west, past a broken down truck. Behind a tree with a symbol "2" is the [key|Lake Cabin Stash Key].
+
+Inside Cabin 4 is a [clue|Clue|Note about the style and content of the rhymes] on a desk and a [rhyme|Nursery Rhyme].
+
+\begin{spoiler}
+
+Hero Doll on the jewelry, the Crow Doll on the eye, and the Monster Doll on the egg.
+
+\end{spoiler}
+
+When you exit you will be attacked by a Taken exiting Cabin 6. Kill him and enter there to get a [charm|Coffee Mug Charm]. Open the suitcase to get the [doll|Father Doll] and a clue. There's also a [deerhead|Dear Head|In Rental Cabin 6] in here. Enter Cabin 2 from the back to find the final [lunchbox|Lunch Box|At the Cauldron Lake Cabins]. This should close the Alex Casey Lunchboxes case.
+
+Go to Witchfinder Station and enter the cabin. You'll hear a rhyme being read out loud.
+
+\begin{ul}
+\item On our Hero, the faraway Father still kept an eye,
+\item And told her not to stand out in the light too bright
+\item While the loving Mother and her Hatchling only tried to survive
+\item When a tricky Witch opened a way into the dark lake,
+\item Our Hero, against all caution, did a bold step take,
+\item Away from the Sun which would make, her Blind to all that she could see.
+\end{ul}
+
+Solve the puzzle by walking around the house and finding the places to put dolls.
+
+\begin{spoiler}
+
+Father on eye, Hero on sun, Mother on heart, Child on egg, Trickster on waves.
+
+\end{spoiler}
+
+Take the Charm Expansion. This closes the Nursery Rhymes case.
 
 \checklist
 
