@@ -3,41 +3,41 @@ from enum import Enum
 import re
 
 
-class PartType(Enum):
+class ParagraphChildType(Enum):
     NONE = 0
     TEXT = 1
     CHECK_ITEM = 2
 
 
-class DocumentItem:
-    part_type: PartType
+class ParagraphChild:
+    part_type: ParagraphChildType
 
 
-class TextDocumentItem(DocumentItem):
+class TextParagraphChild(ParagraphChild):
     def __init__(self, s: str) -> None:
         self.s = s
-        self.part_type = PartType.TEXT
+        self.part_type = ParagraphChildType.TEXT
 
     def __repr__(self) -> str:
         return f"Text ({self.s})"
 
 
-class ChecklistDocumentItem(DocumentItem):
+class ChecklistParagraphChild(ParagraphChild):
     def __init__(self, content: str, list_content: str, tag_name: str) -> None:
         self.content = content
         self.list_content = list_content
         self.tag_name = tag_name
-        self.part_type = PartType.CHECK_ITEM
+        self.part_type = ParagraphChildType.CHECK_ITEM
 
     def __repr__(self) -> str:
         return f"Checklist ({self.content})"
 
 
-class LineItem:
+class DocumentItem:
     pass
 
 
-class SectionHeadingItem(LineItem):
+class SectionHeading(DocumentItem):
     def __init__(self, title: str) -> None:
         self.title = title
 
@@ -45,14 +45,17 @@ class SectionHeadingItem(LineItem):
         return f"Section Header (title = {self.title})"
 
 
-class RegularLineItem(LineItem):
-    items: list[DocumentItem]
+class Paragraph(DocumentItem):
+    items: list[ParagraphChild]
 
     def __init__(self) -> None:
         self.items = []
 
+    def __repr__(self) -> str:
+        return f"Paragraph (content = {self.items})"
 
-class ULLineItem(LineItem):
+
+class UnnumberedList(DocumentItem):
     items: list[str]
 
     def __init__(self) -> None:
@@ -62,8 +65,8 @@ class ULLineItem(LineItem):
         return f"Unnumbered list: [{', '.join(self.items)}]"
 
 
-class SpoilerLineItem(LineItem):
-    items: list[TextDocumentItem]
+class Spoiler(DocumentItem):
+    items: list[TextParagraphChild]
 
     def __init__(self) -> None:
         self.items = []
@@ -73,12 +76,12 @@ class SpoilerLineItem(LineItem):
 
 
 class ChecklistSection:
-    items: list[RegularLineItem]
+    items: list[DocumentItem]
 
     def __init__(self) -> None:
         self.items = []
 
-    def append(self, item):
+    def append_line_item(self, item: DocumentItem):
         self.items.append(item)
 
 
@@ -117,9 +120,6 @@ class WalkthroughParser:
     def parse(self) -> WalkthroughDocument:
         doc = WalkthroughDocument()
         self.lines = self.input_text.split("\n")
-        checklist_counters: dict[str, int] = {}
-        checklist_items: dict[str, list[ChecklistItem]] = {}
-        store_lines = []
         while self.line_no < len(self.lines):
             line = self.lines[self.line_no]
             self.line_no += 1
@@ -144,8 +144,8 @@ class WalkthroughParser:
                 if section_title is None:
                     print(f"Invalid section on line {self.line_no}")
                 else:
-                    item = SectionHeadingItem(section_title)
-                    doc.checklist_sections[-1].append(item)
+                    item = SectionHeading(section_title)
+                    doc.checklist_sections[-1].append_line_item(item)
                 continue
             if line.startswith(R"\declare"):
                 decl = self.parse_declaration(line)
@@ -157,26 +157,26 @@ class WalkthroughParser:
                 continue
             if line.startswith(R"\begin{ul}"):
                 ul = self.read_ul()
-                doc.checklist_sections[-1].append(ul)
+                doc.checklist_sections[-1].append_line_item(ul)
                 continue
             if line.startswith(R"\begin{spoiler}"):
                 spoiler = self.read_spoiler()
                 if spoiler is not None:
-                    doc.checklist_sections[-1].append(spoiler)
+                    doc.checklist_sections[-1].append_line_item(spoiler)
                 continue
             # parse a normal line item
             p = self.parse_line(line)
             if p is not None:
-                doc.checklist_sections[-1].append(p)
+                doc.checklist_sections[-1].append_line_item(p)
         return doc
 
-    def read_spoiler(self) -> SpoilerLineItem | None:
-        item = SpoilerLineItem()
+    def read_spoiler(self) -> Spoiler | None:
+        item = Spoiler()
         line = self.lines[self.line_no]
         started = self.line_no
         while not line.startswith(R"\end{spoiler}"):
             if line.strip() != "":
-                item.items.append(TextDocumentItem(line))
+                item.items.append(TextParagraphChild(line))
             self.line_no += 1
             if self.line_no == len(self.lines):
                 print(
@@ -187,8 +187,8 @@ class WalkthroughParser:
         self.line_no += 1  # skip past the ending tag
         return item
 
-    def read_ul(self) -> ULLineItem:
-        item = ULLineItem()
+    def read_ul(self) -> UnnumberedList:
+        item = UnnumberedList()
         line = self.lines[self.line_no]
         while not line.startswith(R"\end{ul}"):
             if not line.strip().startswith(R"\item"):
@@ -214,13 +214,13 @@ class WalkthroughParser:
             parts.append(name)
         return Declaration(*parts)
 
-    def parse_line(self, line: str) -> list[DocumentItem] | None:
-        parts: list[DocumentItem] = []
+    def parse_line(self, line: str) -> Paragraph | None:
+        ret = Paragraph()
         line = line.strip()
         remainder = line
         while "[" in remainder:
             part, remainder = remainder.split("[", maxsplit=1)
-            parts.append(TextDocumentItem(part.strip()))
+            ret.items.append(TextParagraphChild(part.strip()))
             if "]" not in remainder:
                 print(f"Unclosed checklist item on line {self.line_no}")
                 return None
@@ -234,13 +234,13 @@ class WalkthroughParser:
             if remainder.startswith("."):
                 lp.content += "."
                 remainder = remainder[1:]
-            parts.append(lp)
+            ret.items.append(lp)
         remainder = remainder.strip()
         if remainder != "":
-            parts.append(TextDocumentItem(remainder.strip()))
-        return parts
+            ret.items.append(TextParagraphChild(remainder.strip()))
+        return ret
 
-    def parse_checklist_item(self, s: str) -> ChecklistDocumentItem | None:
+    def parse_checklist_item(self, s: str) -> ChecklistParagraphChild | None:
         if "|" not in s:
             print(f"Invalid collectible {s} on line {self.line_no}")
             return None
@@ -253,7 +253,7 @@ class WalkthroughParser:
         else:
             list_content = content
 
-        return ChecklistDocumentItem(content, list_content, tag_name)
+        return ChecklistParagraphChild(content, list_content, tag_name)
 
 
 def read_between_braces(line: str) -> str | None:
