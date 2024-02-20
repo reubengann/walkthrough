@@ -5,9 +5,8 @@ import sys
 import time
 from watchfiles import Change, watch
 
-from src.compose_html import make_html_from_lines
 from src.parse_document import parse_document
-from src.compose_html_2 import make_html_from_doc as make_html_2
+from src.compose_html import make_html_from_doc
 
 
 def main() -> int:
@@ -23,8 +22,6 @@ def main() -> int:
     watch_p = subp.add_parser("watch", help="Compile walkthrough with watching")
     watch_p.add_argument("infile")
     watch_p.add_argument("-o", "--outfile")
-    parse_p = subp.add_parser("parse", help="Parse walkthrough")
-    parse_p.add_argument("infile")
     args = parser.parse_args()
     match args.subparser_name:
         case "compile":
@@ -37,8 +34,8 @@ def main() -> int:
             else:
                 outfile = infile.parent / f"{infile.stem}.html"
             print(f"Compiling {infile} to {outfile}")
-
-            outfile.write_text(make_html_from_lines(infile.read_text()))
+            doc = parse_document(infile.read_text())
+            outfile.write_text(make_html_from_doc(doc))
             return 0
         case "watch":
             infile = Path(args.infile)
@@ -49,25 +46,18 @@ def main() -> int:
                 outfile = Path(args.outfile)
             else:
                 outfile = infile.parent / f"{infile.stem}.html"
-            outfile.write_text(make_html_from_lines(infile.read_text()))
+            doc = parse_document(infile.read_text())
+            outfile.write_text(make_html_from_doc(doc))
             print(f"Watching {infile}. Press Ctrl+C to stop.")
             try:
                 for changes in watch(infile.parent):
                     for change, file in changes:
                         if Path(file) == infile.resolve() and change == Change.modified:
                             print(f"[{datetime.now()}] Recompiling.")
-                            outfile.write_text(make_html_from_lines(infile.read_text()))
+                            doc = parse_document(infile.read_text())
+                            outfile.write_text(make_html_from_doc(doc))
             except KeyboardInterrupt:
                 pass
-            return 0
-        case "parse":
-            infile = Path(args.infile)
-            if not infile.exists():
-                print(f"Cannot find file {infile}")
-                return 1
-            doc = parse_document(infile.read_text())
-            outfile = infile.parent / f"{infile.stem}_2343.html"
-            outfile.write_text(make_html_2(doc))
             return 0
         case _:
             parser.print_help()
