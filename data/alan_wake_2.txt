@@ -685,3 +685,56 @@ Take the Charm Expansion. This closes the Nursery Rhymes case.
 
 \checklist
 
+All done with cleanup. Switch back to Alan. 
+
+\section{Initiation 6: Return}
+
+Enter Parliament Tower and go up the elevator. Open the door and to the right find [television|Television: Part 2-1|Part 2-1]. Continue this way and open another door to see [television|Television: Part 2-2|Part 2-2]. In a nearby hallway is [television|Television: Part 2-3|Part 2-3], and at the end, [television|Television: Part 2-4|Part 2-4]. Enter this TV to continue. Use the typewriter.
+
+\checklist
+
+\section{Initiation 7: Masks}
+
+Use the TV. Head to the cafeteria and talk to Ahti. Take the path behind him and use the light to reopen way downstairs. Inside the flooded basement, make your way through to a red room with mannequins, and use the light. Take the photos from the shoebox. Head back up and run around to the TV we used last time. Activating it will get you [television|Television: Drowning|Drowning].
+
+Walk toward the Hotel. On the way, align the orbs to get an [echo|Echo|Thomas Zane]. Head up the elevator and use the projector. On the way our you'll get [television|Television: Collaboration|Collaboration].
+
+\section{Initiation 8: Zane's Film}
+
+Head toward the car wash and burn away the 3 dark orbs. Inside the garage, go under the sliding door. Turn left, and on this side of the building, under an arch, find [wopow|Word of Aid|Word of Aid Outside the cinema, to the east, near a ladder. It's near an arch]. Climb up a nearby ladder and look up at the sign to align orbs for [echo|Echo: Murder Case|Murder Case].
+
+Back on the ground, across the street from this, behind a chain link fence, you can look in the window and see a dark orb. Burn it away, then on the street side burn away 3 more in the same room. Duck back under the shutter and enter the door to find a [breaker|Breaker Room] with a [map|Dark Place collectible map].
+
+Enter the cinema, behind the concession stand is the [map|Poet's Cinema Map]. Enter a break room west of here and see [television|Television: Stop writing|Stop writing]. On the second floor go all the way west and pick up the [wopow|Word of Fix|Word of Fix above the concession stand]. Align the orbs up here and get the Cult of the Word thread.
+
+Go back into the kitchen area and use this on the Lobby scene. Align the orbs to get the New York's Finest thread. Use this on the Lobby scene.
+
+East of the concession stand, enter the Ladies Room and find a [wopow|Word of Action|Word of Action In the storage room behind the Ladies Room] in a small storage room behind it. Head south into the theater. Up on the stage you can align the orbs to see an [echo|Echo|Zane's Films]. Use the Cult of the Word clip here and head up the stairs where it says Emergency Exit. Here you can find the Clip of the Lost Film thread.
+
+Kill the Taken and then use this new thread on the Theater Hall scene. Put the light into the screen and a door will open on the east. Take it to go back outside.
+
+Drop down here and you'll find the Out in the Night scene. Use the break room on the right if you want. Use the New York's Finest thread here and align the orbs to see an [echo|Echo|Police initiation].
+
+We need to get to the red door behind the dumpster. Take the light out of the car, and then stand in front of where the door is and put it back. Go up the stairs and then a ladder. Head to the north section of the rooftops and look on a building near the spotlights to see [wopow|Word of Stuff|Below a low window on the roof] below a low window.
+
+Go south through a gate. Turn left and swing around an AC unit to see a few steps leading down. Duck under the walkway. Follow this path around until you find the final [breaker|Breaker Room|On the Poet's Cinema Roof] and the [map|Poet's Cinema Collectible Map]. Leave the other way, unlocking a door. As you exit, look up at the water tower to collect [wopow|Word of Lamp|Word of Lamp on a water tower on the roof].
+
+Go right, past a break room, and down a ladder. Here use the Cult of the Word thread. Align the orbs to get the Grandmaster story thread.
+
+You might want to save and prepare, as there are several enemies we need to night to get back. On your way back to the ladder there will be 4 enemies. Go down the ladder and put New York's Finest thread back in. Down here are 6 more enemies. You can elect to just run up the stairs behind them rather than fight. Either way, go through the door at the top of the stairs, back into the theater.
+
+Go to the screen and use the Grandmaster thread. Head onto the stage and enter the door on the screen.
+
+Continue walking and take the only path available. On the third loop, make sure to go through the exit door on the north wall and see the [television|Television: Initiation|Initiation] before leaving through the Projection Booth door. Go through and take the knife. Walk down the hall and align the orbs. When you get to a dead end, turn around, then duck under some shelves. Take the mask.
+
+Watch the movie here in the theater if you want, and then exit the theater. As you pass by you'll get [television|Television: Part 1|Part 1]. In the lobby there's an [echo|Echo] you can view. Remove the scene to reveal the exit. On the street is an [echo|Echo|Worst Case] you can align. Go to the square.
+
+On the west side of the plaza, answer the phone. Interact with the shoebox under the statue in the middle of the square.
+
+\checklist
+
+Back as Saga, head to the Bright Falls Sheriff Station.
+
+\section{Return 6: Scratch}
+
+Talk to Estevez in a closet on the left. Kill the Taken in here, then speak with her to get [key|Sheriff's Station Keys].
