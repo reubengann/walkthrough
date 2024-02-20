@@ -1,9 +1,36 @@
 from dataclasses import dataclass
+from enum import Enum
 import re
 
 
+class PartType(Enum):
+    NONE = 0
+    TEXT = 1
+    CHECK_ITEM = 2
+
+
 class DocumentItem:
-    pass
+    part_type: PartType
+
+
+class TextDocumentItem(DocumentItem):
+    def __init__(self, s: str) -> None:
+        self.s = s
+        self.part_type = PartType.TEXT
+
+    def __repr__(self) -> str:
+        return f"Text ({self.s})"
+
+
+class ChecklistDocumentItem(DocumentItem):
+    def __init__(self, content: str, list_content: str, tag_name: str) -> None:
+        self.content = content
+        self.list_content = list_content
+        self.tag_name = tag_name
+        self.part_type = PartType.CHECK_ITEM
+
+    def __repr__(self) -> str:
+        return f"Checklist ({self.content})"
 
 
 class LineItem:
@@ -36,13 +63,13 @@ class ULLineItem(LineItem):
 
 
 class SpoilerLineItem(LineItem):
-    items: list[str]
+    items: list[TextDocumentItem]
 
     def __init__(self) -> None:
         self.items = []
 
     def __repr__(self) -> str:
-        return f"Unnumbered list: [{', '.join(self.items)}]"
+        return f"Spoiler: [{', '.join(str(i) for i in self.items)}]"
 
 
 class ChecklistSection:
@@ -85,18 +112,14 @@ class WalkthroughParser:
     def __init__(self, doc: str) -> None:
         self.input_text = doc
         self.line_no = 0
+        self.decl_map: dict[str, Declaration] = {}
 
     def parse(self) -> WalkthroughDocument:
         doc = WalkthroughDocument()
         self.lines = self.input_text.split("\n")
-        decl_map: dict[str, Declaration] = {}
         checklist_counters: dict[str, int] = {}
         checklist_items: dict[str, list[ChecklistItem]] = {}
         store_lines = []
-        reading_ul = False
-        ul_element = None
-        reading_spoiler = False
-        spoiler_element = None
         while self.line_no < len(self.lines):
             line = self.lines[self.line_no]
             self.line_no += 1
@@ -127,7 +150,7 @@ class WalkthroughParser:
             if line.startswith(R"\declare"):
                 decl = self.parse_declaration(line)
                 if decl is not None:
-                    decl_map[decl.name] = decl
+                    self.decl_map[decl.name] = decl
                 continue
             if line.startswith(R"\checklist"):
                 doc.start_new_checklist_section()
@@ -141,6 +164,10 @@ class WalkthroughParser:
                 if spoiler is not None:
                     doc.checklist_sections[-1].append(spoiler)
                 continue
+            # parse a normal line item
+            p = self.parse_line(line)
+            if p is not None:
+                doc.checklist_sections[-1].append(p)
         return doc
 
     def read_spoiler(self) -> SpoilerLineItem | None:
@@ -149,7 +176,7 @@ class WalkthroughParser:
         started = self.line_no
         while not line.startswith(R"\end{spoiler}"):
             if line.strip() != "":
-                item.items.append(line)
+                item.items.append(TextDocumentItem(line))
             self.line_no += 1
             if self.line_no == len(self.lines):
                 print(
@@ -157,6 +184,7 @@ class WalkthroughParser:
                 )
                 return None
             line = self.lines[self.line_no]
+        self.line_no += 1  # skip past the ending tag
         return item
 
     def read_ul(self) -> ULLineItem:
@@ -185,6 +213,47 @@ class WalkthroughParser:
             name, remainder = remainder.split("}", 1)
             parts.append(name)
         return Declaration(*parts)
+
+    def parse_line(self, line: str) -> list[DocumentItem] | None:
+        parts: list[DocumentItem] = []
+        line = line.strip()
+        remainder = line
+        while "[" in remainder:
+            part, remainder = remainder.split("[", maxsplit=1)
+            parts.append(TextDocumentItem(part.strip()))
+            if "]" not in remainder:
+                print(f"Unclosed checklist item on line {self.line_no}")
+                return None
+            part, remainder = remainder.split("]", maxsplit=1)
+            lp = self.parse_checklist_item(part)
+            if lp is None:
+                return None
+            if lp.tag_name not in self.decl_map:
+                print(f"Unknown tag type {lp.tag_name} on line {self.line_no}")
+                return None
+            if remainder.startswith("."):
+                lp.content += "."
+                remainder = remainder[1:]
+            parts.append(lp)
+        remainder = remainder.strip()
+        if remainder != "":
+            parts.append(TextDocumentItem(remainder.strip()))
+        return parts
+
+    def parse_checklist_item(self, s: str) -> ChecklistDocumentItem | None:
+        if "|" not in s:
+            print(f"Invalid collectible {s} on line {self.line_no}")
+            return None
+        tag_name, content = s.split("|", 1)
+        tag_name = tag_name.strip()
+        content = content.strip()
+        list_content = None
+        if "|" in content:
+            content, list_content = content.split("|", 1)
+        else:
+            list_content = content
+
+        return ChecklistDocumentItem(content, list_content, tag_name)
 
 
 def read_between_braces(line: str) -> str | None:
