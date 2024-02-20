@@ -23,23 +23,32 @@ class TextParagraphChild(ParagraphChild):
 
 
 class ChecklistParagraphChild(ParagraphChild):
-    def __init__(self, content: str, list_content: str, tag_name: str) -> None:
+    def __init__(self, content: str, list_content: str, tag_name: str, item_id) -> None:
         self.content = content
         self.list_content = list_content
         self.tag_name = tag_name
         self.part_type = ParagraphChildType.CHECK_ITEM
+        self.item_id = item_id
 
     def __repr__(self) -> str:
         return f"Checklist ({self.content})"
 
 
+class DocumentItemType(Enum):
+    SECTIONHEADING = 1
+    PARAGRAPH = 2
+    UNNUMBEREDLIST = 3
+    SPOILER = 4
+
+
 class DocumentItem:
-    pass
+    item_type: DocumentItemType
 
 
 class SectionHeading(DocumentItem):
     def __init__(self, title: str) -> None:
         self.title = title
+        self.item_type = DocumentItemType.SECTIONHEADING
 
     def __repr__(self) -> str:
         return f"Section Header (title = {self.title})"
@@ -49,6 +58,7 @@ class Paragraph(DocumentItem):
     items: list[ParagraphChild]
 
     def __init__(self) -> None:
+        self.item_type = DocumentItemType.PARAGRAPH
         self.items = []
 
     def __repr__(self) -> str:
@@ -60,6 +70,7 @@ class UnnumberedList(DocumentItem):
 
     def __init__(self) -> None:
         self.items = []
+        self.item_type = DocumentItemType.UNNUMBEREDLIST
 
     def __repr__(self) -> str:
         return f"Unnumbered list: [{', '.join(self.items)}]"
@@ -70,6 +81,7 @@ class Spoiler(DocumentItem):
 
     def __init__(self) -> None:
         self.items = []
+        self.item_type = DocumentItemType.SPOILER
 
     def __repr__(self) -> str:
         return f"Spoiler: [{', '.join(str(i) for i in self.items)}]"
@@ -90,6 +102,7 @@ class WalkthroughDocument:
         self.version = "1"
         self.title = "no title"
         self.checklist_sections = [ChecklistSection()]
+        self.decl_map: dict[str, Declaration] = {}
 
     def start_new_checklist_section(self):
         self.checklist_sections.append(ChecklistSection())
@@ -102,12 +115,6 @@ class Declaration:
     plural: str
 
 
-@dataclass
-class ChecklistItem:
-    content: str
-    item_id: str
-
-
 class WalkthroughParser:
 
     lines: list[str]
@@ -115,7 +122,7 @@ class WalkthroughParser:
     def __init__(self, doc: str) -> None:
         self.input_text = doc
         self.line_no = 0
-        self.decl_map: dict[str, Declaration] = {}
+        self.checklist_counters: dict[str, int] = {}
 
     def parse(self) -> WalkthroughDocument:
         doc = WalkthroughDocument()
@@ -150,7 +157,7 @@ class WalkthroughParser:
             if line.startswith(R"\declare"):
                 decl = self.parse_declaration(line)
                 if decl is not None:
-                    self.decl_map[decl.name] = decl
+                    doc.decl_map[decl.name] = decl
                 continue
             if line.startswith(R"\checklist"):
                 doc.start_new_checklist_section()
@@ -165,7 +172,7 @@ class WalkthroughParser:
                     doc.checklist_sections[-1].append_line_item(spoiler)
                 continue
             # parse a normal line item
-            p = self.parse_line(line)
+            p = self.parse_line(line, doc.decl_map)
             if p is not None:
                 doc.checklist_sections[-1].append_line_item(p)
         return doc
@@ -197,6 +204,7 @@ class WalkthroughParser:
                 item.items.append(line.split(R"\item")[1])
             self.line_no += 1
             line = self.lines[self.line_no]
+        self.line_no += 1  # skip past the ending tag
         return item
 
     def parse_declaration(self, line: str) -> Declaration | None:
@@ -214,7 +222,9 @@ class WalkthroughParser:
             parts.append(name)
         return Declaration(*parts)
 
-    def parse_line(self, line: str) -> Paragraph | None:
+    def parse_line(
+        self, line: str, decl_map: dict[str, Declaration]
+    ) -> Paragraph | None:
         ret = Paragraph()
         line = line.strip()
         remainder = line
@@ -228,7 +238,7 @@ class WalkthroughParser:
             lp = self.parse_checklist_item(part)
             if lp is None:
                 return None
-            if lp.tag_name not in self.decl_map:
+            if lp.tag_name not in decl_map:
                 print(f"Unknown tag type {lp.tag_name} on line {self.line_no}")
                 return None
             if remainder.startswith("."):
@@ -252,8 +262,10 @@ class WalkthroughParser:
             content, list_content = content.split("|", 1)
         else:
             list_content = content
-
-        return ChecklistParagraphChild(content, list_content, tag_name)
+        count = self.checklist_counters.setdefault(tag_name, 0) + 1
+        this_id = f"{tag_name}{count}"
+        self.checklist_counters[tag_name] += 1
+        return ChecklistParagraphChild(content, list_content, tag_name, this_id)
 
 
 def read_between_braces(line: str) -> str | None:
@@ -264,14 +276,15 @@ def read_between_braces(line: str) -> str | None:
     return None
 
 
-def parse_document(input_text: str):
+def parse_document(input_text: str) -> WalkthroughDocument:
     p = WalkthroughParser(input_text)
     doc = p.parse()
-    print(doc.version)
-    print(doc.title)
-    i = 0
-    for check_sec in doc.checklist_sections:
-        i += 1
-        print(f"---checklist section {i}---")
-        for x in check_sec.items:
-            print(x)
+    # print(doc.version)
+    # print(doc.title)
+    # i = 0
+    # for check_sec in doc.checklist_sections:
+    #     i += 1
+    #     print(f"---checklist section {i}---")
+    #     for x in check_sec.items:
+    #         print(x)
+    return doc

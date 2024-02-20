@@ -7,6 +7,7 @@ from watchfiles import Change, watch
 
 from src.compose_html import make_html_from_lines
 from src.parse_document import parse_document
+from src.compose_html_2 import make_html_from_doc as make_html_2
 
 
 def main() -> int:
@@ -64,7 +65,9 @@ def main() -> int:
             if not infile.exists():
                 print(f"Cannot find file {infile}")
                 return 1
-            parse_document(infile.read_text())
+            doc = parse_document(infile.read_text())
+            outfile = infile.parent / f"{infile.stem}_2343.html"
+            outfile.write_text(make_html_2(doc))
             return 0
         case _:
             parser.print_help()

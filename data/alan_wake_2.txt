@@ -739,7 +739,7 @@ Back as Saga, head to the Bright Falls Sheriff Station.
 
 Talk to Estevez in a closet on the left. Kill the Taken in here, then speak with her to get [key|Sheriff's Station Keys]. Use this key on Tim Breaker's office and get a [clue|Clue|FBC file linking cult activity to Wake].
 
-Head downstairs. On the right, open a gate using the boltcutters and find the final [cult stash|Cult Stash|Inside the Bright Falls station] of the game. This closes the Cult Stashes case.
+Head downstairs. On the right, open a gate using the boltcutters and find the final [cultstash|Cult Stash|Inside the Bright Falls station] of the game. This closes the Cult Stashes case.
 
 \begin{spoiler}
 
