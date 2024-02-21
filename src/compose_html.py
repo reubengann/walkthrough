@@ -140,6 +140,12 @@ def make_html_from_doc(doc: WalkthroughDocument) -> str:
                                 ).append(citem)
                     main_container.append(element)
         # Append checklist
+        section_header = html.new_tag(
+            "h3",
+            attrs={"class": "text-base font-semibold leading-6 mb-2 mt-6 text-xl"},
+        )
+        section_header.append("Checklist")
+        main_container.append(section_header)
         checklist_container = make_checklist_container(doc, html, checklist_items)
         main_container.append(checklist_container)
         all_checklist_items.append((csec.name, dict(checklist_items)))
@@ -151,14 +157,29 @@ def make_html_from_doc(doc: WalkthroughDocument) -> str:
     main_container.append(all_checklist_h2)
 
     for checklist_item_section_name, foo_checklist_items in all_checklist_items:
+        if len(foo_checklist_items.keys()) == 0:
+            continue
         section_header = html.new_tag(
             "h3",
-            attrs={"class": "text-base font-semibold leading-6 mb-2"},
+            attrs={"class": "text-base font-semibold leading-6 mb-2 mt-6 text-xl"},
         )
         section_header.append(checklist_item_section_name)
         main_container.append(section_header)
         checklist_container = make_checklist_container(doc, html, foo_checklist_items)
         main_container.append(checklist_container)
+    all_checklist_h2 = html.new_tag(
+        "h2", attrs={"class": "mt-8 text-2xl font-bold tracking-tight"}
+    )
+    all_checklist_h2.string = "All collectibles by type"
+    main_container.append(all_checklist_h2)
+
+    all_collectibles_by_type = get_collectibles_by_type(all_checklist_items)
+    for item_type, items_of_that_type in all_collectibles_by_type.items():
+        main_container.append(
+            make_rollup_checklist_container(
+                html, doc.decl_map[item_type].plural, items_of_that_type
+            )
+        )
 
     store_script = html.new_tag("script")
     store_script_text = """tailwind.config = {
@@ -204,7 +225,25 @@ def make_html_from_doc(doc: WalkthroughDocument) -> str:
     return str(html).replace("val =&gt; localStorage", "val => localStorage")
 
 
-def make_checklist_container(doc, html, checklist_items):
+def get_collectibles_by_type(
+    all_checklist_items: list[tuple[str, dict[str, list[ChecklistItem]]]]
+) -> dict[str, list[tuple[str, ChecklistItem]]]:
+    all_collectibles_by_type: dict[str, list[tuple[str, ChecklistItem]]] = {}
+    for checklist_item_section_name, foo_checklist_items in all_checklist_items:
+        for item_type, item_list in foo_checklist_items.items():
+            for item in item_list:
+                all_collectibles_by_type.setdefault(item_type, []).append(
+                    (checklist_item_section_name, item)
+                )
+
+    return all_collectibles_by_type
+
+
+def make_checklist_container(
+    doc: WalkthroughDocument,
+    html: BeautifulSoup,
+    checklist_items: dict[str, list[ChecklistItem]],
+):
     checklist_container = html.new_tag("div")
     checklist_ul = html.new_tag("ul")
     checklist_ul.attrs["class"] = "mt-8 space-y-8"
@@ -234,6 +273,41 @@ def make_checklist_container(doc, html, checklist_items):
             section_ul.append(item_li)
         section_ol.append(section_ul)
         checklist_ul.append(section_ol)
+    checklist_container.append(checklist_ul)
+    return checklist_container
+
+
+def make_rollup_checklist_container(
+    html: BeautifulSoup,
+    item_name_plural: str,
+    checklist_items: list[tuple[str, ChecklistItem]],
+):
+    checklist_container = html.new_tag("div")
+    checklist_ul = html.new_tag("ul", attrs={"class": "mt-8 space-y-8"})
+    section_ol = html.new_tag("li")
+    section_header = html.new_tag(
+        "h3",
+        attrs={"class": "text-base font-semibold leading-6 mb-2"},
+    )
+    section_header.append(f"{item_name_plural} (")
+    section_header.append(
+        html.new_tag(
+            "span",
+            attrs={
+                "x-text": f"[{','.join([t[1].item_id for t in checklist_items])}].filter(Boolean).length"
+            },
+        )
+    )
+    section_header.append(f"/{len(checklist_items)})")
+    section_ol.append(section_header)
+    section_ul = html.new_tag("ul")
+
+    for prefix, ci in checklist_items:
+        item_li = html.new_tag("li")
+        item_li.append(make_checklist_tag(html, f"{prefix}: {ci.content}", ci.item_id))
+        section_ul.append(item_li)
+    section_ol.append(section_ul)
+    checklist_ul.append(section_ol)
     checklist_container.append(checklist_ul)
     return checklist_container
 

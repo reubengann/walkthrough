@@ -69,7 +69,7 @@ Afterward, talk to Casey, then pick up [manpage|Manuscript Page: Saga Pursues Ni
 
 Across the street, find [radio|Radio: Donna's Jerky review|Donna's Jerky review] playing outside a hardware store. On Coal St find a [settersign|Setter Sign|On Coal St]. Once you're ready, head to the car and drive back to Cauldron Lake.
 
-\checklist
+\checklist{Bright Falls 1}
 
 \section{Return 2: Cauldron Lake}
 
@@ -87,7 +87,7 @@ Look behind the cash register to find lotto numbers and a notepad. If you look a
 
 You can now pick up [weapon|Shotgun]. Save your game if you want, then head back to Witch's Ladle. Here you'll be attacked by two Taken. After handling them, put the heart into the hole in the sign, and enter the Overlap.
 
-\checklist
+\checklist{Cauldron Lake 2}
 
 \section{Return 2: Overlap}
 
@@ -95,7 +95,7 @@ Head forward until you walk into a tree and loop back around. Turning right, you
 
 Continue until Saga passes through a narrow gap in rock. When Nightingale attacks, hit him with your flashlight and unload into him with your shotgun. After you hurt him, you need to turn around and run away from a tornado. Now you need to continue walking and shooting him until he dies. Keep a look out for supplies on the ground if you need them.
 
-\checklist
+\checklist{Cauldron Lake Overlap}
 
 \section{Return 2: Cauldron Lake}
 
@@ -147,7 +147,7 @@ The [charm|Hammer Charm] is on the table.
 
 That's it for this segment. Head back to the car and drive to Bright Falls.
 
-\checklist
+\checklist{Cauldron Lake 3}
 
 \section{Initiation 1: Backstage}
 
@@ -165,7 +165,7 @@ For a hallway nearby that says it goes to the stage and take the [map|Map: Talk 
 
 Use the lamp to take the light overhead, and go down the newly revealed path. Near a chain-link fence, put the light into the bulb, which will open a new way. Go through the fence and take the light again. Open the door and go up on flight of stairs. Head around this hallway, open a two doors in succession and find a TV. Put the light in the TV. You can now save your game.
 
-\checklist
+\checklist{Dark Place 1}
 
 \section{Initiation 2: Caldera Street}
 
@@ -193,7 +193,7 @@ Back down the ladder and through the door to back to street level. To the west i
 
 Look around for more supplies if you want, then grab the light you put into the stairway. Use the lights to enter the subway, then use your ticket.
 
-\checklist
+\checklist{Dark Place 2}
 
 \section{Initiation 2: Subway}
 
@@ -219,7 +219,7 @@ While heading back east, look for a lit car in the center of the station, which 
 
 We're about to leave, so make sure you got everything.
 
-\checklist
+\checklist{Subway}
 
 You might want to save your game here. Then head back to Collapsed Tunnel scene and use the Summoning thread on it. You now need to run back to the break room. Once the Dark Presence disappears, return to the tunnel and head through.
 
@@ -233,7 +233,7 @@ On the right side of the plaza the same phone will be ringing, so go pick it up.
 
 Use the memory card in the kitchen on the projector in the living room to get [television|Television: Part 1|Part 1]. Then interact with the screen.
 
-\checklist
+\checklist{Dark Place 3}
 
 \section{Return 2: The Heart}
 
@@ -243,7 +243,7 @@ Head into the lobby. On the TV will be playing [television|Television: Coffee Wo
 
 Head to the Oh Deer and look at the [television|Television: Ahma Beer|Ahma Beer] on the wall. Use the car to head to Watery.
 
-\checklist
+\checklist{Bright Falls 2}
 
 \section{Local Girl}
 
@@ -301,7 +301,7 @@ Back at the lighthouse, head west to get [radio|Radio: Jim's Mayoral Candidacy|J
 
 Time to head to the trailer park.
 
-\checklist
+\checklist{Watery 1}
 
 Head down the hill to the break room with a [settersign|Setter Sign|In front of the trailer park] in front of it. Then enter the park.
 
@@ -327,7 +327,7 @@ We need to collect several objects to proceed:
 
 Make sure to take [manpage|Manuscript Page: Deputies Corrupted|Deputies Corrupted] on the ground exiting the Espresso Express after getting the Circuit Board. 
 
-\checklist
+\checklist{Watery 2}
 
 Once you have all the items, place them in the float to open the Overlap.
 
@@ -341,7 +341,7 @@ Continue on the only path for a boss fight. Try not to shoot the enemies any mor
 
 This closes the "Trail of the Cult" case.
 
-\checklist
+\checklist{Watery Overlap}
 
 \section{Watery}
 
@@ -408,7 +408,7 @@ Pick up the [charm|Coffee Mug Charm] from the porch.
 
 That's it for items. Use the janitor room to switch to Alan.
 
-\checklist
+\checklist{Watery 3}
 
 \section{Initiation 4: We Sing}
 
@@ -426,7 +426,7 @@ Head north back to the Vision Shop again to see [television|Television: The Dark
 
 Try entering the Oceanview Hotel. When you end up outside, turn right to see a huge neon arrow. Follow it, and head down the alley toward the Mirror Peak bar entrance. There will be a scene.
 
-\checklist
+\checklist{Dark Place Backstage}
 
 \section{Initiation 5: Room 665}
 
@@ -440,7 +440,7 @@ We need a code to enter. Head to a nearby rooftop bar and put the light in throu
 
 Enter the code 2550 into the door to proceed. Use the key, turn on the projector, and interact with the picture.
 
-\checklist
+\checklist{Dark Place 4}
 
 Walk to a balcony off the hall and align the orbs. Go down the elevator. Here you'll find the Entrance Hall scene and align the orbs to get the Pre-Show Ritual story thread. Run around the nearby hallway to find the [map|Oceanview Hotel Map] from the wall and find the Final Scene.
 
@@ -468,7 +468,7 @@ Back on the first floor, put the Climax thread on the Final Scene. Walk ahead an
 
 Exit the hotel. Straight ahead is [echo|an echo|Right outside the hotel]. Use the break room ahead of you to return to Saga.
 
-\checklist
+\checklist{Oceanview Hotel}
 
  Use the car to head back to Bright Falls, and watch a scene.
 
@@ -502,7 +502,7 @@ The code is 177
 
 Go to the nursing home. On the left, in front of the Wellness Center is the final [settersign|Setter Sign|In front of the Wellness Center]. Up a few steps, in front of the Nursing Home in the corner is [manpage|Manuscript Page: Saga At The Nursing Home|Saga At The Nursing Home]. Ring the doorbell.
 
-\checklist
+\checklist{Bunker Woods 1}
 
 \section {Return 5: Old Gods}
 
@@ -542,7 +542,7 @@ If you want to, head back to the laundry room and turn on the projector. Then he
 
 If you're playing on the Final Draft, you can find [manpage|Dark Poem 2] on the floor. On a side table is a heart shaped box with a [clue|Clue|a heart shaped box], and on another table a [clue|Clue]. In the bathroom is [manpage|Manuscript Page: Cynthia And Tor|Cynthia And Tor]. Kill the Taken downstairs and use the jukebox.
 
-\checklist
+\checklist{Nursing Home}
 
 Enter the Overlap. There are no Manuscript Pages here, so just keep going down the path. Kill a Taken and start a generator, then go back one room and flip a switch. Head through the chain link door.
 
@@ -622,7 +622,7 @@ Adjuacent triangles pointing up, facing away left-to-right, stacked pointing up.
 
 Drive to Watery.
 
-\checklist
+\checklist{Bunker Woods 2}
 
 \section{Watery Cleanup}
 
@@ -646,7 +646,7 @@ The code is found by counting the spare parts down here. The code is 542.
 
 Drive to Cauldron Lake.
 
-\checklist
+\checklist{Watery Cleanup}
 
 \section{Cauldron Lake Cleanup}
 
@@ -683,7 +683,7 @@ Father on eye, Hero on sun, Mother on heart, Child on egg, Trickster on waves.
 
 Take the Charm Expansion. This closes the Nursery Rhymes case.
 
-\checklist
+\checklist{Cauldron Lake Cleanup}
 
 All done with cleanup. Switch back to Alan. 
 
@@ -691,7 +691,7 @@ All done with cleanup. Switch back to Alan.
 
 Enter Parliament Tower and go up the elevator. Open the door and to the right find [television|Television: Part 2-1|Part 2-1]. Continue this way and open another door to see [television|Television: Part 2-2|Part 2-2]. In a nearby hallway is [television|Television: Part 2-3|Part 2-3], and at the end, [television|Television: Part 2-4|Part 2-4]. Enter this TV to continue. Use the typewriter.
 
-\checklist
+\checklist{Dark Place 5}
 
 \section{Initiation 7: Masks}
 
@@ -731,7 +731,7 @@ Watch the movie here in the theater if you want, and then exit the theater. As y
 
 On the west side of the plaza, answer the phone. Interact with the shoebox under the statue in the middle of the square.
 
-\checklist
+\checklist{Theater}
 
 Back as Saga, head to the Bright Falls Sheriff Station.
 
@@ -748,3 +748,5 @@ Head downstairs. On the right, open a gate using the boltcutters and find the fi
 \end{spoiler}
 
 Inside is the [key|Lighthouse Key].
+
+\checklist{Bright Falls 3}
