@@ -49,7 +49,7 @@ You can find [lunchbox|Lunch Box|At the landslide] at the landslide dead end wes
 
 Return to the crime scene and talk to Thornton. You'll get the [key|Shortcut Key]. On your way out, when you see a watch station, walk to the left to find [lunchbox|Lunch Box|By the FBC Monitoring station].
 
-\checklist
+\checklist{Cauldron Lake 1}
 
 \section{Return 1 - Invitation: Bright Falls}
 

@@ -53,11 +53,12 @@ def make_html_from_doc(doc: WalkthroughDocument) -> str:
     )
 
     checklist_items: dict[str, list[ChecklistItem]] = {}
+    all_checklist_items: list[tuple[str, dict[str, list[ChecklistItem]]]] = []
     store_lines = []
     title_tag.string = doc.title
     h1_tag = html.new_tag("h1")
     h1_tag.string = doc.title
-    h1_tag.attrs["class"] = "mt-2 text-3xl font-bold tracking-tight sm:text-4xl"
+    h1_tag.attrs["class"] = "my-2 text-3xl font-bold tracking-tight sm:text-4xl"
     main_container.append(h1_tag)
     dark_mode_control_div = BeautifulSoup(
         """
@@ -139,38 +140,25 @@ def make_html_from_doc(doc: WalkthroughDocument) -> str:
                                 ).append(citem)
                     main_container.append(element)
         # Append checklist
-        checklist_container = html.new_tag("div")
-        checklist_ul = html.new_tag("ul")
-        checklist_ul.attrs["class"] = "mt-8 space-y-8"
-        for tag_name, tags in checklist_items.items():
-            decl = doc.decl_map[tag_name]
-            section_ol = html.new_tag("li")
-            section_header = html.new_tag(
-                "h3",
-                attrs={"class": "text-base font-semibold leading-6 mb-2"},
-            )
-            section_header.append(f"{decl.plural} (")
-            section_header.append(
-                html.new_tag(
-                    "span",
-                    attrs={
-                        "x-text": f"[{','.join([t.item_id for t in tags])}].filter(Boolean).length"
-                    },
-                )
-            )
-            section_header.append(f"/{len(tags)})")
-            section_ol.append(section_header)
-            section_ul = html.new_tag("ul")
-
-            for ci in checklist_items[tag_name]:
-                item_li = html.new_tag("li")
-                item_li.append(make_checklist_tag(html, ci.content, ci.item_id))
-                section_ul.append(item_li)
-            section_ol.append(section_ul)
-            checklist_ul.append(section_ol)
-        checklist_container.append(checklist_ul)
+        checklist_container = make_checklist_container(doc, html, checklist_items)
         main_container.append(checklist_container)
+        all_checklist_items.append((csec.name, dict(checklist_items)))
         checklist_items.clear()
+    all_checklist_h2 = html.new_tag(
+        "h2", attrs={"class": "mt-8 text-2xl font-bold tracking-tight"}
+    )
+    all_checklist_h2.string = "All collectibles by section"
+    main_container.append(all_checklist_h2)
+
+    for checklist_item_section_name, foo_checklist_items in all_checklist_items:
+        section_header = html.new_tag(
+            "h3",
+            attrs={"class": "text-base font-semibold leading-6 mb-2"},
+        )
+        section_header.append(checklist_item_section_name)
+        main_container.append(section_header)
+        checklist_container = make_checklist_container(doc, html, foo_checklist_items)
+        main_container.append(checklist_container)
 
     store_script = html.new_tag("script")
     store_script_text = """tailwind.config = {
@@ -214,6 +202,46 @@ def make_html_from_doc(doc: WalkthroughDocument) -> str:
     head_tag.append(store_script)
 
     return str(html).replace("val =&gt; localStorage", "val => localStorage")
+
+
+def make_checklist_container(doc, html, checklist_items):
+    checklist_container = html.new_tag("div")
+    checklist_ul = html.new_tag("ul")
+    checklist_ul.attrs["class"] = "mt-8 space-y-8"
+    for tag_name, tags in checklist_items.items():
+        decl = doc.decl_map[tag_name]
+        section_ol = html.new_tag("li")
+        section_header = html.new_tag(
+            "h3",
+            attrs={"class": "text-base font-semibold leading-6 mb-2"},
+        )
+        section_header.append(f"{decl.plural} (")
+        section_header.append(
+            html.new_tag(
+                "span",
+                attrs={
+                    "x-text": f"[{','.join([t.item_id for t in tags])}].filter(Boolean).length"
+                },
+            )
+        )
+        section_header.append(f"/{len(tags)})")
+        section_ol.append(section_header)
+        section_ul = html.new_tag("ul")
+
+        for ci in checklist_items[tag_name]:
+            item_li = html.new_tag("li")
+            item_li.append(make_checklist_tag(html, ci.content, ci.item_id))
+            section_ul.append(item_li)
+        section_ol.append(section_ul)
+        checklist_ul.append(section_ol)
+    checklist_container.append(checklist_ul)
+    return checklist_container
+
+
+def create_tag_with_content(html: BeautifulSoup, tagname: str, content: str):
+    tag = html.new_tag(tagname)
+    tag.string = content
+    return tag
 
 
 def make_checklist_tag(html: BeautifulSoup, s: str, this_id: str) -> Tag:
@@ -269,9 +297,7 @@ def make_collapsible(html: BeautifulSoup, content: Tag):
             "html.parser",
         )
     )
-    content_div = html.new_tag(
-        "div", attrs={"x-show": "open", "class": "text-gray-900"}
-    )
+    content_div = html.new_tag("div", attrs={"x-show": "open"})
     content_div.append(content)
     container_div.append(content_div)
     return container_div

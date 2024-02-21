@@ -89,9 +89,11 @@ class Spoiler(DocumentItem):
 
 class ChecklistSection:
     items: list[DocumentItem]
+    name: str
 
     def __init__(self) -> None:
         self.items = []
+        self.name = "Unnamed section"
 
     def append_line_item(self, item: DocumentItem):
         self.items.append(item)
@@ -160,6 +162,20 @@ class WalkthroughParser:
                     doc.decl_map[decl.name] = decl
                 continue
             if line.startswith(R"\checklist"):
+                if "{" in line:
+                    res = read_between_braces(line)
+                    if res is not None:
+                        checklist_section_label = res
+                    else:
+                        print(
+                            f"Warning: on line {self.line_no}, got an invalid checklist section name"
+                        )
+                        checklist_section_label = (
+                            f"Section {len(doc.checklist_sections)}"
+                        )
+                else:
+                    checklist_section_label = f"Section {len(doc.checklist_sections)}"
+                doc.checklist_sections[-1].name = checklist_section_label
                 doc.start_new_checklist_section()
                 continue
             if line.startswith(R"\begin{ul}"):
