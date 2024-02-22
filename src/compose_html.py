@@ -19,70 +19,21 @@ class ChecklistItem:
 
 
 def make_html_from_doc(doc: WalkthroughDocument) -> str:
-    html = BeautifulSoup()
-    html_tag = html.new_tag(
-        "html",
-        attrs={
-            "x-data": "{ darkMode: localStorage.getItem('dark') === 'true'}",
-            "x-init": "$watch('darkMode', val => localStorage.setItem('dark', val))",
-            "x-bind:class": "{ 'dark': darkMode }",
-        },
-    )
-    html.append(html_tag)
-    head_tag = html.new_tag("head")
-    html_tag.append(head_tag)
-    actual_body_tag = html.new_tag(
-        "body", attrs={"class": "bg-gray-100 dark:bg-gray-600"}
-    )
-    main_container = html.new_tag("div", attrs={"x-data": "checklistItems"})
-    main_container.attrs["id"] = "main_container"
-    main_container.attrs["class"] = "mx-auto max-w-7xl px-6 lg:px-8 dark:text-white"
-    html_tag.append(actual_body_tag)
-    actual_body_tag.append(main_container)
-
-    title_tag = html.new_tag("title")
-    title_tag.string = "Sample HTML File"
-    head_tag.append(title_tag)
-    head_tag.append(
-        html.new_tag("script", attrs={"src": "https://cdn.tailwindcss.com"})
-    )
-    head_tag.append(
-        html.new_tag(
-            "script", attrs={"src": "https://unpkg.com/alpinejs", "defer": "defer"}
-        )
-    )
-
     checklist_items: dict[str, list[ChecklistItem]] = {}
     all_checklist_items: list[tuple[str, dict[str, list[ChecklistItem]]]] = []
     store_lines = []
-    title_tag.string = doc.title
-    h1_tag = html.new_tag("h1")
-    h1_tag.string = doc.title
-    h1_tag.attrs["class"] = "my-2 text-3xl font-bold tracking-tight sm:text-4xl"
-    main_container.append(h1_tag)
-    dark_mode_control_div = BeautifulSoup(
-        """
-<div class="flex items-center">
-    <button type="button" :class="{ 'bg-indigo-600': darkMode, 'bg-gray-200': !darkMode }" @click="darkMode = !darkMode"
-    class="relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2" role="switch" aria-checked="false" aria-labelledby="annual-billing-label">
-      <span aria-hidden="true" :class="{ 'translate-x-5' : darkMode, 'translate-x-0': !darkMode }" class="pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out"></span>
-    </button>
-    <span class="ml-3 text-sm">
-      <span class="font-medium">Dark Mode</span>
-    </span>
-  </div>
-""",
-        "html.parser",
-    )
+
+    html = BeautifulSoup()
+    head_tag, main_container = make_preamble(html, doc.title)
+    dark_mode_control_div = make_dark_mode_controls()
     main_container.append(dark_mode_control_div)
     for csec in doc.checklist_sections:
         for section_item in csec.items:
             match section_item:
                 case SectionHeading():
-                    h2_tag = html.new_tag("h2")
-                    h2_tag.attrs["class"] = "mt-8 text-2xl font-bold tracking-tight"
-                    h2_tag.string = section_item.title
-                    main_container.append(h2_tag)
+                    main_container.append(
+                        make_section_heading(html, section_item.title)
+                    )
                 case UnnumberedList():
                     ul_element = html.new_tag("ul", attrs={"class": "list-disc ml-6"})
                     for actual_list_item in section_item.items:
@@ -223,6 +174,71 @@ def make_html_from_doc(doc: WalkthroughDocument) -> str:
     head_tag.append(store_script)
 
     return str(html).replace("val =&gt; localStorage", "val => localStorage")
+
+
+def make_section_heading(html: BeautifulSoup, title: str):
+    h2_tag = html.new_tag("h2")
+    h2_tag.attrs["class"] = "mt-8 text-2xl font-bold tracking-tight"
+    h2_tag.string = title
+    return h2_tag
+
+
+def make_dark_mode_controls() -> Tag:
+    return BeautifulSoup(
+        """
+<div class="flex items-center">
+    <button type="button" :class="{ 'bg-indigo-600': darkMode, 'bg-gray-200': !darkMode }" @click="darkMode = !darkMode"
+    class="relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2" role="switch" aria-checked="false" aria-labelledby="annual-billing-label">
+      <span aria-hidden="true" :class="{ 'translate-x-5' : darkMode, 'translate-x-0': !darkMode }" class="pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out"></span>
+    </button>
+    <span class="ml-3 text-sm">
+      <span class="font-medium">Dark Mode</span>
+    </span>
+  </div>
+""",
+        "html.parser",
+    )
+
+
+def make_preamble(html: BeautifulSoup, title: str) -> tuple[Tag, Tag]:
+    html_tag = html.new_tag(
+        "html",
+        attrs={
+            "x-data": "{ darkMode: localStorage.getItem('dark') === 'true'}",
+            "x-init": "$watch('darkMode', val => localStorage.setItem('dark', val))",
+            "x-bind:class": "{ 'dark': darkMode }",
+        },
+    )
+    html.append(html_tag)
+    head_tag = html.new_tag("head")
+    html_tag.append(head_tag)
+    actual_body_tag = html.new_tag(
+        "body", attrs={"class": "bg-gray-100 dark:bg-gray-600"}
+    )
+    main_container = html.new_tag("div", attrs={"x-data": "checklistItems"})
+    main_container.attrs["id"] = "main_container"
+    main_container.attrs["class"] = "mx-auto max-w-7xl px-6 lg:px-8 dark:text-white"
+    html_tag.append(actual_body_tag)
+    actual_body_tag.append(main_container)
+
+    title_tag = html.new_tag("title")
+    title_tag.string = "Sample HTML File"
+    head_tag.append(title_tag)
+    head_tag.append(
+        html.new_tag("script", attrs={"src": "https://cdn.tailwindcss.com"})
+    )
+    head_tag.append(
+        html.new_tag(
+            "script", attrs={"src": "https://unpkg.com/alpinejs", "defer": "defer"}
+        )
+    )
+
+    title_tag.string = title
+    h1_tag = html.new_tag("h1")
+    h1_tag.string = title
+    h1_tag.attrs["class"] = "my-2 text-3xl font-bold tracking-tight sm:text-4xl"
+    main_container.append(h1_tag)
+    return head_tag, main_container
 
 
 def get_collectibles_by_type(
