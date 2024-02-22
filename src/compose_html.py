@@ -39,6 +39,7 @@ def make_html_from_doc(doc: WalkthroughDocument) -> str:
     toc_header.append("Table of Contents")
     toc_container.append(toc_header)
     toc = html.new_tag("ul", attrs={"class": "space-y-2"})
+    toc.append(html.new_tag("a", attrs={"name": "top_of_toc"}))
     toc_container.append(toc)
     main_container.append(toc_container)
     section_count = 0
@@ -133,14 +134,11 @@ def make_html_from_doc(doc: WalkthroughDocument) -> str:
     toc.append(
         make_toc_item(html, "collectibles_by_section", "All collectibles by section")
     )
-    all_checklist_h2 = html.new_tag(
-        "h2", attrs={"class": "mt-8 text-2xl font-bold tracking-tight"}
+    main_container.append(
+        make_section_heading(
+            html, "All collectibles by section", "collectibles_by_section"
+        )
     )
-    all_checklist_h2.string = "All collectibles by section"
-    all_checklist_h2.append(
-        html.new_tag("a", attrs={"name": "collectibles_by_section"})
-    )
-    main_container.append(all_checklist_h2)
 
     for checklist_item_section_name, foo_checklist_items in all_checklist_items:
         if len(foo_checklist_items.keys()) == 0:
@@ -157,14 +155,11 @@ def make_html_from_doc(doc: WalkthroughDocument) -> str:
     toc.append(
         make_toc_item(html, "all_collectibles_by_type", "All collectibles by type")
     )
-    all_checklist_h2 = html.new_tag(
-        "h2", attrs={"class": "mt-8 text-2xl font-bold tracking-tight"}
+    main_container.append(
+        make_section_heading(
+            html, "All collectibles by type", "all_collectibles_by_type"
+        )
     )
-    all_checklist_h2.string = "All collectibles by type"
-    all_checklist_h2.append(
-        html.new_tag("a", attrs={"name": "all_collectibles_by_type"})
-    )
-    main_container.append(all_checklist_h2)
 
     all_collectibles_by_type = get_collectibles_by_type(all_checklist_items)
     for item_type, items_of_that_type in all_collectibles_by_type.items():
@@ -231,6 +226,11 @@ def make_section_heading(html: BeautifulSoup, title: str, anchor_name: str):
     h2_tag.attrs["class"] = "mt-8 text-2xl font-bold tracking-tight"
     h2_tag.string = title
     h2_tag.append(html.new_tag("a", attrs={"name": anchor_name}))
+    top_link = BeautifulSoup(
+        ' <span class="text-xl font-normal"><a href="#top_of_toc">(Go to top)</a></span>',
+        "html.parser",
+    )
+    h2_tag.append(top_link)
     return h2_tag
 
 
