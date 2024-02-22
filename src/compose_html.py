@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+import re
 from bs4 import BeautifulSoup, Tag
 
 from src.parse_document import (
@@ -18,6 +19,12 @@ class ChecklistItem:
     item_id: str
 
 
+def generate_safe_html_tag_name(string: str) -> str:
+    tag_name = string.replace(" ", "_")
+    tag_name = re.sub(r"[^a-zA-Z0-9_]", "", tag_name.lower())
+    return tag_name
+
+
 def make_html_from_doc(doc: WalkthroughDocument) -> str:
     checklist_items: dict[str, list[ChecklistItem]] = {}
     all_checklist_items: list[tuple[str, dict[str, list[ChecklistItem]]]] = []
@@ -27,12 +34,33 @@ def make_html_from_doc(doc: WalkthroughDocument) -> str:
     head_tag, main_container = make_preamble(html, doc.title)
     dark_mode_control_div = make_dark_mode_controls()
     main_container.append(dark_mode_control_div)
+    toc_container = html.new_tag("div")
+    toc_header = html.new_tag("h2", attrs={"class": "text-2xl font-bold"})
+    toc_header.append("Table of Contents")
+    toc_container.append(toc_header)
+    toc = html.new_tag("ul", attrs={"class": "space-y-2"})
+    toc_container.append(toc)
+    main_container.append(toc_container)
+    section_count = 0
     for csec in doc.checklist_sections:
         for section_item in csec.items:
             match section_item:
                 case SectionHeading():
+                    section_count += 1
+                    section_nice_name = generate_safe_html_tag_name(section_item.title)
                     main_container.append(
-                        make_section_heading(html, section_item.title)
+                        make_section_heading(
+                            html,
+                            section_item.title,
+                            f"section{section_count}_{section_nice_name}",
+                        )
+                    )
+                    toc.append(
+                        make_toc_item(
+                            html,
+                            f"section{section_count}_{section_nice_name}",
+                            section_item.title,
+                        )
                     )
                 case UnnumberedList():
                     ul_element = html.new_tag("ul", attrs={"class": "list-disc ml-6"})
@@ -101,10 +129,17 @@ def make_html_from_doc(doc: WalkthroughDocument) -> str:
         main_container.append(checklist_container)
         all_checklist_items.append((csec.name, dict(checklist_items)))
         checklist_items.clear()
+
+    toc.append(
+        make_toc_item(html, "collectibles_by_section", "All collectibles by section")
+    )
     all_checklist_h2 = html.new_tag(
         "h2", attrs={"class": "mt-8 text-2xl font-bold tracking-tight"}
     )
     all_checklist_h2.string = "All collectibles by section"
+    all_checklist_h2.append(
+        html.new_tag("a", attrs={"name": "collectibles_by_section"})
+    )
     main_container.append(all_checklist_h2)
 
     for checklist_item_section_name, foo_checklist_items in all_checklist_items:
@@ -118,10 +153,17 @@ def make_html_from_doc(doc: WalkthroughDocument) -> str:
         main_container.append(section_header)
         checklist_container = make_checklist_container(doc, html, foo_checklist_items)
         main_container.append(checklist_container)
+
+    toc.append(
+        make_toc_item(html, "all_collectibles_by_type", "All collectibles by type")
+    )
     all_checklist_h2 = html.new_tag(
         "h2", attrs={"class": "mt-8 text-2xl font-bold tracking-tight"}
     )
     all_checklist_h2.string = "All collectibles by type"
+    all_checklist_h2.append(
+        html.new_tag("a", attrs={"name": "all_collectibles_by_type"})
+    )
     main_container.append(all_checklist_h2)
 
     all_collectibles_by_type = get_collectibles_by_type(all_checklist_items)
@@ -176,10 +218,19 @@ def make_html_from_doc(doc: WalkthroughDocument) -> str:
     return str(html).replace("val =&gt; localStorage", "val => localStorage")
 
 
-def make_section_heading(html: BeautifulSoup, title: str):
+def make_toc_item(html, anchor_name: str, title_in_toc: str):
+    li = html.new_tag("li")
+    a = html.new_tag("a", href=f"#{anchor_name}")
+    a.append(title_in_toc)
+    li.append(a)
+    return li
+
+
+def make_section_heading(html: BeautifulSoup, title: str, anchor_name: str):
     h2_tag = html.new_tag("h2")
     h2_tag.attrs["class"] = "mt-8 text-2xl font-bold tracking-tight"
     h2_tag.string = title
+    h2_tag.append(html.new_tag("a", attrs={"name": anchor_name}))
     return h2_tag
 
 
