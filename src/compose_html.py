@@ -120,16 +120,17 @@ def make_html_from_doc(doc: WalkthroughDocument) -> str:
                                 ).append(citem)
                     main_container.append(element)
         # Append checklist
-        section_header = html.new_tag(
-            "h3",
-            attrs={"class": "text-base font-semibold leading-6 mb-2 mt-6 text-xl"},
-        )
-        section_header.append("Checklist")
-        main_container.append(section_header)
-        checklist_container = make_checklist_container(doc, html, checklist_items)
-        main_container.append(checklist_container)
-        all_checklist_items.append((csec.name, dict(checklist_items)))
-        checklist_items.clear()
+        if checklist_items:
+            section_header = html.new_tag(
+                "h3",
+                attrs={"class": "text-base font-semibold leading-6 mb-2 mt-6 text-xl"},
+            )
+            section_header.append("Checklist")
+            main_container.append(section_header)
+            checklist_container = make_checklist_container(doc, html, checklist_items)
+            main_container.append(checklist_container)
+            all_checklist_items.append((csec.name, dict(checklist_items)))
+            checklist_items.clear()
 
     toc.append(
         make_toc_item(html, "collectibles_by_section", "All collectibles by section")

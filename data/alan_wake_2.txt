@@ -307,13 +307,19 @@ Head down the hill to the break room with a [settersign|Setter Sign|In front of 
 
 Next to Odin and Thor you should see some dreamcatchers, so look around for a [lunchbox|Lunch Box|Found in the Watery Trailer Park]. Inside trailer #1 you can find [television|Television: Parade Floats|Parade Floats] and [deerhead|Deer Head|Trailer #1].
 
-Investigate Saga's trailer, picking up all the clues. Pursue the new Taken to the Kavela Knights Workshop.
+Investigate Saga's trailer, picking up all the clues. Two are in Saga's bedroom: [clue|Book of Pun Jokes from Ilmo] and [clue|Letter from Agent Marrow]. Pursue the new Taken to the Kalevala Knights Workshop.
 
 Before going inside, look around the far side for a derelict boat with dreamcatchers to find [lunchbox|Lunch Box|Near the workshop]. Going inside, on the left side of the workshop, find [manpage|Manuscript Page: Deputies Make A Grave Mistake|Deputies Make A Grave Mistake] on a workbench. In the back of the workshop, find a [deerhead|Deer Head|Inside the workshop].
 
-Go inside the office to find a lock. Look at the computer and read all the messages to get [clue|Clue: OOP|OOP] and to see that the combination is inside the giant smiling coffee cup. Standing behind the cup will reveal the combination (up triangle/down triangle stacked, up down left to right but overlapping, down up stacked). Use the combination to open the lock.
+Go inside the office to find a lock. Look at the computer and read all the messages to get [clue|Clue: OOP|OOP] and to see that the combination is inside the giant smiling coffee cup. 
 
-Inside the break room, collect clues from the bulletin board. You can pick up a fuse from the table. Then head down into the basement.
+\begin{spoiler}
+Standing behind the cup will reveal the combination. up triangle/down triangle stacked, up down left to right but overlapping, down up stacked.
+\end{spoiler} 
+
+Use the combination to open the lock.
+
+Inside the break room, collect clues from the bulletin board and from the table ([clue|Report on Rose Marigold], [clue|Drug-fueled scribbles]). You can pick up a fuse from the table. Then head down into the basement.
 
 Try to take the Clicker. On the floor is [manpage|Manuscript Page: Saga Fights Taken At The Workshop|Saga Fights Taken At The Workshop]. Go ahead and profile the deputies. Go upstairs and kill the Taken. Outside, find [manpage|Manuscript Page: The Koskela's Parade Float|The Koskela's Parade Float] on the ground in front of the float. On the nearby table, find a legal pad with some clues. Profile the Koskelas. 
 
@@ -749,4 +755,49 @@ Head downstairs. On the right, open a gate using the boltcutters and find the fi
 
 Inside is the [key|Lighthouse Key].
 
+Go into the morgue and after a dialog you'll get the fuse. Place it in the fuse box in the same room. Kill several enemies, then climb the stairs back to the main floor. On the Final Draft, pick up [manpage|Manuscript Page: Breakthrough in the Lake House|Breakthrough in the Lake House (Final Draft only)]. Talk to Estevez. On the computer here you can get a [clue|Clue|Email about newly installed electronic locks]. Head to the cells.
+
+In the first cell on the right pick up the [manpage|Manuscript Page: Sheriff's Station Attacked|Sheriff's Station Attacked]. Approach Alan in the last cell on the right, and get ready for some action.
+
+Turn around and exit outside. The goal in this section is to damage him enough until he has to heal. When he does, quickly move to the red boxes and power them up. Don't even both trying to power them up when he's active. Two or three rifle shells is enough to stun him. After activating all three boxes, you'll see a scene.
+
+In the Tim Breaker's office, speak to Casey and profile Wake and Casey. Talk to Estevez and get the [key|Prison Cell Key]. Use it to open a cell on the left in the jail. Inside look at the files to get some clues. If playing on the Final Draft, get [manpage|Manuscript Page: Dark Poem 3|Dark Poem 3 (Final Draft only)]. Profile and enter everything on the board, then talk to Casey and Estevez again.
+
+Out in the hall, talk to Ilmo about all topics.
+
+Leave the station and return to your car. Near the back side is [manpage|Manuscript Page: The Cult Finds the Clicker|The Cult Finds the Clicker]. Driver to Watery.
+
+If you want, head inside Suomi Hall and meet the Mayor.
+
+Go the lighthouse and unlock it. Inside you'll find the second [invexp|Inventory Expansion|In the lighthouse]. You'll also find Manuscript Pages [manpage|The Cult Of The Tree Is Born] and [manpage|Ilmo Resists The Dark Presence].
+
+We're now going to proceed to the point of no return. Make sure you have everything you want to collect. Then return to the Sheriff's Station and talk to Estevez. For the final section, it's very helpful to have the rifle upgrade that allows you to shoot the Taken without burning away the darkness, so grab that if you can.
+
 \checklist{Bright Falls 3}
+
+\section{Return 7: Summoning}
+
+Drive to Cauldron Lake. We need to head to the shore, but many of the previous routes are blocked, and there are many Taken to fight. Go through the fence. As you head through the paths, Tor and Odin will open the way with their van. The path will take you along the stream, then across a bridge. Before you jump down to the shoreline, pick up [manpage|Manuscript Page: It's Not a Lake|It's Not a Lake].
+
+Talk to Tor to start the fight. There are many waves of Taken. Casey and Estevez will do most of the work to light up the Taken, but you may need to burn some yourself. It's very helpful to have the rifle upgrade that allows you to shoot the Taken without burning away the darkness. There's a final wave near the end that you should probably use a grenade on once they converge on the van. Otherwise just keep shooting until the red light appears, then approach it and use the clicker.
+
+\section{Initiation 9: Gone}
+
+Go up the elevator. Enter the door on the left and walk around to interact with the screen and get [television|Television: Part 3|Part 3].
+
+The next fight plays out pretty much like the previous one against Scratch. You need to activate two lights. Shoot Scratch several times and Estevez will eventually train her light on him. Once that happens, run to the nearest light and hold the button. After you activate both, run inside the cage.
+
+Talk to Estevez and pick up the weapons. Duck under the fallen tree and make your way on the only available path back to the car. There will be several Taken along the way. At the end, drop down and use the car to drive to Bright Falls.
+
+Watch the TV in the Oh Deer. Walk to the end of the street and pick up the book. Run through the Lodge and out the back door.
+
+At the nursing home, try to enter. Turn around and see a door with a light. Use it to enter the back of the Wellness Center. Move through to the entrance until you encounter Scratch. Turn around and run until you reach a lit room, then continue through to the entry area and out into the Nursing Home. Head to the third floor and enter the door with the spiral on it.
+
+Use the typewriter, then align the orbs. Put the new thread on the board.
+
+Try to leave the Mind Place via the door. Then use the case board. Profile Saga. Continue looking at objects, placing them on the board, and profiling to find all the of ways Saga has failed. When the room gets dark, get the flashlight from the central table. Burn away dark orbs and look at the objects that remind Saga of good qualities. Continue profiling and using the board until the case is closed.
+
+\section{Come Home}
+
+Answer the payphone. Walk around the perimeter of the square to find Tim Breaker. After talking with him, he'll give you the final [manpage|Manuscript Page: Door Traverses The Dark Place|Door Traverses The Dark Place]. Across the square is a door you can open with some stairs going down. This door takes you to the subway, so walk through and exit out back to Caldera St. In the plaza, fight several Taken and take the objects from the shoe box. Talk to Alan in the Mind Place, then go back the way we came, through the subway, to the fountain. Enter it by walking down the steps.
+
