@@ -207,6 +207,8 @@ Go across a little bridge. Turn and go up a ladder, then look at the billboard a
 
 Back down the ladder and through the door to back to street level. To the west is a door you can unlock for a shortcut back. Head south to a taxi with its light on. You can take this light, but in doing so the taxi will morph into a police car with its sirens on. This will attract shadows. Either run away or burn them. There's a suitcase nearby hiding near the front of a car with a flashbang if you're having issues. Before going back to the street, go to a little hallway on the east and look up to find [wopow|Word of Gun|Word of Gun, near the police car].
 
+Climb a ladder near here. Around the giant Poet's Cinema sign, on the ground near some trash bags is [wopow|Word of War|Word of War on an elevated walkway near the Poet's Cinema sign.]
+
 Look around for more supplies if you want, then grab the light you put into the stairway. Use the lights to enter the subway, then use your ticket.
 
 \checklist{Dark Place 2}
@@ -231,7 +233,7 @@ Head down into the flooded tunnel with a break room. Take the two lights, then g
 
 Turn left and head west as far as you can. You find [wopow|Word of Lamp|Word of Lamp, in a flooded part of Shrine St. Station] on a wall to the left.
 
-While heading back east, look for a lit car in the center of the station, which has [wopow|Word of Gun|Word of Gun, in a lit car in the center of Shrine St. Station] on it. Now head all the way east to End of the Line. Place Murder cult, then watch the scene and place Summoning Ritual. Head back west and take the light. In a room to the north, slightly west of the exit, find [wopow|Word of ??|Word of ??, a room to the north of Shrine St. Station]. Head north through the exit with some enemies, and take the stairway up. There's a [wopow|Word of Fix|Word of Fix, behind the closed gate while exiting Shrine St. Station] behind the closed gate at the top. Continue, using the break room if you want, then head north back into the main tunnel.
+While heading back east, look for a lit car in the center of the station, which has [wopow|Word of Gun|Word of Gun, in a lit car in the center of Shrine St. Station] on it. Now head all the way east to End of the Line. Place Murder cult, then watch the scene and place Summoning Ritual. Head back west and take the light. In a room to the north, slightly west of the exit, find [wopow|Word of Action|Word of Action, a room to the north of Shrine St. Station]. Head north through the exit with some enemies, and take the stairway up. There's a [wopow|Word of Fix|Word of Fix, behind the closed gate while exiting Shrine St. Station] behind the closed gate at the top. Continue, using the break room if you want, then head north back into the main tunnel.
 
 We're about to leave, so make sure you got everything.
 
