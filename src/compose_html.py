@@ -35,12 +35,18 @@ def make_html_from_doc(doc: WalkthroughDocument) -> str:
     dark_mode_control_div = make_dark_mode_controls()
     main_container.append(dark_mode_control_div)
     toc_container = html.new_tag("div")
-    toc_header = html.new_tag("h2", attrs={"class": "text-2xl font-bold"})
+    toc_header = html.new_tag("h2", attrs={"class": "text-3xl font-bold mt-4"})
     toc_header.append("Table of Contents")
     toc_container.append(toc_header)
-    toc = html.new_tag("ul", attrs={"class": "space-y-2"})
-    toc.append(html.new_tag("a", attrs={"name": "top_of_toc"}))
-    toc_container.append(toc)
+
+    walkthrough_toc_ul = html.new_tag("ul", attrs={"class": "space-y-2 ml-4"})
+    walkthrough_toc_ul.append(html.new_tag("a", attrs={"name": "top_of_toc"}))
+    walkthrough_toc_label = html.new_tag(
+        "h3", attrs={"class": "ml-2 font-bold text-2xl"}
+    )
+    walkthrough_toc_label.append("Walkthrough")
+    toc_container.append(walkthrough_toc_label)
+    toc_container.append(walkthrough_toc_ul)
     main_container.append(toc_container)
     section_count = 0
     for csec in doc.checklist_sections:
@@ -56,7 +62,7 @@ def make_html_from_doc(doc: WalkthroughDocument) -> str:
                             f"section{section_count}_{section_nice_name}",
                         )
                     )
-                    toc.append(
+                    walkthrough_toc_ul.append(
                         make_toc_item(
                             html,
                             f"section{section_count}_{section_nice_name}",
@@ -123,7 +129,9 @@ def make_html_from_doc(doc: WalkthroughDocument) -> str:
         if checklist_items:
             section_header = html.new_tag(
                 "h3",
-                attrs={"class": "text-base font-semibold leading-6 mb-2 mt-6 text-xl"},
+                attrs={
+                    "class": "text-base border-t pt-4 font-semibold leading-6 mb-2 mt-6 text-xl"
+                },
             )
             section_header.append("Checklist")
             main_container.append(section_header)
@@ -132,7 +140,7 @@ def make_html_from_doc(doc: WalkthroughDocument) -> str:
             all_checklist_items.append((csec.name, dict(checklist_items)))
             checklist_items.clear()
 
-    toc.append(
+    walkthrough_toc_ul.append(
         make_toc_item(html, "collectibles_by_section", "All collectibles by section")
     )
     main_container.append(
@@ -153,7 +161,7 @@ def make_html_from_doc(doc: WalkthroughDocument) -> str:
         checklist_container = make_checklist_container(doc, html, foo_checklist_items)
         main_container.append(checklist_container)
 
-    toc.append(
+    walkthrough_toc_ul.append(
         make_toc_item(html, "all_collectibles_by_type", "All collectibles by type")
     )
     main_container.append(
@@ -216,7 +224,7 @@ def make_html_from_doc(doc: WalkthroughDocument) -> str:
 
 def make_toc_item(html, anchor_name: str, title_in_toc: str):
     li = html.new_tag("li")
-    a = html.new_tag("a", href=f"#{anchor_name}")
+    a = html.new_tag("a", attrs={"href": f"#{anchor_name}", "class": "hover:underline"})
     a.append(title_in_toc)
     li.append(a)
     return li
@@ -288,7 +296,7 @@ def make_preamble(html: BeautifulSoup, title: str) -> tuple[Tag, Tag]:
     title_tag.string = title
     h1_tag = html.new_tag("h1")
     h1_tag.string = title
-    h1_tag.attrs["class"] = "my-2 text-3xl font-bold tracking-tight sm:text-4xl"
+    h1_tag.attrs["class"] = "my-2 text-5xl font-bold tracking-tight sm:text-5xl"
     main_container.append(h1_tag)
     return head_tag, main_container
 
@@ -312,8 +320,8 @@ def make_checklist_container(
     html: BeautifulSoup,
     checklist_items: dict[str, list[ChecklistItem]],
 ):
-    checklist_container = html.new_tag("div")
-    checklist_ul = html.new_tag("ul")
+    checklist_container = html.new_tag("div", attrs={"class": "border-b pb-4"})
+    checklist_ul = html.new_tag("ul", attrs={"class": "ml-4"})
     checklist_ul.attrs["class"] = "mt-8 space-y-8"
     for tag_name, tags in checklist_items.items():
         decl = doc.decl_map[tag_name]
