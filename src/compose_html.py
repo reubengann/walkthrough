@@ -178,27 +178,9 @@ def make_html_from_doc(doc: WalkthroughDocument) -> str:
         )
         main_container.append(checklist_container)
 
-    toc_level_1.append(
-        make_toc_item(
-            html,
-            "all_collectibles_by_type",
-            "All collectibles by type",
-            additional_class="text-2xl font-bold",
-        )
+    add_all_collectibles_by_type(
+        doc, all_checklist_items, html, main_container, toc_level_1
     )
-    main_container.append(
-        make_section_heading(
-            html, "All collectibles by type", "all_collectibles_by_type"
-        )
-    )
-
-    all_collectibles_by_type = get_collectibles_by_type(all_checklist_items)
-    for item_type, items_of_that_type in all_collectibles_by_type.items():
-        main_container.append(
-            make_rollup_checklist_container(
-                html, doc.decl_map[item_type].plural, items_of_that_type
-            )
-        )
 
     store_script = html.new_tag("script")
     store_script_text = """tailwind.config = {
@@ -244,9 +226,57 @@ def make_html_from_doc(doc: WalkthroughDocument) -> str:
     return str(html).replace("val =&gt; localStorage", "val => localStorage")
 
 
-def make_toc_item(
-    html, anchor_name: str, title_in_toc: str, additional_class: str | None = None
+def add_all_collectibles_by_type(
+    doc: WalkthroughDocument,
+    all_checklist_items: list[tuple[str, dict[str, list[ChecklistItem]]]],
+    html: BeautifulSoup,
+    main_container: Tag,
+    toc_level_1: Tag,
 ):
+    main_container.append(
+        make_section_heading(
+            html, "All collectibles by type", "all_collectibles_by_type"
+        )
+    )
+
+    all_collectibles_by_type_li = make_toc_item(
+        html,
+        "all_collectibles_by_type",
+        "All collectibles by type",
+        additional_class="text-2xl font-bold",
+    )
+    all_collectibles_by_type_div = html.new_tag("div")
+    all_collectibles_by_type_li.append(all_collectibles_by_type_div)
+    all_collectibles_by_type_ul = html.new_tag("ul", attrs={"class": "ml-4"})
+    all_collectibles_by_type_div.append(all_collectibles_by_type_ul)
+    toc_level_1.append(all_collectibles_by_type_li)
+
+    all_collectibles_by_type = get_collectibles_by_type(all_checklist_items)
+    for item_type, items_of_that_type in all_collectibles_by_type.items():
+        main_container.append(
+            html.new_tag("a", attrs={"name": f"all_items_list_{item_type}"})
+        )
+        main_container.append(
+            make_rollup_checklist_container(
+                html, doc.decl_map[item_type].plural, items_of_that_type
+            )
+        )
+        all_collectibles_by_type_ul_li = html.new_tag("li")
+        link_to_section = html.new_tag(
+            "a",
+            attrs={"href": f"#all_items_list_{item_type}", "class": "hover:underline"},
+        )
+        link_to_section.append(doc.decl_map[item_type].plural)
+        all_collectibles_by_type_ul_li.append(link_to_section)
+        all_collectibles_by_type_ul.append(all_collectibles_by_type_ul_li)
+
+
+def make_toc_item(
+    html: BeautifulSoup,
+    anchor_name: str,
+    title_in_toc: str,
+    additional_class: str | None = None,
+) -> Tag:
     c = "hover:underline"
     if additional_class:
         c += " " + additional_class
@@ -385,7 +415,7 @@ def make_rollup_checklist_container(
     html: BeautifulSoup,
     item_name_plural: str,
     checklist_items: list[tuple[str, ChecklistItem]],
-):
+) -> Tag:
     checklist_container = html.new_tag("div")
     checklist_ul = html.new_tag("ul", attrs={"class": "mt-8 space-y-8"})
     section_ol = html.new_tag("li")
