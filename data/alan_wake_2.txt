@@ -16,6 +16,7 @@
 \declare{wopow}{Word of Power}{Words of Power}
 \declare{echo}{Echo}{Echoes}
 \declare{breaker}{Breaker Room}{Breaker Rooms}
+\declare{koskelatvad}{Koskela TV Ad}{Koskela TV Ads}
 
 \version{1}
 
@@ -75,7 +76,7 @@ Across from the Oh Deer diner is a sign for a mayoral candidate [settersign|Sett
 
 Head into the Oh Deer diner. In the back, behind a door labeled "Employees only" you'll find [deerhead|Deer Head|Inside the Oh Deer diner]. Talk to the Bookers about all topics. You should not be able to close The Previous Murders case and start Cult of the Tree. While heading to the police station, go around the back of the diner and look at the electrical box to find a [clue|Clue|Cult of the Tree: Triangle Graffiti Found around Town]. 
 
-Inside the station, head behind the counter and find the [map|Sheriff's station map|Sheriff's station map]. In a lounge on the first floor, find [television|Television: Adventure tours|Adventure tours].
+Inside the station, head behind the counter and find the [map|Sheriff's station map|Sheriff's station map]. In a lounge on the first floor, find [koskelatvad|Koskela Ad: Adventure tours|Adventure tours].
 
 Head downstairs. Feel free to loot the lockers at any time, then head into the morgue. Look at the body and follow the prompts. Get [manpage|Manuscript Page: Saga Fights Nightingale With the Light|Saga Fights Nightingale With the Light] from the body.
 
@@ -257,9 +258,9 @@ Use the memory card in the kitchen on the projector in the living room to get [t
 
 You can now start case The Story. Talk to Alan, then profile him. Speak with him again to get [manpage|Manuscript Page: The Trailer|The Trailer]. Use the page on the board. Talk to Alan again. Nearby is a break room where you can save or switch characters, but let's stay as Saga.
 
-Head into the lobby. On the TV will be playing [television|Television: Coffee World|Coffee World]. In a nearby hallway, enter room 107 to find [manpage|Manuscript Page: Ed Returns to Cauldron Lake|Ed Returns to Cauldron Lake] and [manpage|Manuscript Page: Tammy Rides the Ferry|Tammy Rides the Ferry].
+Head into the lobby. On the TV will be playing [koskelatvad|Koskela Ad: Coffee World|Coffee World]. In a nearby hallway, enter room 107 to find [manpage|Manuscript Page: Ed Returns to Cauldron Lake|Ed Returns to Cauldron Lake] and [manpage|Manuscript Page: Tammy Rides the Ferry|Tammy Rides the Ferry].
 
-Head to the Oh Deer and look at the [television|Television: Ahma Beer|Ahma Beer] on the wall. Use the car to head to Watery.
+Head to the Oh Deer and look at the [koskelatvad|Koskela Ad: Ahma Beer|Ahma Beer] on the wall. Use the car to head to Watery.
 
 \checklist{Bright Falls 2}
 
@@ -323,7 +324,7 @@ Time to head to the trailer park.
 
 Head down the hill to the break room with a [settersign|Setter Sign|In front of the trailer park] in front of it. Then enter the park.
 
-Next to Odin and Thor you should see some dreamcatchers, so look around for a [lunchbox|Lunch Box|Found in the Watery Trailer Park]. Inside trailer #1 you can find [television|Television: Parade Floats|Parade Floats] and [deerhead|Deer Head|Trailer #1].
+Next to Odin and Thor you should see some dreamcatchers, so look around for a [lunchbox|Lunch Box|Found in the Watery Trailer Park]. Inside trailer #1 you can find [koskelatvad|Koskela Ad: Parade Floats|Parade Floats] and [deerhead|Deer Head|Trailer #1].
 
 Investigate Saga's trailer, picking up all the clues. Two are in Saga's bedroom: [clue|Book of Pun Jokes from Ilmo] and [clue|Letter from Agent Marrow]. Pursue the new Taken to the Kalevala Knights Workshop.
 
@@ -530,7 +531,7 @@ Go to the nursing home. On the left, in front of the Wellness Center is the fina
 
 \section {Return 5: Old Gods}
 
-In the admin office to the right is the [map|Valhalla Nursing Home Map] and [lunchbox|Lunch Box|Inside the nursing home Admin Office]. Following Rose to get [television|Television: Bright Falls Blend|Bright Falls Blend]. Talk to the two residents, Ahti, and Rose. 
+In the admin office to the right is the [map|Valhalla Nursing Home Map] and [lunchbox|Lunch Box|Inside the nursing home Admin Office]. Following Rose to get [koskelatvad|Koskela Ad: Bright Falls Blend|Bright Falls Blend]. Talk to the two residents, Ahti, and Rose. 
 
 Head upstairs. In the Rec Room find a [deerhead|Dear Head|In the Rec Room of the Nursing Home]. Look around Tor's room, then try talking to Odin. Profile him and use the board. Look at the picture on the wall before leaving for a [clue|Clue|A Painting of Mom and me with Odin and Tor].
 
@@ -807,7 +808,7 @@ The next fight plays out pretty much like the previous one against Scratch. You 
 
 Talk to Estevez and pick up the weapons. Duck under the fallen tree and make your way on the only available path back to the car. There will be several Taken along the way. At the end, drop down and use the car to drive to Bright Falls.
 
-Watch the TV in the Oh Deer. Walk to the end of the street and pick up the book. Run through the Lodge and out the back door.
+Watch the TV in the Oh Deer to see the final [koskelatvad|Koskela Ad: Return Review|Return Review]. Walk to the end of the street and pick up the book. Run through the Lodge and out the back door.
 
 At the nursing home, try to enter. Turn around and see a door with a light. Use it to enter the back of the Wellness Center. Move through to the entrance until you encounter Scratch. Turn around and run until you reach a lit room, then continue through to the entry area and out into the Nursing Home. Head to the third floor and enter the door with the spiral on it.
 
