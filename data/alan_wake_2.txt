@@ -21,6 +21,22 @@
 
 \title{Alan Wake 2}
 
+\section{Introduction}
+
+Welcome to an all-collectibles, mostly spoiler-free guide for Alan Wake 2. This document has a full walkthrough with a route to get all the collectibles that aren't bugged. If you just want the checklists of items, you can go to the "All items by section" or "All items by type" sections. Click the check boxes as you go to keep track of everything (if you want). At the end of each section is a summary of all the collectibles, so you can verify that you got everything. The progress will be stored in your browser's local storage.
+
+Alan Wake 2 is a survival horror game. So some things to be aware of that I'm not going to mention in the walkthrough:
+
+\begin{ul}
+\item You should always be looking around for items. Check every cabinet, drawer, box. Sometimes these will be marked on the map, and sometimes not.
+\item Use the Shoebox frequently to store items. Your inventory will fill up quickly.
+\item Save often. The game only autosaves at important times, and if you are just running around collecting things, and the game crashes or you quit, you will lose progress.
+\end{ul}
+
+There are two modes to play the game: a normal playthrough and The Final Draft, which is only available after you've beaten the game once. There are a few manuscript pages that can only be collected on The Final Draft, and I'll point those out.
+
+Some collectibles are currently bugged and unobtainable, especially some Clues. Some collectibles are missable, so check with the checklist before moving onto new areas.
+
 \section{Return 0}
 
 Simply walk ahead.
@@ -185,7 +201,7 @@ Go back to Wheeler St., just northwest of the TV Studio. To the right of some ph
 
 You can try putting the light into the subway station, but it won't help, because we need two lights to proceed. Instead, head to another flashing light nearby that leads to a stairway going up, and put the light there. Head upstairs. Once on the tracks, go east and climb up a ladder.
 
-To your right, you should see a ladder leading up to a billboard. Align the cicles to get [echo|Echo: Cold Case|Cold Case]. Go back down and through a door leading down some stairs. Here you'll find a break room where you can save. Looking southeast you should see a glowing arrow leading to [wopow|Word of Light|Word of Light, on the rooftops]. Head southeast up a small flight of stairs and you should hear someone humming. Enter the door to find [breaker|Breaker Room|On the rooftops]. Inside find [map|Breaker Map 1].
+To your right, you should see a ladder leading up to a billboard. Align the cicles to get [echo|Echo: Cold Case|Cold Case]. Go back down and through a door leading down some stairs. Here you'll find a break room where you can save. Looking southeast you should see a glowing arrow leading to [wopow|Word of Lamp|Word of Lamp, on the rooftops]. Head southeast up a small flight of stairs and you should hear someone humming. Enter the door to find [breaker|Breaker Room|On the rooftops]. Inside find [map|Breaker Map 1].
 
 Go across a little bridge. Turn and go up a ladder, then look at the billboard and line up the dots to find [echo|Echo: Hard Case|Hard Case].
 
@@ -436,9 +452,9 @@ Try entering the Oceanview Hotel. When you end up outside, turn right to see a h
 
 \section{Initiation 5: Room 665}
 
-Enter the Mirror Peak Bar door and head down to the roof (surprisingly). Climb down a ladder and then up a stairway. Take the light. Go under a scaffold and up a ladder. Burn away the orbs and kill the resulting enemies. Then enter the door. Climb up the stairs right in front of you and crawl through a cardboard tent to reach a break room. Head to the south end of the roof and you will see a [wopow|Word of Aid|On the south end of the roof on a propped up piece of metal] on a propped up piece of metal.
+Enter the Mirror Peak Bar door and head down to the roof (surprisingly). Climb down a ladder and then up a stairway. Take the light. Go under a scaffold and up a ladder. Burn away the orbs and kill the resulting enemies. Then enter the door. Climb up the stairs right in front of you and crawl through a cardboard tent to reach a break room. Head to the south end of the roof and you will see a [wopow|Word of Aid|Word of Aid on the south end of the roof on a propped up piece of metal] on a propped up piece of metal.
 
-Heading up two ladders, you should see [wopow|Word of Lamp|On a water tower] on a water tower. Rather than open this door, go the left and down some stairs. Ducking under a nearby stairway, you eventually you should see a [wopow|Word of Gun|On the underside of a stairway landing] on the underside of a stairway landing. Go the other way and down a ladder, and on your left is a [breaker|Breaker Room|On the rooftops]. Take [map|Breaker Map 3].
+Heading up two ladders, you should see [wopow|Word of Lamp|Word of Lamp on a water tower] on a water tower. Rather than open this door, go the left and down some stairs. Ducking under a nearby stairway, you eventually you should see a [wopow|Word of Gun|Word of Gun on the underside of a stairway landing] on the underside of a stairway landing. Go the other way and down a ladder, and on your left is a [breaker|Breaker Room|On the rooftops]. Take [map|Breaker Map 3].
 
 Place the light in the door and pass through. Return, and take the light again. Go through the door and on the other side, with the water tower, place the light to remove it. Return and put the light in again. You can now pass through and walk around to the hotel room entrance.
 
@@ -721,7 +737,7 @@ Kill the Taken and then use this new thread on the Theater Hall scene. Put the l
 
 Drop down here and you'll find the Out in the Night scene. Use the break room on the right if you want. Use the New York's Finest thread here and align the orbs to see an [echo|Echo|Police initiation].
 
-We need to get to the red door behind the dumpster. Take the light out of the car, and then stand in front of where the door is and put it back. Go up the stairs and then a ladder. Head to the north section of the rooftops and look on a building near the spotlights to see [wopow|Word of Stuff|Below a low window on the roof] below a low window.
+We need to get to the red door behind the dumpster. Take the light out of the car, and then stand in front of where the door is and put it back. Go up the stairs and then a ladder. Head to the north section of the rooftops and look on a building near the spotlights to see [wopow|Word of Stuff|Word of Stuff below a low window on the roof] below a low window.
 
 Go south through a gate. Turn left and swing around an AC unit to see a few steps leading down. Duck under the walkway. Follow this path around until you find the final [breaker|Breaker Room|On the Poet's Cinema Roof] and [map|Breaker Map 6]. Leave the other way, unlocking a door. As you exit, look up at the water tower to collect [wopow|Word of Lamp|Word of Lamp on a water tower on the roof].
 

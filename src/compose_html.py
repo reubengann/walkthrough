@@ -76,7 +76,9 @@ def make_html_from_doc(doc: WalkthroughDocument) -> str:
                         )
                     )
                 case UnnumberedList():
-                    ul_element = html.new_tag("ul", attrs={"class": "list-disc ml-6"})
+                    ul_element = html.new_tag(
+                        "ul", attrs={"class": "list-disc ml-6 mt-4"}
+                    )
                     for actual_list_item in section_item.items:
                         li = html.new_tag("li", attrs={"class": "mb-2"})
                         li.append(actual_list_item)
@@ -108,7 +110,7 @@ def make_html_from_doc(doc: WalkthroughDocument) -> str:
                                     "input",
                                     type="checkbox",
                                     attrs={
-                                        "id": paragraph_child.item_id,
+                                        "id": f"{paragraph_child.item_id}_in_paragraph",
                                         "x-model": paragraph_child.item_id,
                                         "class": "h-4 w-4 rounded focus:ring-indigo-600",
                                         "@change": "storeStatuses()",
@@ -141,7 +143,9 @@ def make_html_from_doc(doc: WalkthroughDocument) -> str:
             )
             section_header.append("Checklist")
             main_container.append(section_header)
-            checklist_container = make_checklist_container(doc, html, checklist_items)
+            checklist_container = make_checklist_container(
+                doc, html, checklist_items, "end_of_section"
+            )
             main_container.append(checklist_container)
             all_checklist_items.append((csec.name, dict(checklist_items)))
             checklist_items.clear()
@@ -169,7 +173,9 @@ def make_html_from_doc(doc: WalkthroughDocument) -> str:
         )
         section_header.append(checklist_item_section_name)
         main_container.append(section_header)
-        checklist_container = make_checklist_container(doc, html, foo_checklist_items)
+        checklist_container = make_checklist_container(
+            doc, html, foo_checklist_items, "by_section"
+        )
         main_container.append(checklist_container)
 
     toc_level_1.append(
@@ -340,6 +346,7 @@ def make_checklist_container(
     doc: WalkthroughDocument,
     html: BeautifulSoup,
     checklist_items: dict[str, list[ChecklistItem]],
+    loc: str,
 ):
     checklist_container = html.new_tag("div", attrs={"class": "border-b pb-4"})
     checklist_ul = html.new_tag("ul", attrs={"class": "ml-4"})
@@ -366,7 +373,7 @@ def make_checklist_container(
 
         for ci in checklist_items[tag_name]:
             item_li = html.new_tag("li")
-            item_li.append(make_checklist_tag(html, ci.content, ci.item_id))
+            item_li.append(make_checklist_tag(html, ci.content, ci.item_id, loc))
             section_ul.append(item_li)
         section_ol.append(section_ul)
         checklist_ul.append(section_ol)
@@ -401,7 +408,9 @@ def make_rollup_checklist_container(
 
     for prefix, ci in checklist_items:
         item_li = html.new_tag("li")
-        item_li.append(make_checklist_tag(html, f"{prefix}: {ci.content}", ci.item_id))
+        item_li.append(
+            make_checklist_tag(html, f"{prefix}: {ci.content}", ci.item_id, "rollup")
+        )
         section_ul.append(item_li)
     section_ol.append(section_ul)
     checklist_ul.append(section_ol)
@@ -415,13 +424,13 @@ def create_tag_with_content(html: BeautifulSoup, tagname: str, content: str):
     return tag
 
 
-def make_checklist_tag(html: BeautifulSoup, s: str, this_id: str) -> Tag:
+def make_checklist_tag(html: BeautifulSoup, s: str, this_id: str, loc: str) -> Tag:
     container = html.new_tag("div", attrs={"class": "relative flex items-start"})
     input_container = html.new_tag("div", attrs={"class": "flex h-6 items-center"})
     input_tag = html.new_tag(
         "input",
         attrs={
-            "id": this_id,
+            "id": f"{this_id}{loc}",
             "type": "checkbox",
             "x-model": this_id,
             "class": "h-4 w-4 ml-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600",
