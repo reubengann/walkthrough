@@ -801,3 +801,4 @@ Try to leave the Mind Place via the door. Then use the case board. Profile Saga.
 
 Answer the payphone. Walk around the perimeter of the square to find Tim Breaker. After talking with him, he'll give you the final [manpage|Manuscript Page: Door Traverses The Dark Place|Door Traverses The Dark Place]. Across the square is a door you can open with some stairs going down. This door takes you to the subway, so walk through and exit out back to Caldera St. In the plaza, fight several Taken and take the objects from the shoe box. Talk to Alan in the Mind Place, then go back the way we came, through the subway, to the fountain. Enter it by walking down the steps.
 
+\checklist{Endgame}

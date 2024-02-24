@@ -39,14 +39,20 @@ def make_html_from_doc(doc: WalkthroughDocument) -> str:
     toc_header.append("Table of Contents")
     toc_container.append(toc_header)
 
+    toc_level_1 = html.new_tag("ul", attrs={"class": "space-y-2 ml-4"})
+    walkthrough_toc_item = html.new_tag("li")
+    toc_level_1.append(walkthrough_toc_item)
+    walkthrough_toc_container = html.new_tag("div", attrs={"class": "mt-2"})
+    walkthrough_toc_item.append(walkthrough_toc_container)
     walkthrough_toc_ul = html.new_tag("ul", attrs={"class": "space-y-2 ml-4"})
     walkthrough_toc_ul.append(html.new_tag("a", attrs={"name": "top_of_toc"}))
     walkthrough_toc_label = html.new_tag(
         "h3", attrs={"class": "ml-2 font-bold text-2xl"}
     )
     walkthrough_toc_label.append("Walkthrough")
-    toc_container.append(walkthrough_toc_label)
-    toc_container.append(walkthrough_toc_ul)
+    walkthrough_toc_container.append(walkthrough_toc_label)
+    walkthrough_toc_container.append(walkthrough_toc_ul)
+    toc_container.append(toc_level_1)
     main_container.append(toc_container)
     section_count = 0
     for csec in doc.checklist_sections:
@@ -140,8 +146,13 @@ def make_html_from_doc(doc: WalkthroughDocument) -> str:
             all_checklist_items.append((csec.name, dict(checklist_items)))
             checklist_items.clear()
 
-    walkthrough_toc_ul.append(
-        make_toc_item(html, "collectibles_by_section", "All collectibles by section")
+    toc_level_1.append(
+        make_toc_item(
+            html,
+            "collectibles_by_section",
+            "All collectibles by section",
+            additional_class="text-2xl font-bold",
+        )
     )
     main_container.append(
         make_section_heading(
@@ -161,8 +172,13 @@ def make_html_from_doc(doc: WalkthroughDocument) -> str:
         checklist_container = make_checklist_container(doc, html, foo_checklist_items)
         main_container.append(checklist_container)
 
-    walkthrough_toc_ul.append(
-        make_toc_item(html, "all_collectibles_by_type", "All collectibles by type")
+    toc_level_1.append(
+        make_toc_item(
+            html,
+            "all_collectibles_by_type",
+            "All collectibles by type",
+            additional_class="text-2xl font-bold",
+        )
     )
     main_container.append(
         make_section_heading(
@@ -222,9 +238,14 @@ def make_html_from_doc(doc: WalkthroughDocument) -> str:
     return str(html).replace("val =&gt; localStorage", "val => localStorage")
 
 
-def make_toc_item(html, anchor_name: str, title_in_toc: str):
+def make_toc_item(
+    html, anchor_name: str, title_in_toc: str, additional_class: str | None = None
+):
+    c = "hover:underline"
+    if additional_class:
+        c += " " + additional_class
     li = html.new_tag("li")
-    a = html.new_tag("a", attrs={"href": f"#{anchor_name}", "class": "hover:underline"})
+    a = html.new_tag("a", attrs={"href": f"#{anchor_name}", "class": c})
     a.append(title_in_toc)
     li.append(a)
     return li
