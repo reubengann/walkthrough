@@ -18,7 +18,7 @@
 \declare{breaker}{Breaker Room}{Breaker Rooms}
 \declare{koskelatvad}{Koskela TV Ad}{Koskela TV Ads}
 
-\version{1}
+\version{3}
 
 \title{Alan Wake 2}
 
@@ -32,10 +32,12 @@ There are two modes to play the game: a normal playthrough and The Final Draft, 
 
 \begin{ul}
 \item You should always be looking around for items. Check every cabinet, drawer, box. Sometimes these will be marked on the map, and sometimes not.
+\item When you get clues or profiling opportunities, you should place them on the Case Board as soon as you can. Sometimes new possibilities only open up once you've done that.
 \item Use the Shoebox frequently to store items. Your inventory will fill up quickly.
 \item Save often. The game only autosaves at important times, and if you are just running around collecting things, and the game crashes or you quit, you will lose progress.
 \item If playing on The Final Draft, I recommend you do not pick up charms that you already have. They fill up the inventory and cannot be disposed of.
 \item Puzzle solutions are hidden behind expandable sections. Just click on them to reveal the answer.
+\item There are many clues in the game that are unmissable. When that's the case, I won't point them out.
 \end{ul}
 
 Some collectibles are currently bugged and unobtainable, especially some Clues. Some collectibles are missable, so check with the checklist before moving onto new areas.
@@ -294,37 +296,61 @@ Head to the Oh Deer and look at the [koskelatvad|Koskela Ad: Ahma Beer|Ahma Beer
 
 \checklist{Bright Falls 2}
 
-\section{Local Girl}
+\section{Return 3: Local Girl}
 
 Right nearby is a [settersign|Setter Sign|In front of Suomi Hall]. Head inside Suomi Hall and get the [map|Watery Map] inside the door. Head back into the breakroom to find [deerhead|Deer Head|Inside Suomi Hall].
 
 Outside, you can talk to a man near a nursing home bus.
 
-Head past the "Road Closed" sign and talk to the man. This starts the case Fact vs Fiction. Go ahead and profile, and finish the conversation.
+Head west past the "Road Closed" sign and talk to the men here. This starts the case Fact vs Fiction. Go ahead and profile, and finish the conversation.
 
 We need to head north along the trail. You will be attacked by a taken who throws axes. Shoot him and continue.
 
-Head right at the fork, then another right. You'll find [rhyme|Nursery Rhyme|Found near the shooting range]. Pick up the [doll|Deer Doll] and [doll|Moose Doll] here and then solve the puzzle. Put the moose on the woods. The [charm|Charm|Coffee Mug Charm] is on a big wooden moose back the way you came.
+Head right at the fork, then another right. You'll find [rhyme|Nursery Rhyme|Found near the shooting range]. Pick up the [doll|Deer Doll] and [doll|Moose Doll] here and then solve the puzzle.
+
+\begin{spoiler}
+Put the moose on the woods.
+\end{spoiler}
+
+The [charm|Charm|Coffee Mug Charm] is on a big wooden moose back the way you came.
 
 Continue on the path and go right when you see a sign, to duck under a fallen log. Up the ledge you'll find [manpage|Manuscript Page: Watery|Watery] and a [cultstash|Cult Stash|Found in the woods near watery] that requires Simon Says input.
 
-Proceed on the original path until you come to a hunting shack you can power up to use as a break room. Inside you'll find [manpage|Manuscript Page: Saga in the Watery Woods|Saga in the Watery Woods]. Outside is a [cultstash|Cult Stash|Found at the shooting range near watery]. The code is 527.
+Proceed on the original path until you come to a hunting shack you can power up to use as a break room. Inside you'll find [manpage|Manuscript Page: Saga in the Watery Woods|Saga in the Watery Woods]. Outside, open a [cultstash|Cult Stash|Found at the shooting range near watery]
 
-Head east up toward the Radio Tower. You'll hear [radio|Radio: Terry's Cuckoo Clocks|Terry's Cuckoo Clocks]. Nearby is a picnic area with a [rhyme|Rhyme|found by the radio tower]. Put the deer on the house. The [charm|Charm|Deer Charm] is on a nearby dead deer next to the radio tower. From here you should see the dreamcatchers signaling a [lunchbox|Lunch Box|Next to the radio tower].
+\begin{spoiler}
+The code is 527.
+\end{spoiler}
+
+Inside you'll fine the [weapon|Crossbow].
+
+Head east up toward the Radio Tower. You'll hear [radio|Radio: Terry's Cuckoo Clocks|Terry's Cuckoo Clocks]. Nearby is a picnic area with a [rhyme|Rhyme|found by the radio tower].
+
+\begin{spoiler}
+Put the deer on the house.
+\end{spoiler}
+
+The [charm|Charm|Deer Charm] is on a nearby dead deer next to the radio tower. From here you should see the dreamcatchers signaling a [lunchbox|Lunch Box|Next to the radio tower].
 
 Go back and continue on the main path, down some steps and drop off a ledge and across a bridge. On the right you should see dreamcatchers and a [lunchbox|Lunch Box|On the way to coffee world] near a picnic site. The next area area is flooded, so we can't get to the Ranger station right now. Just proceed up some ledges into the park.
 
-In a break room you'll find [manpage|Manuscript Page: Scratch on the Hunt|Scratch on the Hunt]. Head to the gift shop. Go around to the front door, and check the bulletin board next to it to find 2 clues. Next to the Slow Roaster is a [cultstash|Cult Stash|By the Ferris Wheel]. The code is found by entering the numbers of the striped cups (147).
+In a break room you'll find [manpage|Manuscript Page: Scratch on the Hunt|Scratch on the Hunt]. Head to the gift shop. Go around to the front door, and check the bulletin board next to it to find 2 clues. Next to the Slow Roaster is a [cultstash|Cult Stash|By the Ferris Wheel]. Solve the puzzle.
+
+\begin{spoiler}
+The code is found by entering the numbers of the striped cups.  147.
+\end{spoiler}
 
 Go to the Percolator and kill the Taken. Go around to the other side and pick up the Screwdriver. Return to the gift shop and open it up. Inside, find [manpage|Manuscript Page: Coffee World Attacked|Coffee World Attacked] on a table. Look at the safe and profile Ilmo again. Solve the puzzle to open the safe.
 
 \begin{spoiler}
 
-The puzzle says Tracker, Lookout, Cleaner. Looking at the staff board, the closest to Tracker is Lost and Found, and she has 1 sticker. Lookout might be Security, with 4 stickers, and Janitor is cleaner, with 6 stickers. The code is 146.
+The puzzle says Tracker, Lookout, Cleaner. You can get additional hints by collecting clues and profiling Ilmo. Looking at the staff board, the closest to Tracker is Lost and Found, and she has 1 sticker. Lookout might be Security, with 4 stickers, and Janitor is cleaner, with 6 stickers. The code is 146.
 
 \end{spoiler}
 
-Before moving on let's collect some stuff. Head due south from the gift shop to find a [settersign|Setter Sign|In Coffee World] near a huge statue of a coffee pot in a bowtie. Walk all the way around this statue and pick up the [key|Coffee World Stash Key]. Go slightly northwest to find Huotari well. In the grass behind it you'll find [cultstash|Cult Stash|Near the wishing well] with a [clue|Clue: M and T|M and T].
+Take the [key|Trailer Park Key].
+
+Before moving on let's collect some stuff. Head due south from the gift shop to find a [settersign|Setter Sign|In Coffee World] near a huge statue of a coffee pot in a bowtie. Walk all the way around this statue and pick up the [key|Coffee World Stash Key]. Go slightly northwest to find Huotari well. In the grass behind it you'll find [cultstash|Cult Stash|Near the wishing well] with a [clue|Clue: M and T|M and T] you can unlock with the key we just got.
 
 Head southeast to the exit to the road. Inside the giant yellow coffee pot on your left is [lunchbox|Lunch Box|Found in the Coffee World Parking].
 
@@ -333,6 +359,8 @@ Head up the path to the Watery Lighthouse. There's a break room on the way, and 
 \begin{spoiler}
 
 A II has two stacked triangles facing up. III has two side-by-side triangles facing down. Stand on the triangle and look down to see I which is two triangles stacked facing down.
+
+\img{stash_2_solution.png}
 
 \end{spoiler}
 
@@ -344,7 +372,7 @@ Old watcher (Wise Elder on eye) plays trick on ocean (Trickster on waves).
 
 \end{spoiler}
 
-The [charm|Charm|Lighthouse Charm] appears all the way down in the flooded area below. You have to go back to the road and duck under a fallen tree to get it.
+The [charm|Lighthouse Charm|Lighthouse Charm] appears all the way down in the flooded area below. You have to go back to the road and duck under a fallen tree to get it.
 
 Back at the lighthouse, head west to get [radio|Radio: Jim's Mayoral Candidacy|Jim's Mayoral Candidacy] at a gazebo.
 
@@ -356,7 +384,9 @@ Head down the hill to the break room with a [settersign|Setter Sign|In front of 
 
 Next to Odin and Thor you should see some dreamcatchers, so look around for a [lunchbox|Lunch Box|Found in the Watery Trailer Park]. Inside trailer #1 you can find [koskelatvad|Koskela Ad: Parade Floats|Parade Floats] and [deerhead|Deer Head|Trailer #1].
 
-Investigate Saga's trailer, picking up all the clues. Two are in Saga's bedroom: [clue|Book of Pun Jokes from Ilmo] and [clue|Letter from Agent Marrow]. Pursue the new Taken to the Kalevala Knights Workshop.
+Investigate Saga's trailer, picking up all the clues. Two are in Saga's bedroom: [clue|Book of Pun Jokes from Ilmo] and [clue|Letter from Agent Marrow]. One is on the kitchen table [clue|Clue: Birthday card from Mom to Logan|Birthday card from Mom to Logan]. Three are in Logan's room ([clue|Clue: Children's book - Nordic Tales|Children's book - Nordic Tales], [clue|Clue: Poster in Logan's Room|Poster in Logan's Room], [clue|Clue: Junior FBI Agent|Junior FBI Agent]). Look at the newspaper to progress.
+
+Pursue the new Taken to the Kalevala Knights Workshop.
 
 Before going inside, look around the far side for a derelict boat with dreamcatchers to find [lunchbox|Lunch Box|Near the workshop]. Going inside, on the left side of the workshop, find [manpage|Manuscript Page: Deputies Make A Grave Mistake|Deputies Make A Grave Mistake] on a workbench. In the back of the workshop, find a [deerhead|Deer Head|Inside the workshop].
 
@@ -364,20 +394,21 @@ Go inside the office to find a lock. Look at the computer and read all the messa
 
 \begin{spoiler}
 Standing behind the cup will reveal the combination. up triangle/down triangle stacked, up down left to right but overlapping, down up stacked.
+\img{stash_3_solution.png}
 \end{spoiler} 
 
 Use the combination to open the lock.
 
-Inside the break room, collect clues from the bulletin board and from the table ([clue|Report on Rose Marigold], [clue|Drug-fueled scribbles]). You can pick up a fuse from the table. Then head down into the basement.
+Inside the break room, collect clues from the bulletin board ([clue|Ritual being interrupted], [clue|Steps of the cult ritual], [clue|Admonishing members sabotaging FBC equipment]) and from the table ([clue|Report on Rose Marigold], [clue|Drug-fueled scribbles]). You can pick up a fuse from the table. Then head down into the basement.
 
-Try to take the Clicker. On the floor is [manpage|Manuscript Page: Saga Fights Taken At The Workshop|Saga Fights Taken At The Workshop]. Go ahead and profile the deputies. Go upstairs and kill the Taken. Outside, find [manpage|Manuscript Page: The Koskela's Parade Float|The Koskela's Parade Float] on the ground in front of the float. On the nearby table, find a legal pad with some clues. Profile the Koskelas. 
+Try to take the Clicker. On the floor is [manpage|Manuscript Page: Saga Fights Taken At The Workshop|Saga Fights Taken At The Workshop]. Go ahead and profile the deputies. Go upstairs and kill the Taken. Outside, find [manpage|Manuscript Page: The Koskela's Parade Float|The Koskela's Parade Float] on the ground in front of the float. On the nearby table, find a legal pad with some clues. Profile the Koskelas. Also get all the clues on the float.
 
 We need to collect several objects to proceed:
 \begin{ul}
+	\item The Moose Mask, at the well
 	\item The Cassette Tape, in the Fair trade area, behind a laughing sign
 	\item The Toy Knife in gift shop
-	\item The Circuit Board, at the Espresso Express. Use the fuse from the workshop and then go underneath by stopping the ride at the right time.
-	\item The Moose Mask, at the well
+	\item The Circuit Board, at the Espresso Express. Use the fuse from the workshop on the fusebox on the right side of the ride and then go underneath by stopping the ride at the right time.
 \end{ul}
 
 Make sure to take [manpage|Manuscript Page: Deputies Corrupted|Deputies Corrupted] on the ground exiting the Espresso Express after getting the Circuit Board. 
@@ -428,7 +459,7 @@ Wise man on waves, bear on candy.
 
 \end{spoiler}
 
-An enemy will be guarding the [charm|Coffee World Token Charm] on a nearby fish cleaning station. In the trailer furthest east is  [radio|Radio: Gil's weird joke|Gil's weird joke]. Behind Trailer #4 is a [cultstash|Cult Stash|Trailer park, behind Trailer #4] and the [key|Trailer Park Stash Key] for it is obtained by walking up a small ramp near the grill and taking it off the electrical box.
+An enemy will be guarding the [charm|Coffee World Token Charm] on a nearby fish cleaning station. In the trailer furthest to the southeast (Trailer 6) is [radio|Radio: Gil's weird joke|Gil's weird joke]. Behind Trailer #4 is a [cultstash|Cult Stash|Trailer park, behind Trailer #4] and the [key|Trailer Park Stash Key] for it is obtained by walking up a small ramp near the grill and taking it off the electrical box.
 
 Use the newly repaired bridge to walk east back into the town. At the end of the westernmost pier is [manpage|Manuscript Page: The Dark Presence Attacks|The Dark Presence Attacks]. The easternmost pier has a [cultstash|Cult Stash|Downtown Watery, the easternmost pier], which you can get by solving a short math puzzle.
 
@@ -455,23 +486,23 @@ Use the screwdriver to jimmy open the lock to the building behind Suomi hall. On
 
 \begin{spoiler}
 
-Trickster on light, Maiden on necklace.
+Trickster on necklace, Maiden on house.
 
 \end{spoiler}
 
-Pick up the [charm|Coffee Mug Charm] from the porch.
+Pick up the [charm|Coffee Mug Charm] from the mailbox.
 
-That's it for items. Use the janitor room to switch to Alan.
+That's it for items. Use the janitor room inside Suomi Hall to switch to Alan.
 
 \checklist{Watery 3}
 
 \section{Initiation 4: We Sing}
 
-Enter the TV. Follow the arrows up some stairs, around, and eventually down some more stairs. Sometimes you may have to wait while the song catches up. At the end, interact with a TV.
+Use the typewriter. Enter the TV. Follow the arrows up some stairs, around, and eventually down some more stairs. Sometimes you may have to wait while the song catches up. At the end, interact with a TV.
 
-Grab the lamp and head up the ladder at the far end of the dining hall. Use the lamp at the dead end of the catwalk and then proceed down the ladder and stairs. Run around to a far corner and take the light, then place it in the center section with the blinking car. Enter the TV.
+Grab the lamp and head up the ladder at the far end of the dining hall. Use the lamp at the dead end of the catwalk and then proceed down the ladder and stairs. Here you can pick up the flashlight and gun. Follow the lit up neon arrows until you can take the light, then place it in the center section with the blinking car. Enter the TV.
 
-Ride the ferry, follow the path, and take the [weapon|Flare Gun]. Continue on, fighting enemies or bypassing them, until you get to another TV.
+Ride the ferry, follow the path up a ladder and take the [weapon|Flare Gun]. Continue on, fighting enemies or bypassing them, until you get to another TV.
 
 Back in the green room, enter the door and align the orbs. Climb a long ladder and use the Song's End story thread on the board. Enter one last TV for the finale.
 
@@ -487,41 +518,47 @@ Try entering the Oceanview Hotel. When you end up outside, turn right to see a h
 
 Enter the Mirror Peak Bar door and head down to the roof (surprisingly). Climb down a ladder and then up a stairway. Take the light. Go under a scaffold and up a ladder. Burn away the orbs and kill the resulting enemies. Then enter the door. Climb up the stairs right in front of you and crawl through a cardboard tent to reach a break room. Head to the south end of the roof and you will see a [wopow|Word of Aid|Word of Aid on the south end of the roof on a propped up piece of metal] on a propped up piece of metal.
 
-Heading up two ladders, you should see [wopow|Word of Lamp|Word of Lamp on a water tower] on a water tower. Rather than open this door, go the left and down some stairs. Ducking under a nearby stairway, you eventually you should see a [wopow|Word of Gun|Word of Gun on the underside of a stairway landing] on the underside of a stairway landing. Go the other way and down a ladder, and on your left is a [breaker|Breaker Room|On the rooftops]. Take [map|Breaker Map 3].
+Heading up two ladders. On the far west side you should see orbs to align to get [echo|Echo: Closed Case|Closed Case]. Looking the other way, can just about get [wopow|Word of Lamp|Word of Lamp on a water tower] on a water tower. Rather than open this door, go the left and down some stairs. Ducking under a nearby stairway, you eventually you should see a [wopow|Word of Gun|Word of Gun on the underside of a stairway landing] on the underside of a stairway landing. Go the other way, south and down a ladder, and on your left is a [breaker|Breaker Room|On the rooftops]. Take [map|Breaker Map 3].
 
-Place the light in the door and pass through. Return, and take the light again. Go through the door and on the other side, with the water tower, place the light to remove it. Return and put the light in again. You can now pass through and walk around to the hotel room entrance.
+Return to the door, place the light, and pass through. Return, and take the light again. Go through the door and on the other side, with the water tower, place the light to make the tower disappear. Return and put the light in again. You can now pass through and walk around to the hotel room entrance.
 
-We need a code to enter. Head to a nearby rooftop bar and put the light in through the barrier. Look at the board to see that the Oceanview Cocktail is 25.50. Before you go, take the light out while inside the bar for some loot.
+Before we tackle this, go to where the other water tower is and you should see some orbs to align. This shows you [echo|Echo: Final Case|Final Case].
 
-Enter the code 2550 into the door to proceed. Use the key, turn on the projector, and interact with the picture.
+We need a code to enter.
+
+\begin{spoiler}
+Head to a nearby rooftop bar and put the light in through the barrier. Look at the board to see that the Oceanview Cocktail is 25.50. The code is 2550.
+\end{spoiler}
+
+Before you go, take the light out while inside the bar for some loot. Enter the code into the door to proceed. Use the key, turn on the projector, and interact with the picture.
 
 \checklist{Dark Place 4}
 
-Walk to a balcony off the hall and align the orbs. Go down the elevator. Here you'll find the Entrance Hall scene and align the orbs to get the Pre-Show Ritual story thread. Run around the nearby hallway to find the [map|Oceanview Hotel Map] from the wall and find the Final Scene.
+Walk to a balcony off the hall and align the orbs ([echo|Echo: Another Murder|Another Murder]). Go down the elevator. Here you'll find the Entrance Hall scene and align the orbs to get the [echo|Echo: Pre-Show Ritual|Pre-Show Ritual] story thread. Run around the nearby hallway to find the [map|Oceanview Hotel Map] from the wall and find the Final Scene.
 
-In the Entrance hall, head toward the exit and go outside. Across Ocean Avenue, high up on a brick building, you'll see a [wopow|Word of Aid|Word of Aid High up on a brick building outside the hotel].
+In the Entrance hall, head toward the exit and go outside. Across Ocean Avenue, high up on a brick building and slightly west, you'll see a [wopow|Word of Aid|Word of Aid High up on a brick building outside the hotel].
 
 Use the Pre-Show Ritual on the Final Scene. Pick up [key|Room 104 Key] from a nearby box. Open Room 104 and go through the bathroom to be teleported to the second floor break room.
 
-In Room 224, go into the back room find [television|Television: Night Springs Intro|Night Springs Intro]. Shoot a piece of cardboard and head back. There's a [wopow|Word of War|Word of War in Room 224] in the shower. In the second floor hallway, look up at an exit sign to see a [wopow|Word of War|Word of War on the ceiling behind glass on the second floor hallway].
+In Room 224, go into the back room find [television|Television: Night Springs Intro|Night Springs Intro]. Shoot a piece of cardboard and head back. There's a [wopow|Word of War|Word of War in Room 224] in the shower. In a part of the map labeled "second floor hallway", look up at an exit sign on the north side to see a [wopow|Word of War|Word of War on the ceiling behind glass on the second floor hallway].
 
-In Room 205 you can see [television|Television: Signals|Signals]. Enter Room 216 to find [key|Room 209 Key]. Entering there to find a [breaker|Breaker Room|In Room 209]. Here is another [map|Breaker Map 4]
+In Room 205 you can see [television|Television: Signals|Signals]. Enter Room 216 to find [key|Room 209 Key]. Enter 209 to find a [breaker|Breaker Room|In Room 209]. Here is another [map|Breaker Map 4]
 
 Enter the ballroom and find a break room with [key|Room 101 Key]. On the ceiling behind the bar is a [wopow|Word of Stuff|Word of Stuff in the Ballroom]. Use the Pre-show Ritual scene here and check out the mask and board.
 
 Go back downstairs and enter room 101 using your key to see [television|Television: Visions|Visions]
 
-Go into Room 219 and take the light. Go through the new door and you can now enter Room 202 to find a new scene Rehearsal Room. Stand near the whiteboards and use the story thread. Align the orbs to get the Haunted story thread, and then use it here.
+Go into Room 219 and take the light. Go through the new door and you can now enter Room 202 to find a new scene Rehearsal Room. Stand near the whiteboards and use the story thread. Align the orbs to get [echo|Echo: Haunted|Haunted] story thread, and then use it here.
 
-Use the Haunted thread back in the ballroom, and then align the orbs from the stage to get the Devil thread. Kill all the enemies, and then head back to the first floor. In the Entrance Room scene, put the Devil thread and get ready for a fight. (The flare gun is useful here.)
+Use the Haunted thread back in the ballroom, and then align the orbs from the stage to get [echo|Echo: Devil|Devil]. Kill all the enemies, and then head back to the first floor. In the Entrance Room scene, put the Devil thread and get ready for a fight. (The flare gun is useful here.)
 
-After you've killed the new enemies, travel up the stairs until you find an echo, then align the orbs to get [echo|Echo: Room 666|Room 666]. Continue up the 6th floor. Up here, just walk to the other end of the floor with all the dead bodies, and enter the door. Align the orbs to get The Climax story thread.
+After you've killed the new enemies, travel up the stairs until you find an echo, then align the orbs to get [echo|Echo: Room 666|Room 666]. Continue up the 6th floor. Up here, just walk to the other end of the floor with all the dead bodies, and enter the door. Align the orbs to get [echo|Echo: The Climax|The Climax] story thread.
 
 The dark presence will show up to chase you. Take either side and run until it shows up in the front of you. On your way back, turn into the center of the corridor, and then turn back to the stairs. Avoid the shadows and find a safe room. (There's a high chance you'll die for no reason ... just keep trying.)
 
-Back on the first floor, put the Climax thread on the Final Scene. Walk ahead and interact with the tub.
+Back on the first floor, put the Climax thread on the Entrance Scene to get [echo|Echo: Quid Pro Quo|Quid Pro Quo] and then use it in the Final Scene. Walk ahead and interact with the tub.
 
-Exit the hotel. Straight ahead is [echo|an echo|Right outside the hotel]. Use the break room ahead of you to return to Saga.
+Exit the hotel. Straight ahead is [echo|Echo: Dead Tired|Dead Tired]. Use the break room ahead of you to return to Saga.
 
 \checklist{Oceanview Hotel}
 
@@ -531,7 +568,7 @@ Exit the hotel. Straight ahead is [echo|an echo|Right outside the hotel]. Use th
 
 Walk through the kitchen and get the shotgun. Run up the path, following the gunfire and killing Taken along the way. Cross a small bridge to a cabin. Inside, as Saga, find [manpage|Manuscript Page: The History Of The Valhalla Nursing Home|The History Of The Valhalla Nursing Home]. You can now start the case The Anderson Brothers.
 
-Follow the path to the north to find a [rhyme|Nursery Rhyme|North of the break room in the woods]. Also nearby is a [cultstash|Cult Stash|North of the break room in the woods] with Simon Says.
+Follow the path to the north to find a [cultstash|Cult Stash|North of the break room in the woods] with Simon Says and a [rhyme|Nursery Rhyme|North of the break room in the woods].
 
 \begin{spoiler}
 
@@ -541,7 +578,7 @@ Mother on home, child on trees
 
 Get the [charm|Lantern Charm] on the path we just came up. 
 
-Head south from the break room and you'll see dreamcatchers on the right side leading to a [lunchbox|Lunch Box|South of the break room in Bunker Woods]. Head south, down some stairs, to a campsite to find [radio|Radio: Technical Issues|Technical Issues]. Back up the stairs and down a little hill to the east is a truck with a [cultstash|Cult Stash|On a truck in Bunker Woods].
+Head south from the break room and you'll see dreamcatchers on the right side leading to a [lunchbox|Lunch Box|South of the break room in Bunker Woods]. Head south, down some stairs, to a campsite to find [radio|Radio: Technical Issues|Technical Issues]. Back up the stairs and immediately to the right, down a little hill to the east, is a truck with a [cultstash|Cult Stash|On a truck in Bunker Woods].
 
 \begin{spoiler}
 
@@ -561,13 +598,13 @@ Go to the nursing home. On the left, in front of the Wellness Center is the fina
 
 \section {Return 5: Old Gods}
 
-In the admin office to the right is the [map|Valhalla Nursing Home Map] and [lunchbox|Lunch Box|Inside the nursing home Admin Office]. Following Rose to get [koskelatvad|Koskela Ad: Bright Falls Blend|Bright Falls Blend]. Talk to the two residents, Ahti, and Rose. 
+In the admin office to the right is the [map|Valhalla Nursing Home Map] and [lunchbox|Lunch Box|Inside the nursing home Admin Office]. In the next room you can see [koskelatvad|Koskela Ad: Bright Falls Blend|Bright Falls Blend].  Follow Rose and talk to the Norman and Mandy-May, Ahti, and Rose.
 
-Head upstairs. In the Rec Room find a [deerhead|Dear Head|In the Rec Room of the Nursing Home]. Look around Tor's room, then try talking to Odin. Profile him and use the board. Look at the picture on the wall before leaving for a [clue|Clue|A Painting of Mom and me with Odin and Tor].
+Head upstairs. In the Rec Room find a [deerhead|Dear Head|In the Rec Room of the Nursing Home]. Look around Tor's room, then try talking to Odin. Profile him and use the board. Look at the picture on the wall before leaving for a [clue|Clue|A Painting of Mom and me with Odin and Tor]. In the Trophy Room, talk to a woman.
 
 Talk to Rose and enter the Wellness Center. On the left is the [map|Wellness Center Map]. In room 102, find [manpage|Manuscript Page: Tor Is Bewitched|Tor Is Bewitched] on a desk. Investigate the bed at the end for two clues. Check the dispensary for a break room.
 
-Enter rehabilitation and try to follow Tor. Exit out the other door in this room and unlock the double doors leading back. Enter the office and exit through the other door to a hallway leading north. Exit into the Security Room. There are clues for this puzzle: one on the counter, one on the bulletin board, three in a filing cabinet drawer, and one on the computer. Solve the puzzle.
+Enter rehabilitation and try to follow Tor. Exit out the other door in this room and unlock the double doors leading back. Enter the office and exit through the other door to a hallway leading north. Exit into the Security Room. In a filing drawer you can get [clue|Clue: Cult Initiation Letter signed|Cult Initiation Letter signed], [clue|Clue: Cult Initiation Letter addressed|Cult Initiation Letter addressed], and a clue for this puzzle. There are two other clues for this puzzle: one on the counter and one on the bulletin board. Solve the puzzle.
 
 \begin{spoiler}
 
@@ -575,9 +612,9 @@ The ceremony takes place on the day after the next new moon. We can tell by the 
 
 \end{spoiler}
 
-On the computer's mail you can see a clue that the doorknob for the room at the end of the hall is "in a glassy cage where pretty flowers bloom near the greet". On the media tab you'll get a clue. Then use the security tab and unlock the doors. The nearby shortcut to the lobby is now open.
+On the computer's mail you can get a hint that the doorknob for the room at the end of the hall is "in a glassy cage where pretty flowers bloom near the greet". On the media tab you'll get a clue. Then use the security tab and unlock the doors. The nearby shortcut to the lobby is now open.
 
-Go into the newly available staff lounge and into the receptionist area to find the doorknob in a box. Use it to enter room 101 and claim the [weapon|Rifle]. Here you'll also find [manpage|Manuscript Page: The Cult Storms the Lodge|The Cult Storms the Lodge] and a [deerhead|Deer Head|In the Wellness Center, room 101]. In Exam Room 2, pick up [manpage|Manuscript Page: Gail Taken|Gail Taken]
+Go into the newly available staff lounge and into the receptionist area to find the doorknob in a box. Use it to enter room 101 and claim the [weapon|Rifle]. Here you'll also find [manpage|Manuscript Page: The Cult Storms the Lodge|The Cult Storms the Lodge] and a [deerhead|Deer Head|In the Wellness Center, room 101]. In Exam Room 2 (Room 104), pick up [manpage|Manuscript Page: Gail Taken|Gail Taken]
 
 Fight an enemy in the rehabilitation room, then proceed to the dining hall. Through the kitchen, go outside and watch a scene.
 
