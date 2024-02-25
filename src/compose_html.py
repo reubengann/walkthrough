@@ -4,6 +4,7 @@ from bs4 import BeautifulSoup, Tag
 
 from src.parse_document import (
     ChecklistParagraphChild,
+    ImageParagraphChild,
     Paragraph,
     SectionHeading,
     Spoiler,
@@ -88,9 +89,14 @@ def make_html_from_doc(doc: WalkthroughDocument) -> str:
                     spoiler_element = html.new_tag("div")
                     main_container.append(make_collapsible(html, spoiler_element))
                     for se in section_item.items:
-                        tag = html.new_tag("p")
-                        tag.string = se.s
-                        spoiler_element.append(tag)
+                        match se:
+                            case TextParagraphChild():
+                                tag = html.new_tag("p")
+                                tag.string = se.s
+                                spoiler_element.append(tag)
+                            case ImageParagraphChild():
+                                tag = html.new_tag("img", attrs={"src": se.image_loc})
+                                spoiler_element.append(tag)
                 case Paragraph():
                     element = html.new_tag("p", attrs={"class": "mt-4"})
                     for paragraph_child in section_item.items:

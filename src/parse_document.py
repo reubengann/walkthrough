@@ -7,6 +7,7 @@ class ParagraphChildType(Enum):
     NONE = 0
     TEXT = 1
     CHECK_ITEM = 2
+    IMAGE = 3
 
 
 class ParagraphChild:
@@ -20,6 +21,12 @@ class TextParagraphChild(ParagraphChild):
 
     def __repr__(self) -> str:
         return f"Text ({self.s})"
+
+
+class ImageParagraphChild(ParagraphChild):
+    def __init__(self, image_loc: str) -> None:
+        self.part_type = ParagraphChildType.IMAGE
+        self.image_loc = image_loc
 
 
 class ChecklistParagraphChild(ParagraphChild):
@@ -77,7 +84,7 @@ class UnnumberedList(DocumentItem):
 
 
 class Spoiler(DocumentItem):
-    items: list[TextParagraphChild]
+    items: list[ParagraphChild]
 
     def __init__(self) -> None:
         self.items = []
@@ -198,7 +205,13 @@ class WalkthroughParser:
         line = self.lines[self.line_no]
         started = self.line_no
         while not line.startswith(R"\end{spoiler}"):
-            if line.strip() != "":
+            if R"\img" in line:
+                image_loc = read_between_braces(line)
+                if image_loc is None:
+                    print(f"On line {self.line_no}, could not parse img tag")
+                else:
+                    item.items.append(ImageParagraphChild(image_loc))
+            elif line.strip() != "":
                 item.items.append(TextParagraphChild(line))
             self.line_no += 1
             if self.line_no == len(self.lines):
