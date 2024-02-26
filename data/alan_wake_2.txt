@@ -1,3 +1,5 @@
+\version{3}
+
 \declare{map}{Map}{Maps}
 \declare{lunchbox}{Lunch Box}{Lunch Boxes}
 \declare{deerhead}{Dear Head}{Deer Heads}
@@ -17,8 +19,6 @@
 \declare{echo}{Echo}{Echoes}
 \declare{breaker}{Breaker Room}{Breaker Rooms}
 \declare{koskelatvad}{Koskela TV Ad}{Koskela TV Ads}
-
-\version{3}
 
 \title{Alan Wake 2}
 
@@ -624,21 +624,27 @@ Across a bridge in the dark gazebo find [manpage|Manuscript Page: Odin Loses An 
 
 On the landing between the first and second floors find [manpage|Manuscript Page: Odin Stuck In Bed|Odin Stuck In Bed]. In Room 207 investigate the record holder on the floor. Profile all topics.
 
-On the third floor, in Gail's room, find [manpage|Manuscript Page: Building The Valhalla Nursing Home|Building The Valhalla Nursing Home]. Try entering Cythia's room. We have to head to the basement.
+On the third floor, carefully approach Gail's room without getting too close to Cynthia's; in here, find [manpage|Manuscript Page: Building The Valhalla Nursing Home|Building The Valhalla Nursing Home]. Try entering Cythia's room. We have to head to the basement.
 
 Go out to the back where Rose is, and fight some Taken. Around to the left is the basement entrance. Down here, follow the path till you see a big furnace with [manpage|Manuscript Page: Barry's Struggles With Artists|Barry's Struggles With Artists]. In an adjacent break room is a fuse box that needs a fuse. Continue on and duck under a board. To the left is [manpage|Manuscript Page: Emmett Taken|Emmett Taken]. Ahead of where you came in is a note saying the fuses are locked up and the code is in the laundry room. Head left of where you came in and duck through an open door.
 
-In front of you is a toolbox with a combination lock. Out in the laundry room, find [manpage|Manuscript Page: Cynthia Corrupted|Cynthia Corrupted] on a table. On the bulletin board it says the code is 273. Return to the toolbox and enter the code. You can unlock a door which is a shortcut back to the boiler room. Put the fuse in and restore power.
+In front of you is a toolbox with a combination lock. Out in the laundry room, find [manpage|Manuscript Page: Cynthia Corrupted|Cynthia Corrupted] on a table. Find the combination.
+
+\begin{spoiler}
+On the bulletin board it says the code is 273.
+\end{spoiler}
+
+Return to the toolbox and enter the code. You can unlock a door which is a shortcut back to the boiler room. Put the fuse in and restore power.
 
 If you want to, head back to the laundry room and turn on the projector. Then head back to Cynthia's room and unlock it.
 
-If you're playing on the Final Draft, you can find [manpage|Dark Poem 2] on the floor. On a side table is a heart shaped box with a [clue|Clue|a heart shaped box], and on another table a [clue|Clue]. In the bathroom is [manpage|Manuscript Page: Cynthia And Tor|Cynthia And Tor]. Kill the Taken downstairs and use the jukebox.
+If you're playing on the Final Draft, you can find [manpage|Dark Poem 2] on the floor. On a side table is a heart shaped box with a [clue|Clue: Box of chocolate from Tor|Box of chocolate from Tor], and on another table a [clue|Clue: An entry from Cythia's journal|An entry from Cythia's journal]. In the bathroom is [manpage|Manuscript Page: Cynthia And Tor|Cynthia And Tor]. Get the record from the bathtub, then head downstairs. Kill the Taken here and then use the jukebox.
 
 \checklist{Nursing Home}
 
-Enter the Overlap. There are no Manuscript Pages here, so just keep going down the path. Kill a Taken and start a generator, then go back one room and flip a switch. Head through the chain link door.
+Enter the Overlap. There are no Manuscript Pages here, so just keep going down the path. In the first loop, ignore all the doors and just keep going in the hallway until you go down some stairs. Kill a Taken and start a generator, then go back one room and flip a switch. Head through the chain link door.
 
-After a couple loops and dead ends you'll come to a room with another switch and a locked cabinet. Flip the switch, enter the door, then flip another switch, and check a nearby desk drawer for [key|Tool Cabinet Key]. Back in the previous room, turn the light back off and retrieve the Boltcutters from the cabinet. Now turn the light on again and re-enter the next room. Turn the light off and kill the Taken that appears. Then use the boltcutters to unlock the door. Down the ladder, in the third loop, continue till you reach a big flooded room.
+In the second loop, go into door 3. You'll reach a dead end, so backtrack to the hallway and head back the way you came, up some stairs. You'll come to a room with another switch and a locked cabinet. Flip the switch, enter the door, then flip another switch, and check a nearby desk drawer for [key|Tool Cabinet Key]. Back in the previous room, turn the light back off and retrieve the Boltcutters from the cabinet. Now turn the light on again and re-enter the next room. Turn the light off and kill the Taken that appears. Then use the boltcutters to unlock the door. Down the ladder, in the third loop, continue till you reach a big flooded room.
 
 In here, do not stay in the water for long! Cynthia is down there and will kill you. Run into the center of the room. Try the panel. Use the platforms to make your way clockwise around the room to an opening. Here, in the outer ring, you need to make your way counterclockwise. In the third opening on the right, activate a generator. Directly across from you on a scaffold is a shortcut back to the center room.
 
@@ -650,13 +656,15 @@ Time for cleanup.
 
 \section{Bright Falls Cleanup}
 
-On the bridge near Tor is [manpage|Manuscript Page: Cynthia's Lamp|Cynthia's Lamp]. Cut the lock on the gate leading southwest. On the northern path find a [lunchbox|Lunch Box|Found in the bunker area near Bright falls (in the woods southwest of the nursing home)] and at the furthest west point, [manpage|Manuscript Page: Rose At Bingo Night|Rose At Bingo Night] and [radio|Terry's Guest Call]. Follow the path south a bit and under a sign with a downward facing arrow pick up the [key|Bunker Woods Stash key]. The corresponding [cultstash|Cult Stash|Found by a forest bunker] is just west of here on a little path, behind a boulder.
+On the bridge near Tor is [manpage|Manuscript Page: Cynthia's Lamp|Cynthia's Lamp]. Cut the lock on the gate leading southwest. On the northern path find a [lunchbox|Lunch Box|Found in the bunker area near Bright falls (in the woods southwest of the nursing home)] on the left. Then, at the furthest west point, [manpage|Manuscript Page: Rose At Bingo Night|Rose At Bingo Night] and [radio|Terry's Guest Call]. Follow the path south a bit and under a sign on a small ridge on the left with a downward facing arrow pick up the [key|Bunker Woods Stash key]. The corresponding [cultstash|Cult Stash|Found by a forest bunker] is just west of here on a little path, behind a boulder.
 
 Continue south, down the wooden stairs to a cabin, and activate the generator. On the floor of this break room is [manpage|Manuscript Page: Bright Falls|Bright Falls]. To the east, on the north side of the path, find a [cultstash|Cult Stash|Stash found in the woods near Bright Falls].
 
 \begin{spoiler}
 
 Two triangles, vertices facing away from each other left to right, Two adjacent triangles, vertices facing down, Two triangles, vertices facing toward each other like an hourglass.
+
+\img{stash_4_solution.png}
 
 \end{spoiler}
 
@@ -684,7 +692,7 @@ Pretty, shiny rocks means the child goes on jewelry. Monster on water and mother
 
 \end{spoiler}
 
-Retrieve the [charm|Valhalla Nursing Home Charm]. Slightly north on a small hill is a [lunchbox|Lunch Box|Near the shore]. From here head north a little ways to the smaller path and slightly west to see a dreamcatcher. Nearby at the top of the hill is a [lunchbox|Lunch Box|Found in the woods near Bright Falls].
+Retrieve the [charm|Valhalla Nursing Home Charm]. Slightly northeast on a small hill is a [lunchbox|Lunch Box|Near the shore]. From here head north a little ways to the smaller path and slightly west to see a dreamcatcher. Nearby at the top of the hill is a [lunchbox|Lunch Box|Found in the woods near Bright Falls].
 
 Cross a small bridge to the east and notice some dreamcatchers. Head toward them and get [lunchbox|Lunch Box|In the flooded area] and [manpage|Manuscript Page: Rose Receives A Message|Rose Receives A Message]. On a dock is a [rhyme|Nursery Rhyme|At the Bright Falls pier]. Solve the puzzle and fight several Taken.
 
@@ -710,6 +718,8 @@ West of the Oh Deer diner is a gate you can cut with the boltcutters and find an
 
 Adjuacent triangles pointing up, facing away left-to-right, stacked pointing up.
 
+\img{stash_5_solution.png}
+
 \end{spoiler}
 
 Drive to Watery.
@@ -718,7 +728,7 @@ Drive to Watery.
 
 \section{Watery Cleanup}
 
-In the trailer park, use the boltcutters to open the gate to Trailer 5. Inside is a [rhyme|Nursery Rhyme].
+Head inside Suomi Hall and meet the mayor. In the trailer park, use the boltcutters to open the gate to Trailer 5. Inside is a [rhyme|Nursery Rhyme].
 
 \begin{spoiler}
 
@@ -728,7 +738,7 @@ Wise Elder Doll on the eye and the Deer Doll on the heart.
 
 Collect the [charm|Deerfest Charm] from a nearby table.
 
-Head to the Kavela Knights workshop and use the boltcutters to open a fence to the back. Behind here you'll find a [cultstash|Cult Stash] and several Taken will show up to defend it. Kill them and then solve the puzzle.
+Head to the Kalevala Knights workshop and use the boltcutters to open a fence to the back. Behind here you'll find a [cultstash|Cult Stash] and several Taken will show up to defend it. Kill them and then solve the puzzle.
 
 \begin{spoiler}
 
@@ -776,6 +786,8 @@ Father on eye, Hero on sun, Mother on heart, Child on egg, Trickster on waves.
 Take the Charm Expansion. This closes the Nursery Rhymes case.
 
 \checklist{Cauldron Lake Cleanup}
+
+There's one more thing we want to do, concerning the Deer Heads. You should have gotten all of them by now. If you talk to the Deer Head in the Mind Place, he'll say to talk to his counterpart. He means the deer head in the Elderwood Palace Lodge. Approach that, and then walk back towards the lobby. You should see a stag inside the lodge, and it will walk down the hall. Follow it into a room with a ton of supplies.
 
 All done with cleanup. Switch back to Alan. 
 
