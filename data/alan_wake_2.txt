@@ -1,4 +1,4 @@
-\version{3}
+\version{4}
 
 \declare{map}{Map}{Maps}
 \declare{lunchbox}{Lunch Box}{Lunch Boxes}
@@ -799,9 +799,9 @@ Enter Parliament Tower and go up the elevator. Open the door and to the right fi
 
 \section{Initiation 7: Masks}
 
-Use the TV. Head to the cafeteria and talk to Ahti. Take the path behind him and use the light to reopen way downstairs. Inside the flooded basement, make your way through to a red room with mannequins, and use the light. Take the photos from the shoebox. Head back up and run around to the TV we used last time. Activating it will get you [television|Television: Drowning|Drowning].
+Use the TV. Head to the cafeteria and talk to Ahti. Take the path behind him and when you step out on a small balcony overlooking the basement, take the light to reopen way downstairs. Inside the flooded basement, put the light in to open the way, and head through to a red room with mannequins, and use the light. Take the photos from the shoebox. Head back up and run around to the TV we used last time. Activating it will get you [television|Television: Drowning|Drowning].
 
-Walk toward the Hotel. On the way, align the orbs to get an [echo|Echo|Thomas Zane]. Head up the elevator and use the projector. On the way our you'll get [television|Television: Collaboration|Collaboration].
+Walk toward the Hotel. On the way, align the orbs to get an [echo|Echo|Thomas Zane]. Head up the elevator and use the projector. On the way out you can see [television|Television: Collaboration|Collaboration] in a reception booth in the lobby (listen for static).
 
 \section{Initiation 8: Zane's Film}
 
@@ -809,29 +809,29 @@ Head toward the car wash and burn away the 3 dark orbs. Inside the garage, go un
 
 Back on the ground, across the street from this, behind a chain link fence, you can look in the window and see a dark orb. Burn it away, then on the street side burn away 3 more in the same room. Duck back under the shutter and enter the door to find a [breaker|Breaker Room] with [map|Breaker Map 5].
 
-Enter the cinema, behind the concession stand is the [map|Poet's Cinema Map]. Enter a break room west of here and see [television|Television: Stop writing|Stop writing]. On the second floor go all the way west and pick up the [wopow|Word of Fix|Word of Fix above the concession stand]. Align the orbs up here and get the Cult of the Word thread.
+Enter the cinema. In the back of the concession stand, in a kitchen, is the [map|Poet's Cinema Map]. Enter a break room west of here and see [television|Television: Stop writing|Stop writing]. On the second floor go all the way west and pick up the [wopow|Word of Fix|Word of Fix above the concession stand]. Align the orbs up here and get the [echo|Echo: Cult of the Word|Cult of the Word] thread.
 
-Go back into the kitchen area and use this on the Lobby scene. Align the orbs to get the New York's Finest thread. Use this on the Lobby scene.
+Go back into the kitchen area and use the new thread on the Lobby scene. Align the orbs to get the [echo|Echo: Crooked Cops|Crooked Cops]/New York's Finest thread. Use this on the Lobby scene.
 
-East of the concession stand, enter the Ladies Room and find a [wopow|Word of Action|Word of Action In the storage room behind the Ladies Room] in a small storage room behind it. Head south into the theater. Up on the stage you can align the orbs to see an [echo|Echo|Zane's Films]. Use the Cult of the Word clip here and head up the stairs where it says Emergency Exit. Here you can find the Clip of the Lost Film thread.
+East of the concession stand, enter the Ladies Room and find a [wopow|Word of Action|Word of Action In the storage room behind the Ladies Room] in a small storage room behind it, on the ceiling. Head south into the theater. Up on the stage you can align the orbs to see an [echo|Echo|Nightless Night]. Use the Cult of the Word clip here and head up the stairs toward the lit room with Exit signs. Here you can find the [echo|Echo: Clip of the Lost Film|Clip of the Lost Film] thread.
 
 Kill the Taken and then use this new thread on the Theater Hall scene. Put the light into the screen and a door will open on the east. Take it to go back outside.
 
-Drop down here and you'll find the Out in the Night scene. Use the break room on the right if you want. Use the New York's Finest thread here and align the orbs to see an [echo|Echo|Police initiation].
+Drop down here and you'll find the Out in the Night scene. Use the break room on the right if you want. Use the New York's Finest thread here and align the orbs to see [echo|Echo: Down the Chute|Down the Chute].
 
 We need to get to the red door behind the dumpster. Take the light out of the car, and then stand in front of where the door is and put it back. Go up the stairs and then a ladder. Head to the north section of the rooftops and look on a building near the spotlights to see [wopow|Word of Stuff|Word of Stuff below a low window on the roof] below a low window.
 
 Go south through a gate. Turn left and swing around an AC unit to see a few steps leading down. Duck under the walkway. Follow this path around until you find the final [breaker|Breaker Room|On the Poet's Cinema Roof] and [map|Breaker Map 6]. Leave the other way, unlocking a door. As you exit, look up at the water tower to collect [wopow|Word of Lamp|Word of Lamp on a water tower on the roof].
 
-Go right, past a break room, and down a ladder. Here use the Cult of the Word thread. Align the orbs to get the Grandmaster story thread.
+Go right, past a break room, and down a ladder. Here use the Cult of the Word thread. Align the orbs to get [echo|Echo: Death of a Cultist|Death of a Cultist] and the Grandmaster story thread.
 
-You might want to save and prepare, as there are several enemies we need to night to get back. On your way back to the ladder there will be 4 enemies. Go down the ladder and put New York's Finest thread back in. Down here are 6 more enemies. You can elect to just run up the stairs behind them rather than fight. Either way, go through the door at the top of the stairs, back into the theater.
+You might want to save and prepare, as there are several enemies we need to fight to get back to the theater. On your way back to the ladder there will be 4 enemies. Go down the ladder and put New York's Finest thread back in. Down here are 6 more enemies. You can elect to just run up the stairs behind them rather than fight. Either way, go through the door at the top of the stairs, back into the theater.
 
 Go to the screen and use the Grandmaster thread. Head onto the stage and enter the door on the screen.
 
-Continue walking and take the only path available. On the third loop, make sure to go through the exit door on the north wall and see the [television|Television: Initiation|Initiation] before leaving through the Projection Booth door. Go through and take the knife. Walk down the hall and align the orbs. When you get to a dead end, turn around, then duck under some shelves. Take the mask.
+Continue walking and take the only path available. On the third loop, make sure to go through the exit door on the north wall and see the [television|Television: Initiation|Initiation] before leaving through the Projection Booth door. Go through and take the knife. Walk down the hall and align the orbs to see [echo|Echo: The Grandmaster|The Grandmaster]. When you get to a dead end, turn around, then duck under some shelves. Take the mask.
 
-Watch the movie here in the theater if you want, and then exit the theater. As you pass by you'll get [television|Television: Part 1|Part 1]. In the lobby there's an [echo|Echo] you can view. Remove the scene to reveal the exit. On the street is an [echo|Echo|Worst Case] you can align. Go to the square.
+Watch the movie here in the theater if you want; you'll get [television|Television: Part 1 of Yoton Yo|Part 1 of Yoton Yo] after awhile. Then exit the theater. In the lobby there's an [echo|Echo: Trapped|Trapped] you can view. Remove the scene to reveal the exit. On the street is an [echo|Echo|Worst Case] you can align by standing near the van and looking up. Go to the square.
 
 On the west side of the plaza, answer the phone. Interact with the shoebox under the statue in the middle of the square.
 
@@ -859,13 +859,11 @@ In the first cell on the right pick up the [manpage|Manuscript Page: Sheriff's S
 
 Turn around and exit outside. The goal in this section is to damage him enough until he has to heal. When he does, quickly move to the red boxes and power them up. Don't even both trying to power them up when he's active. Two or three rifle shells is enough to stun him. After activating all three boxes, you'll see a scene.
 
-In the Tim Breaker's office, speak to Casey and profile Wake and Casey. Talk to Estevez and get the [key|Prison Cell Key]. Use it to open a cell on the left in the jail. Inside look at the files to get some clues. If playing on the Final Draft, get [manpage|Manuscript Page: Dark Poem 3|Dark Poem 3 (Final Draft only)]. Profile and enter everything on the board, then talk to Casey and Estevez again.
+In the Tim Breaker's office, speak to Casey and profile. Talk to Estevez and get the [key|Prison Cell Key]. Use it to open a cell on the left in the jail. Inside look at the files to get some clues. If playing on the Final Draft, get [manpage|Manuscript Page: Dark Poem 3|Dark Poem 3 (Final Draft only)]. Profile and enter everything on the board, then talk to Casey and Estevez again.
 
 Out in the hall, talk to Ilmo about all topics.
 
 Leave the station and return to your car. Near the back side is [manpage|Manuscript Page: The Cult Finds the Clicker|The Cult Finds the Clicker]. Driver to Watery.
-
-If you want, head inside Suomi Hall and meet the Mayor.
 
 Go the lighthouse and unlock it. Inside you'll find the second [invexp|Inventory Expansion|In the lighthouse]. You'll also find Manuscript Pages [manpage|The Cult Of The Tree Is Born] and [manpage|Ilmo Resists The Dark Presence].
 
@@ -881,7 +879,7 @@ Talk to Tor to start the fight. There are many waves of Taken. Casey and Estevez
 
 \section{Initiation 9: Gone}
 
-Go up the elevator. Enter the door on the left and walk around to interact with the screen and get [television|Television: Part 3|Part 3].
+Go up the elevator. Try to enter the door with the sign, and then go through the door on the left and walk around to interact with the screen and get [television|Television: Part 3|Part 3].
 
 The next fight plays out pretty much like the previous one against Scratch. You need to activate two lights. Shoot Scratch several times and Estevez will eventually train her light on him. Once that happens, run to the nearest light and hold the button. After you activate both, run inside the cage.
 
@@ -889,9 +887,9 @@ Talk to Estevez and pick up the weapons. Duck under the fallen tree and make you
 
 Watch the TV in the Oh Deer to see the final [koskelatvad|Koskela Ad: Return Review|Return Review]. Walk to the end of the street and pick up the book. Run through the Lodge and out the back door.
 
-At the nursing home, try to enter. Turn around and see a door with a light. Use it to enter the back of the Wellness Center. Move through to the entrance until you encounter Scratch. Turn around and run until you reach a lit room, then continue through to the entry area and out into the Nursing Home. Head to the third floor and enter the door with the spiral on it.
+At the nursing home, try to enter. Turn around and see a door with a light. Use it to enter the back of the Wellness Center. Move through to the entrance until you encounter Scratch. Turn around and run, taking every left path, until you reach a lit room, then continue through to the entry area and out into the Nursing Home. Head to the third floor and enter the door with the spiral on it.
 
-Use the typewriter, then align the orbs. Put the new thread on the board.
+Look at the typewriter and the board, then align the orbs. Put the new thread on the board.
 
 Try to leave the Mind Place via the door. Then use the case board. Profile Saga. Continue looking at objects, placing them on the board, and profiling to find all the of ways Saga has failed. When the room gets dark, get the flashlight from the central table. Burn away dark orbs and look at the objects that remind Saga of good qualities. Continue profiling and using the board until the case is closed.
 
