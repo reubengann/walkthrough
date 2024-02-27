@@ -11,6 +11,7 @@ from src.parse_document import (
     TextParagraphChild,
     UnnumberedList,
     WalkthroughDocument,
+    LinkParagraphChild,
 )
 
 
@@ -100,9 +101,20 @@ def make_html_from_doc(doc: WalkthroughDocument) -> str:
                 case Paragraph():
                     element = html.new_tag("p", attrs={"class": "mt-4"})
                     for paragraph_child in section_item.items:
+                        element.append(" ")
                         match paragraph_child:
                             case TextParagraphChild():
                                 element.append(paragraph_child.s)
+                            case LinkParagraphChild():
+                                a = html.new_tag(
+                                    "a",
+                                    attrs={
+                                        "href": paragraph_child.url,
+                                        "class": "hover:underline",
+                                    },
+                                )
+                                a.append(paragraph_child.url)
+                                element.append(a)
                             case ChecklistParagraphChild():
                                 if paragraph_child.tag_name not in doc.decl_map:
                                     print(
@@ -298,12 +310,21 @@ def make_section_heading(html: BeautifulSoup, title: str, anchor_name: str):
     h2_tag.attrs["class"] = "mt-8 text-2xl font-bold tracking-tight"
     h2_tag.string = title
     h2_tag.append(html.new_tag("a", attrs={"name": anchor_name}))
-    top_link = BeautifulSoup(
-        ' <span class="text-xl font-normal"><a href="#top_of_toc">(Go to top)</a></span>',
-        "html.parser",
-    )
+    top_link = make_go_to_top_link()
     h2_tag.append(top_link)
     return h2_tag
+
+
+def make_go_to_top_link(span_class: str = "text-lg font-normal") -> Tag:
+    top_link = BeautifulSoup(
+        ' <span><a href="#top_of_toc">(Go to top)</a></span>',
+        "html.parser",
+    )
+    span = top_link.find("span")
+    if isinstance(span, Tag):
+        span["class"] = span_class
+
+    return top_link
 
 
 def make_dark_mode_controls() -> Tag:
@@ -439,6 +460,7 @@ def make_rollup_checklist_container(
         )
     )
     section_header.append(f"/{len(checklist_items)})")
+    section_header.append(make_go_to_top_link("text-md font-normal"))
     section_ol.append(section_header)
     section_ul = html.new_tag("ul")
 

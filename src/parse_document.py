@@ -8,6 +8,7 @@ class ParagraphChildType(Enum):
     TEXT = 1
     CHECK_ITEM = 2
     IMAGE = 3
+    LINK = 4
 
 
 class ParagraphChild:
@@ -39,6 +40,12 @@ class ChecklistParagraphChild(ParagraphChild):
 
     def __repr__(self) -> str:
         return f"Checklist ({self.content})"
+
+
+class LinkParagraphChild(ParagraphChild):
+    def __init__(self, url: str) -> None:
+        self.url = url
+        self.part_type = ParagraphChildType.LINK
 
 
 class DocumentItemType(Enum):
@@ -255,23 +262,35 @@ class WalkthroughParser:
         ret = Paragraph()
         line = line.strip()
         remainder = line
-        while "[" in remainder:
-            part, remainder = remainder.split("[", maxsplit=1)
-            ret.items.append(TextParagraphChild(part.strip()))
-            if "]" not in remainder:
-                print(f"Unclosed checklist item on line {self.line_no}")
-                return None
-            part, remainder = remainder.split("]", maxsplit=1)
-            lp = self.parse_checklist_item(part)
-            if lp is None:
-                return None
-            if lp.tag_name not in decl_map:
-                print(f"Unknown tag type {lp.tag_name} on line {self.line_no}")
-                return None
-            if remainder.startswith("."):
-                lp.content += "."
-                remainder = remainder[1:]
-            ret.items.append(lp)
+
+        while next_token := get_next_token(remainder):
+            if next_token == "[":
+                part, remainder = remainder.split("[", maxsplit=1)
+                ret.items.append(TextParagraphChild(part.strip()))
+                if "]" not in remainder:
+                    print(f"Unclosed checklist item on line {self.line_no}")
+                    return None
+                part, remainder = remainder.split("]", maxsplit=1)
+                lp = self.parse_checklist_item(part)
+                if lp is None:
+                    return None
+                if lp.tag_name not in decl_map:
+                    print(f"Unknown tag type {lp.tag_name} on line {self.line_no}")
+                    return None
+                if remainder.startswith("."):
+                    lp.content += "."
+                    remainder = remainder[1:]
+                ret.items.append(lp)
+            else:
+                part, remainder = remainder.split(R"\link", maxsplit=1)
+                ret.items.append(TextParagraphChild(part.strip()))
+                url = read_between_braces(remainder)
+                if url is None:
+                    print(f"Could not parse link on line {self.line_no}")
+                    break
+                else:
+                    _, remainder = remainder.split("}", maxsplit=1)
+                    ret.items.append(LinkParagraphChild(url))
         remainder = remainder.strip()
         if remainder != "":
             ret.items.append(TextParagraphChild(remainder.strip()))
@@ -293,6 +312,18 @@ class WalkthroughParser:
         this_id = f"{tag_name}{count}"
         self.checklist_counters[tag_name] += 1
         return ChecklistParagraphChild(content, list_content, tag_name, this_id)
+
+
+def get_next_token(s: str) -> str | None:
+    if "[" in s:
+        bracket_loc = s.index("[")
+        if R"\link" in s:
+            link_loc = s.index(R"\link")
+            return "[" if bracket_loc < link_loc else R"\link"
+        return "["
+    if R"\link" in s:
+        return R"\link"
+    return None
 
 
 def read_between_braces(line: str) -> str | None:
