@@ -30,17 +30,21 @@ Alan Wake 2 is a survival horror game. So some things to be aware of that I'm no
 
 There are two modes to play the game: a normal playthrough and The Final Draft, which is only available after you've beaten the game once. There are a few manuscript pages that can only be collected on The Final Draft, and I'll point those out.
 
+There are many clues in the game that are unmissable. When that's the case, I won't point them out.
+
+Puzzle solutions are hidden behind expandable sections. Just click on them to reveal the answer.
+
+Some collectibles are currently bugged and unobtainable, especially some Clues. Some collectibles are missable, so check with the checklist before moving onto new areas.
+
+Some advice:
+
 \begin{ul}
-\item You should always be looking around for items. Check every cabinet, drawer, box. Sometimes these will be marked on the map, and sometimes not.
+\item You should always be looking around for items. Check every cabinet, drawer, box, etc. Sometimes these will be marked on the map, and sometimes not.
 \item When you get clues or profiling opportunities, you should place them on the Case Board as soon as you can. Sometimes new possibilities only open up once you've done that.
 \item Use the Shoebox frequently to store items. Your inventory will fill up quickly.
 \item Save often. The game only autosaves at important times, and if you are just running around collecting things, and the game crashes or you quit, you will lose progress.
 \item If playing on The Final Draft, I recommend you do not pick up charms that you already have. They fill up the inventory and cannot be disposed of.
-\item Puzzle solutions are hidden behind expandable sections. Just click on them to reveal the answer.
-\item There are many clues in the game that are unmissable. When that's the case, I won't point them out.
 \end{ul}
-
-Some collectibles are currently bugged and unobtainable, especially some Clues. Some collectibles are missable, so check with the checklist before moving onto new areas.
 
 If you find a problem with this guide, please report it at \link{https://github.com/reubengann/walkthrough} in the issues section.
 
