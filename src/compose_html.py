@@ -489,19 +489,19 @@ def make_collapsible(html: BeautifulSoup, content: Tag):
         "button",
         attrs={
             "type": "button",
-            "class": "flex w-full items-start justify-between text-left",
+            "class": "flex items-start text-left",
             "@click": "open = !open",
         },
     )
     sp = html.new_tag("span", attrs={"class": "text-base font-semibold leading-7"})
     sp.string = "Click to show solution"
-    button.append(sp)
+
     container_div.append(button)
     button.append(
         BeautifulSoup(
             """
 
-<span class="ml-6 flex h-7 items-center">
+<span class="flex items-center">
           <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" x-bind:class="{ 'hidden': open }">
             <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
           </svg>
@@ -513,6 +513,7 @@ def make_collapsible(html: BeautifulSoup, content: Tag):
             "html.parser",
         )
     )
+    button.append(sp)
     content_div = html.new_tag("div", attrs={"x-show": "open"})
     content_div.append(content)
     container_div.append(content_div)

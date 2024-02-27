@@ -46,7 +46,7 @@ Some collectibles are currently bugged and unobtainable, especially some Clues. 
 
 Walk ahead. There's only one path you can take here. Turn right and then continue on the path left. Eventually you'll walk through a big tree. In the next section go all the way to the end and turn right. Head up this path.
 
-\section{Return 1 - Invitation: Cauldron Lake}
+\section{Return 1: Invitation: Cauldron Lake}{Return 1}
 
 Walk straight ahead and collect the [map|Cauldron Lake Map].
 
@@ -78,9 +78,9 @@ Return to the crime scene and talk to Thornton. You'll get the [key|Shortcut Key
 
 That's it for this section, so head to the car and drive to Bright Falls.
 
-\checklist{Cauldron Lake 1}
+\checklist
 
-\section{Return 1 - Invitation: Bright Falls}
+\section{Return 1: Invitation: Bright Falls}{Return 1}
 
 Turn around and walk to the other side of a white moving van. This will start [radio|Radio: Tapio's weather report|Tapio's weather report]. Here you'll find [cultstash|Cult Stash|In front of the Elderwood Palace Lodge], which can be solved by Simon Says. Head inside the Elderwood Palace Lodge. Inside you'll find the [map|Great Falls Map] near the door, and [deerhead|Deer Head|Inside the Elderwood Palace Lodge] inside a room marked "Private".
 
@@ -100,9 +100,9 @@ Afterward, talk to Casey, then pick up [manpage|Manuscript Page: Saga Pursues Ni
 
 Across the street, find [radio|Radio: Donna's Jerky review|Donna's Jerky review] playing outside a hardware store. On Coal St find a [settersign|Setter Sign|On Coal St]. Once you're ready, head to the car and drive back to Cauldron Lake.
 
-\checklist{Bright Falls 1}
+\checklist
 
-\section{Return 2: Cauldron Lake}
+\section{Return 2: Cauldron Lake}{Return 2}
 
 Follow Casey down the path, and talk to the men at the Watch Station. When done, head to the crime scene and look at the table to get [clue|Clue|Triangle Carving on the table]. Then, a little ways west, look at some footprints. Saga and Casey will split up, so walk down to Witch's Ladle and look at the tree again. You can look at footprints, then approach the tree and burn the darkness away. Take [manpage|Manuscript Page: Saga Finds a Safe Haven|Saga Finds a Safe Haven]. Head to Witch's Hut and observe the fuse box (it wasn't there before). Walk across the bridge to find a fuse in a blue bin, and place this in the fuse box. You can now enter the Witch's Hut and save your game.
 
@@ -118,17 +118,17 @@ Look behind the cash register to find lotto numbers and a notepad. If you look a
 
 You can now pick up [weapon|Shotgun]. Save your game if you want, then head back to Witch's Ladle. Here you'll be attacked by two Taken. After handling them, put the heart into the hole in the sign, and enter the Overlap.
 
-\checklist{Cauldron Lake 2}
+\checklist
 
-\section{Return 2: Overlap}
+\section{Return 2: Overlap}{Return 2}
 
 Head forward until you walk into a tree and loop back around. Turning right, you should see a darkness patch on a big rock. Burn it away to get [manpage|Manuscript Page: Nightingale Enters the Lake|Nightingale Enters the Lake]. Continue on, and when the place is very red, you can find [manpage|Manuscript Page: Nightingale in the Dark Place|Nightingale in the Dark Place] on the ground near a tree before dropping down to enter a cave. If you miss this one, you can get it later.
 
 Continue until Saga passes through a narrow gap in rock. When Nightingale attacks, hit him with your flashlight and unload into him with your shotgun. After you hurt him, you need to turn around and run away from a tornado. Now you need to continue walking and shooting him until he dies. Keep a look out for supplies on the ground if you need them.
 
-\checklist{Cauldron Lake Overlap}
+\checklist
 
-\section{Return 2: Cauldron Lake}
+\section{Return 2: Cauldron Lake}{Return 2}
 
 After Casey takes Alan away, it's time to do some item collection.
 
@@ -184,9 +184,9 @@ The [charm|Hammer Charm] is on the table.
 
 That's it for this segment. Head back to the car and drive to Bright Falls.
 
-\checklist{Cauldron Lake 3}
+\checklist
 
-\section{Initiation 1: Backstage}
+\section{Initiation 1: Backstage}{Initiation 1}
 
 Try to leave the room, then go to the TV and follow the prompt.
 
@@ -212,9 +212,9 @@ As you exit the office, turn right and see a hallway that says it goes to the st
 
 Use the lamp to take the light overhead, and head south down the newly revealed path. Near a chain-link fence, put the light into the bulb, which will open a new way. Go through the fence and take the light again. Open the door and go up on flight of stairs. Head around this hallway to the right, open two doors in succession and find a TV. Put the light in the TV. You can now save your game. You'll also automatically get [television|Writer's Journey: The Dark Place|The Dark Place].
 
-\checklist{Dark Place 1}
+\checklist
 
-\section{Initiation 2: Caldera Street}
+\section{Initiation 2: Caldera Street}{Initiation 2}
 
 Head upstairs and answer the ringing phone to the right. Nearby you'll find the [map|Dark Place Map].
 
@@ -242,9 +242,9 @@ Back on the ground, you can take this light, but in doing so the taxi will morph
 
 Look around for more supplies if you want, then grab the light you put into the stairway. Use the lights to enter the subway, then use your ticket.
 
-\checklist{Dark Place 2}
+\checklist
 
-\section{Initiation 2: Subway}
+\section{Initiation 2: Subway}{Initiation 2}
 
 Align the dots to get a scene [echo|Echo: FBI Agent|FBI Agent]. Use the new story thread the location to open the way. In a subway car to the right of where you came in, find [wopow|Word of Gun|Word of Gun, in a subway car to the right of where you came in]. Now head down the tunnel to a door on your left leading downstairs and find a break room on the right.
 
@@ -270,7 +270,7 @@ In a room to the north, slightly west of the exit, find [wopow|Word of Action|Wo
 
 We're about to leave, so make sure you got everything.
 
-\checklist{Subway}
+\checklist
 
 You might want to save your game here. Then head back to Collapsed Tunnel scene. First, use Torchbearers here to get [echo|Echo: The Tree|The Tree]. Then use the Summoning thread on it. You now need to run back to the break room. Once the Dark Presence disappears, return to the tunnel and head through.
 
@@ -284,9 +284,9 @@ On the right side of the plaza the same phone will be ringing, so go pick it up.
 
 Use the memory card in the kitchen on the projector in the living room to get [television|Television: Part 1|Part 1]. Then interact with the screen.
 
-\checklist{Dark Place 3}
+\checklist
 
-\section{Return 2: The Heart}
+\section{Return 2: The Heart}{Return 2}
 
 You can now start case The Story. Talk to Alan, then profile him. Speak with him again to get [manpage|Manuscript Page: The Trailer|The Trailer]. Use the page on the board. Talk to Alan again. Nearby is a break room where you can save or switch characters, but let's stay as Saga.
 
@@ -294,9 +294,9 @@ Head into the lobby. On the TV will be playing [koskelatvad|Koskela Ad: Coffee W
 
 Head to the Oh Deer and look at the [koskelatvad|Koskela Ad: Ahma Beer|Ahma Beer] on the wall. Use the car to head to Watery.
 
-\checklist{Bright Falls 2}
+\checklist
 
-\section{Return 3: Local Girl}
+\section{Return 3: Local Girl}{Return 3}
 
 Right nearby is a [settersign|Setter Sign|In front of Suomi Hall]. Head inside Suomi Hall and get the [map|Watery Map] inside the door. Head back into the breakroom to find [deerhead|Deer Head|Inside Suomi Hall].
 
@@ -378,7 +378,7 @@ Back at the lighthouse, head west to get [radio|Radio: Jim's Mayoral Candidacy|J
 
 Time to head to the trailer park.
 
-\checklist{Watery 1}
+\checklist
 
 Head down the hill to the break room with a [settersign|Setter Sign|In front of the trailer park] in front of it. Then enter the park.
 
@@ -413,11 +413,11 @@ We need to collect several objects to proceed:
 
 Make sure to take [manpage|Manuscript Page: Deputies Corrupted|Deputies Corrupted] on the ground exiting the Espresso Express after getting the Circuit Board. 
 
-\checklist{Watery 2}
+\checklist
 
 Once you have all the items, place them in the float to open the Overlap.
 
-\section{Watery Overlap}
+\section{Watery Overlap}{Return 3}
 
 Proceed forward through a tunnel.
 
@@ -427,9 +427,9 @@ Continue on the only path for a boss fight. Try not to shoot the enemies any mor
 
 This closes the "Trail of the Cult" case.
 
-\checklist{Watery Overlap}
+\checklist
 
-\section{Watery}
+\section{Watery Cleanup}{Return 3}
 
 Time for some cleanup.
 
@@ -494,9 +494,9 @@ Pick up the [charm|Coffee Mug Charm] from the mailbox.
 
 That's it for items. Use the janitor room inside Suomi Hall to switch to Alan.
 
-\checklist{Watery 3}
+\checklist
 
-\section{Initiation 4: We Sing}
+\section{Initiation 4: We Sing}{Initiation 4}
 
 Use the typewriter. Enter the TV. Follow the arrows up some stairs, around, and eventually down some more stairs. Sometimes you may have to wait while the song catches up. At the end, interact with a TV.
 
@@ -512,9 +512,9 @@ Head north back to the Vision Shop again to see [television|Television: The Dark
 
 Try entering the Oceanview Hotel. When you end up outside, turn right to see a huge neon arrow. Follow it, and head down the alley toward the Mirror Peak bar entrance. There will be a scene.
 
-\checklist{Dark Place Backstage}
+\checklist
 
-\section{Initiation 5: Room 665}
+\section{Initiation 5: Room 665}{Initiation 5}
 
 Enter the Mirror Peak Bar door and head down to the roof (surprisingly). Climb down a ladder and then up a stairway. Take the light. Go under a scaffold and up a ladder. Burn away the orbs and kill the resulting enemies. Then enter the door. Climb up the stairs right in front of you and crawl through a cardboard tent to reach a break room. Head to the south end of the roof and you will see a [wopow|Word of Aid|Word of Aid on the south end of the roof on a propped up piece of metal] on a propped up piece of metal.
 
@@ -532,7 +532,7 @@ Head to a nearby rooftop bar and put the light in through the barrier. Look at t
 
 Before you go, take the light out while inside the bar for some loot. Enter the code into the door to proceed. Use the key, turn on the projector, and interact with the picture.
 
-\checklist{Dark Place 4}
+\checklist
 
 Walk to a balcony off the hall and align the orbs ([echo|Echo: Another Murder|Another Murder]). Go down the elevator. Here you'll find the Entrance Hall scene and align the orbs to get the [echo|Echo: Pre-Show Ritual|Pre-Show Ritual] story thread. Run around the nearby hallway to find the [map|Oceanview Hotel Map] from the wall and find the Final Scene.
 
@@ -560,11 +560,11 @@ Back on the first floor, put the Climax thread on the Entrance Scene to get [ech
 
 Exit the hotel. Straight ahead is [echo|Echo: Dead Tired|Dead Tired]. Use the break room ahead of you to return to Saga.
 
-\checklist{Oceanview Hotel}
+\checklist
 
  Use the car to head back to Bright Falls, and watch a scene.
 
-\section{Return 4: No chance}
+\section{Return 4: No chance}{Return 4}
 
 Walk through the kitchen and get the shotgun. Run up the path, following the gunfire and killing Taken along the way. Cross a small bridge to a cabin. Inside, as Saga, find [manpage|Manuscript Page: The History Of The Valhalla Nursing Home|The History Of The Valhalla Nursing Home]. You can now start the case The Anderson Brothers.
 
@@ -594,9 +594,9 @@ The code is 177
 
 Go to the nursing home. On the left, in front of the Wellness Center is the final [settersign|Setter Sign|In front of the Wellness Center]. Up a few steps, in front of the Nursing Home in the corner is [manpage|Manuscript Page: Saga At The Nursing Home|Saga At The Nursing Home]. Ring the doorbell.
 
-\checklist{Bunker Woods 1}
+\checklist
 
-\section {Return 5: Old Gods}
+\section {Return 5: Old Gods}{Return 5}
 
 In the admin office to the right is the [map|Valhalla Nursing Home Map] and [lunchbox|Lunch Box|Inside the nursing home Admin Office]. In the next room you can see [koskelatvad|Koskela Ad: Bright Falls Blend|Bright Falls Blend].  Follow Rose and talk to the Norman and Mandy-May, Ahti, and Rose.
 
@@ -638,9 +638,9 @@ Return to the toolbox and enter the code. You can unlock a door which is a short
 
 If you want to, head back to the laundry room and turn on the projector. Then head back to Cynthia's room and unlock it.
 
-If you're playing on the Final Draft, you can find [manpage|Dark Poem 2] on the floor. On a side table is a heart shaped box with a [clue|Clue: Box of chocolate from Tor|Box of chocolate from Tor], and on another table a [clue|Clue: An entry from Cythia's journal|An entry from Cythia's journal]. In the bathroom is [manpage|Manuscript Page: Cynthia And Tor|Cynthia And Tor]. Get the record from the bathtub, then head downstairs. Kill the Taken here and then use the jukebox.
+If you're playing on the Final Draft, you can find [manpage|Dark Poem 2|Dark Poem 2 (Final Draft only)] on the floor. On a side table is a heart shaped box with a [clue|Clue: Box of chocolate from Tor|Box of chocolate from Tor], and on another table a [clue|Clue: An entry from Cythia's journal|An entry from Cythia's journal]. In the bathroom is [manpage|Manuscript Page: Cynthia And Tor|Cynthia And Tor]. Get the record from the bathtub, then head downstairs. Kill the Taken here and then use the jukebox.
 
-\checklist{Nursing Home}
+\checklist
 
 Enter the Overlap. There are no Manuscript Pages here, so just keep going down the path. In the first loop, ignore all the doors and just keep going in the hallway until you go down some stairs. Kill a Taken and start a generator, then go back one room and flip a switch. Head through the chain link door.
 
@@ -654,7 +654,7 @@ Profile Tor. This closes the case The Anderson Brothers.
 
 Time for cleanup.
 
-\section{Bright Falls Cleanup}
+\section{Bright Falls Cleanup}{Return 5}
 
 On the bridge near Tor is [manpage|Manuscript Page: Cynthia's Lamp|Cynthia's Lamp]. Cut the lock on the gate leading southwest. On the northern path find a [lunchbox|Lunch Box|Found in the bunker area near Bright falls (in the woods southwest of the nursing home)] on the left. Then, at the furthest west point, [manpage|Manuscript Page: Rose At Bingo Night|Rose At Bingo Night] and [radio|Terry's Guest Call]. Follow the path south a bit and under a sign on a small ridge on the left with a downward facing arrow pick up the [key|Bunker Woods Stash key]. The corresponding [cultstash|Cult Stash|Found by a forest bunker] is just west of here on a little path, behind a boulder.
 
@@ -724,9 +724,9 @@ Adjuacent triangles pointing up, facing away left-to-right, stacked pointing up.
 
 Drive to Watery.
 
-\checklist{Bunker Woods 2}
+\checklist
 
-\section{Watery Cleanup}
+\section{Watery Cleanup}{Return 5}
 
 Head inside Suomi Hall and meet the mayor. In the trailer park, use the boltcutters to open the gate to Trailer 5. Inside is a [rhyme|Nursery Rhyme].
 
@@ -738,7 +738,7 @@ Wise Elder Doll on the eye and the Deer Doll on the heart.
 
 Collect the [charm|Deerfest Charm] from a nearby table.
 
-Head to the Kalevala Knights workshop and use the boltcutters to open a fence to the back. Behind here you'll find a [cultstash|Cult Stash] and several Taken will show up to defend it. Kill them and then solve the puzzle.
+Head to the Kalevala Knights workshop and use the boltcutters to open a fence to the back. Behind here you'll find a [cultstash|Cult Stash|Behind the Kalevala Knights workshop] and several Taken will show up to defend it. Kill them and then solve the puzzle.
 
 \begin{spoiler}
 
@@ -748,11 +748,11 @@ The code is found by counting the spare parts down here. The code is 542.
 
 Drive to Cauldron Lake.
 
-\checklist{Watery Cleanup}
+\checklist
 
-\section{Cauldron Lake Cleanup}
+\section{Cauldron Lake Cleanup}{Return 5}
 
-Drive back to Cauldron Lake. We want to head north to the Rental Cabins. Cabin 1 is a break room with [manpage|Manuscript Page: Cauldron Lake|Cauldron Lake]. In the bathroom is a [cultstash|Cult Stash] we don't have the key for. Enter Cabin 3 and exit through the back, then duck under a fallen tree. Use the next cabin to pass back through to the front side, and head all the way west, past a broken down truck. Behind a tree with a symbol "2" is the [key|Lake Cabin Stash Key].
+Drive back to Cauldron Lake. We want to head north to the Rental Cabins. Cabin 1 is a break room with [manpage|Manuscript Page: Cauldron Lake|Cauldron Lake]. In the bathroom is a [cultstash|Cult Stash|In the rental cabins] we don't have the key for. Enter Cabin 3 and exit through the back, then duck under a fallen tree. Use the next cabin to pass back through to the front side, and head all the way west, past a broken down truck. Behind a tree with a symbol "2" is the [key|Lake Cabin Stash Key].
 
 Inside Cabin 4 is a [clue|Clue|Note about the style and content of the rhymes] on a desk and a [rhyme|Nursery Rhyme].
 
@@ -785,25 +785,25 @@ Father on eye, Hero on sun, Mother on heart, Child on egg, Trickster on waves.
 
 Take the Charm Expansion. This closes the Nursery Rhymes case.
 
-\checklist{Cauldron Lake Cleanup}
+\checklist
 
 There's one more thing we want to do, concerning the Deer Heads. You should have gotten all of them by now. If you talk to the Deer Head in the Mind Place, he'll say to talk to his counterpart. He means the deer head in the Elderwood Palace Lodge. Approach that, and then walk back towards the lobby. You should see a stag inside the lodge, and it will walk down the hall. Follow it into a room with a ton of supplies.
 
 All done with cleanup. Switch back to Alan. 
 
-\section{Initiation 6: Return}
+\section{Initiation 6: Return}{Initiation 6}
 
 Enter Parliament Tower and go up the elevator. Open the door and to the right find [television|Television: Part 2-1|Part 2-1]. Continue this way and open another door to see [television|Television: Part 2-2|Part 2-2]. In a nearby hallway is [television|Television: Part 2-3|Part 2-3], and at the end, [television|Television: Part 2-4|Part 2-4]. Enter this TV to continue. Use the typewriter.
 
-\checklist{Dark Place 5}
+\checklist
 
-\section{Initiation 7: Masks}
+\section{Initiation 7: Masks}{Initiation 7}
 
 Use the TV. Head to the cafeteria and talk to Ahti. Take the path behind him and when you step out on a small balcony overlooking the basement, take the light to reopen way downstairs. Inside the flooded basement, put the light in to open the way, and head through to a red room with mannequins, and use the light. Take the photos from the shoebox. Head back up and run around to the TV we used last time. Activating it will get you [television|Television: Drowning|Drowning].
 
 Walk toward the Hotel. On the way, align the orbs to get an [echo|Echo|Thomas Zane]. Head up the elevator and use the projector. On the way out you can see [television|Television: Collaboration|Collaboration] in a reception booth in the lobby (listen for static).
 
-\section{Initiation 8: Zane's Film}
+\section{Initiation 8: Zane's Film}{Initiation 8}
 
 Head toward the car wash and burn away the 3 dark orbs. Inside the garage, go under the sliding door. Turn left, and on this side of the building, under an arch, find [wopow|Word of Aid|Word of Aid Outside the cinema, to the east, near a ladder. It's near an arch]. Climb up a nearby ladder and look up at the sign to align orbs for [echo|Echo: Murder Case|Murder Case].
 
@@ -835,11 +835,11 @@ Watch the movie here in the theater if you want; you'll get [television|Televisi
 
 On the west side of the plaza, answer the phone. Interact with the shoebox under the statue in the middle of the square.
 
-\checklist{Theater}
+\checklist
 
 Back as Saga, head to the Bright Falls Sheriff Station.
 
-\section{Return 6: Scratch}
+\section{Return 6: Scratch}{Return 6}
 
 Talk to Estevez in a closet on the left. Kill the Taken in here, then speak with her to get [key|Sheriff's Station Keys]. Use this key on Tim Breaker's office and get a [clue|Clue|FBC file linking cult activity to Wake].
 
@@ -869,15 +869,15 @@ Go the lighthouse and unlock it. Inside you'll find the second [invexp|Inventory
 
 We're now going to proceed to the point of no return. Make sure you have everything you want to collect. Then return to the Sheriff's Station and talk to Estevez. For the final section, it's very helpful to have the rifle upgrade that allows you to shoot the Taken without burning away the darkness, so grab that if you can.
 
-\checklist{Bright Falls 3}
+\checklist
 
-\section{Return 7: Summoning}
+\section{Return 7: Summoning}{Return 7}
 
 Drive to Cauldron Lake. We need to head to the shore, but many of the previous routes are blocked, and there are many Taken to fight. Go through the fence. As you head through the paths, Tor and Odin will open the way with their van. The path will take you along the stream, then across a bridge. Before you jump down to the shoreline, pick up [manpage|Manuscript Page: It's Not a Lake|It's Not a Lake].
 
 Talk to Tor to start the fight. There are many waves of Taken. Casey and Estevez will do most of the work to light up the Taken, but you may need to burn some yourself. It's very helpful to have the rifle upgrade that allows you to shoot the Taken without burning away the darkness. There's a final wave near the end that you should probably use a grenade on once they converge on the van. Otherwise just keep shooting until the red light appears, then approach it and use the clicker.
 
-\section{Initiation 9: Gone}
+\section{Initiation 9: Gone}{Initiation 9}
 
 Go up the elevator. Try to enter the door with the sign, and then go through the door on the left and walk around to interact with the screen and get [television|Television: Part 3|Part 3].
 
@@ -893,8 +893,8 @@ Look at the typewriter and the board, then align the orbs. Put the new thread on
 
 Try to leave the Mind Place via the door. Then use the case board. Profile Saga. Continue looking at objects, placing them on the board, and profiling to find all the of ways Saga has failed. When the room gets dark, get the flashlight from the central table. Burn away dark orbs and look at the objects that remind Saga of good qualities. Continue profiling and using the board until the case is closed.
 
-\section{Come Home}
+\section{Return 9: Come Home}{Return 9}
 
 Answer the payphone. Walk around the perimeter of the square to find Tim Breaker. After talking with him, he'll give you the final [manpage|Manuscript Page: Door Traverses The Dark Place|Door Traverses The Dark Place]. Across the square is a door you can open with some stairs going down. This door takes you to the subway, so walk through and exit out back to Caldera St. In the plaza, fight several Taken and take the objects from the shoe box. Talk to Alan in the Mind Place, then go back the way we came, through the subway, to the fountain. Enter it by walking down the steps.
 
-\checklist{Endgame}
+\checklist

@@ -53,9 +53,14 @@ class DocumentItem:
 
 
 class SectionHeading(DocumentItem):
-    def __init__(self, title: str) -> None:
+
+    short_name: str | None
+
+    def __init__(self, title: str, short_name: str | None) -> None:
         self.title = title
+        self.short_name = None
         self.item_type = DocumentItemType.SECTIONHEADING
+        self.short_name = short_name
 
     def __repr__(self) -> str:
         return f"Section Header (title = {self.title})"
@@ -132,6 +137,7 @@ class WalkthroughParser:
         self.input_text = doc
         self.line_no = 0
         self.checklist_counters: dict[str, int] = {}
+        self.current_section_name = "No section"
 
     def parse(self) -> WalkthroughDocument:
         doc = WalkthroughDocument()
@@ -157,10 +163,15 @@ class WalkthroughParser:
                 continue
             if line.startswith(R"\section"):
                 section_title = read_between_braces(line)
+                foo = line.split("}")
+                section_short_name = None
+                if foo[1] != "":
+                    section_short_name = read_between_braces(foo[1] + "}")
                 if section_title is None:
                     print(f"Invalid section on line {self.line_no}")
                 else:
-                    item = SectionHeading(section_title)
+                    item = SectionHeading(section_title, section_short_name)
+                    self.current_section_name = section_short_name or section_title
                     doc.checklist_sections[-1].append_line_item(item)
                 continue
             if line.startswith(R"\declare"):
@@ -169,20 +180,7 @@ class WalkthroughParser:
                     doc.decl_map[decl.name] = decl
                 continue
             if line.startswith(R"\checklist"):
-                if "{" in line:
-                    res = read_between_braces(line)
-                    if res is not None:
-                        checklist_section_label = res
-                    else:
-                        print(
-                            f"Warning: on line {self.line_no}, got an invalid checklist section name"
-                        )
-                        checklist_section_label = (
-                            f"Section {len(doc.checklist_sections)}"
-                        )
-                else:
-                    checklist_section_label = f"Section {len(doc.checklist_sections)}"
-                doc.checklist_sections[-1].name = checklist_section_label
+                doc.checklist_sections[-1].name = self.current_section_name
                 doc.start_new_checklist_section()
                 continue
             if line.startswith(R"\begin{ul}"):
