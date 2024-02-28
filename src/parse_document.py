@@ -124,6 +124,7 @@ class WalkthroughDocument:
         self.title = "no title"
         self.checklist_sections = [ChecklistSection()]
         self.decl_map: dict[str, Declaration] = {}
+        self.images: list[str] = []
 
     def start_new_checklist_section(self):
         self.checklist_sections.append(ChecklistSection())
@@ -145,6 +146,7 @@ class WalkthroughParser:
         self.line_no = 0
         self.checklist_counters: dict[str, int] = {}
         self.current_section_name = "No section"
+        self.images: list[str] = []
 
     def parse(self) -> WalkthroughDocument:
         doc = WalkthroughDocument()
@@ -203,6 +205,7 @@ class WalkthroughParser:
             p = self.parse_line(line, doc.decl_map)
             if p is not None:
                 doc.checklist_sections[-1].append_line_item(p)
+        doc.images = self.images
         return doc
 
     def read_spoiler(self) -> Spoiler | None:
@@ -216,6 +219,7 @@ class WalkthroughParser:
                     print(f"On line {self.line_no}, could not parse img tag")
                 else:
                     item.items.append(ImageParagraphChild(image_loc))
+                    self.images.append(image_loc)
             elif line.strip() != "":
                 item.items.append(TextParagraphChild(line))
             self.line_no += 1
