@@ -26,8 +26,6 @@
 
 Welcome to an all-collectibles, mostly spoiler-free guide for Alan Wake 2. This document has a full walkthrough with a route to get all the collectibles that aren't bugged. If you just want the checklists of items, you can go to the "All items by section" or "All items by type" sections. Click the check boxes as you go to keep track of everything (if you want). At the end of each section is a summary of all the collectibles, so you can verify that you got everything. The progress will be stored in your browser's local storage.
 
-Alan Wake 2 is a survival horror game. So some things to be aware of that I'm not going to mention in the walkthrough:
-
 There are two modes to play the game: a normal playthrough and The Final Draft, which is only available after you've beaten the game once. There are a few manuscript pages that can only be collected on The Final Draft, and I'll point those out.
 
 There are many clues in the game that are unmissable. When that's the case, I won't point them out.
@@ -36,7 +34,7 @@ Puzzle solutions are hidden behind expandable sections. Just click on them to re
 
 Some collectibles are currently bugged and unobtainable, especially some Clues. Some collectibles are missable, so check with the checklist before moving onto new areas.
 
-Some advice:
+Alan Wake 2 is a survival horror game. So some things to be aware of that I'm not going to mention in the walkthrough:
 
 \begin{ul}
 \item You should always be looking around for items. Check every cabinet, drawer, box, etc. Sometimes these will be marked on the map, and sometimes not.
