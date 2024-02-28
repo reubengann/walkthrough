@@ -1,0 +1,40 @@
+\version{1}
+
+\declare{map}{Map}{Maps}
+\declare{lunchbox}{Lunch Box}{Lunch Boxes}
+
+\title{Alan Wake 2}
+
+\section{Introduction}
+
+Welcome to my walkthrough.
+
+Here's a list
+
+\begin{ul}
+\item Some information.
+\item Some more information
+\item ...
+\end{ul}
+
+Here's a link at \link{https://github.com/reubengann/walkthrough}.
+
+\section{Level 1}
+
+Do some stuff in this section. There are no collectibles.
+
+\section{Level 2: A cool level name}{Level 2}
+
+Walk straight ahead and collect the [map|Cauldron Lake Map].
+
+Follow Casey. Jump down and check out the Mirror Peak sign if you want. Continue down until you see a big Cauldron Campsite welcome sign. Casey will head forward, but go right and head to the Mortar Falls overlook (marked by an icon on your map). You'll see little dreamcatchers hanging on the trees. Look around to find a [lunchbox|Lunch Box|Near the waterfall vista].
+
+Profile Nightingale and place the new clue on the board. Saga will say you should go to the lake.
+
+Time to collect some stuff. Head south of the crime scene to find a trailer. Observe a twig sculpture on the ground to get a [clue|Clue|creepy twig sculpture] and notice the locked box that has a puzzle on it. Inside, pet a [deerhead|Deer Head|Inside the trailer near the crime scene]. Use the clue on the box to find the code.
+
+\begin{spoiler}
+\img{stash_1_solution.png}
+\end{spoiler}
+
+\checklist
