@@ -150,3 +150,11 @@ python walkthrough.py watch c:\walkthroughs\game1.txt
 ```
 
 Same as `compile`, but it will monitor the input file and recompile when changes are detected. Useful when you are writing the walkthrough and don't want to have to issue the `compile` command over and over.
+
+### Build
+
+```bash
+python walkthrough.py build c:\walkthroughs\game1.txt
+```
+
+This compiles the html and zips it up along with all of the images. Good for distributing your walkthrough.
