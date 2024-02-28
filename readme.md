@@ -107,7 +107,10 @@ Walk forward and take the [key|Special Key].
 In a break room you'll find [manpage|Manuscript Page: Scratch on the Hunt|Scratch on the Hunt]
 ```
 
-A checklist item for a collectible is surrounded by square brackets. Arguments of the checklist item are delimited by pipes (the | symbol). The first argument must be a collectible code that was previously declared in the declarations. The second argument is the name as it will appear in the paragraph text. The third argument is optional, and is the way it will show up in the summary checklists. If unspecified, the full text will show up in the checklist.
+A checklist item for a collectible is surrounded by square brackets. Arguments of the checklist item are delimited by pipes (the | symbol). 
+- The first argument must be a collectible code that was previously declared in the declarations. 
+- The second argument is the name as it will appear in the paragraph text. 
+- The third argument is optional, and is the way it will show up in the summary checklists. If unspecified, the full text will show up in the checklist.
 
 ### Link
 
@@ -132,8 +135,18 @@ Otherwise, use whatever environment management you like.
 
 ## Command line arguments
 
-`compile`
+### Compile
+
+```bash
+python walkthrough.py compile c:\walkthroughs\game1.txt
+```
+
 Compiles the html into the same folder as the source. Used while you're writing the walkthrough.
 
-`watch`
-Same as `compile`, but it will monitor the input file and recompile when changes are detected.
+### Watch
+
+```bash
+python walkthrough.py watch c:\walkthroughs\game1.txt
+```
+
+Same as `compile`, but it will monitor the input file and recompile when changes are detected. Useful when you are writing the walkthrough and don't want to have to issue the `compile` command over and over.
