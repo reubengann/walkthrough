@@ -119,15 +119,7 @@ This will insert a hyperlink to that address.
 
 ## Setup
 
-To only run the program
-
-```bash
-conda create -n walkthrough python=3.11
-conda activate walkthrough
-pip install -r requirements.txt
-```
-
-To do development, run
+It's recommended to set up a virtual environment. If using conda:
 
 ```bash
 conda create -n walkthrough python=3.11
@@ -136,33 +128,12 @@ pip install -r requirements.in
 pip install -r requirements-dev.in
 ```
 
+Otherwise, use whatever environment management you like.
+
 ## Command line arguments
 
-`cmd1`
-Do command 1
+`compile`
+Compiles the html into the same folder as the source. Used while you're writing the walkthrough.
 
-`cmd2`
-Do command 2
-
-## Freezing requirements
-
-```bash
-python -m piptools compile
-```
-
-This will generate requirements.txt with run requirements only (not dev reqs). To update the requirements.txt after it has been built, first check which packages are out of date:
-
-```bash
-pip list --outdated
-```
-
-Upgrade the packages you want to update, and then run the tests to make sure nothing breaks:
-
-```bash
-pip install packagename --upgrade
-pip-compile --upgrade-package packagename
-```
-
-## Code coverage
-
-`pytest --cov=src test/ --cov-report term-missing`
+`watch`
+Same as `compile`, but it will monitor the input file and recompile when changes are detected.
