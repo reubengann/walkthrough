@@ -27,6 +27,12 @@ def main() -> int:
     )
     build_p.add_argument("infile")
     build_p.add_argument("-o", "--outfile")
+    init_p = subp.add_parser("init", help="start a new walkthrough")
+    init_p.add_argument(
+        "game_name",
+        help="Short name to call the game (no spaces or special characters)",
+    )
+    init_p.add_argument("outfolder")
     args = parser.parse_args()
     match args.subparser_name:
         case "compile":
@@ -95,6 +101,24 @@ def main() -> int:
                         return 1
             if not preexisting:
                 outfile_html.unlink()
+            return 0
+        case "init":
+            game_name: str = args.game_name
+            outfolder: str = args.outfolder
+            outpath = Path(outfolder) / f"{game_name}.txt"
+            if outpath.exists():
+                print(f"file {outpath} already exists!")
+                return 1
+            lines = [
+                f"\\game_short_name{{{game_name}}} ",
+                "\\version{1}",
+                "\\declare{collectible_short_name}{Collectible Long Name}{Collectible Plural}"
+                "\\title{Your Game's name}\n",
+                "\\section{Introduction}\n" "Some introduction to the game\n",
+                "\\section{Level 1}\n",
+                "Walk straight ahead and collect the [collectible_short_name|Cool collectible].\n",
+            ]
+            outpath.write_text("\n".join(lines))
             return 0
         case _:
             parser.print_help()

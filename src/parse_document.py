@@ -125,6 +125,7 @@ class WalkthroughDocument:
         self.checklist_sections = [ChecklistSection()]
         self.decl_map: dict[str, Declaration] = {}
         self.images: list[str] = []
+        self.game_short_name = "untitled"
 
     def start_new_checklist_section(self):
         self.checklist_sections.append(ChecklistSection())
@@ -155,6 +156,13 @@ class WalkthroughParser:
             line = self.lines[self.line_no]
             self.line_no += 1
             if line.strip() == "":  # skip blank lines
+                continue
+            if line.startswith(R"\game_short_name"):
+                game_short_name = read_between_braces(line)
+                if game_short_name is None:
+                    print(f"Invalid game_short_name on line {self.line_no}")
+                else:
+                    doc.game_short_name = game_short_name
                 continue
             if line.startswith(R"\version"):
                 version = read_between_braces(line)

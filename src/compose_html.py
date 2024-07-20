@@ -206,37 +206,39 @@ def make_html_from_doc(doc: WalkthroughDocument) -> str:
       };\n"""
     store_script_text += f'const currentVersion = "{doc.version}";'
     store_script_text += """
-    const storedVersion = localStorage.getItem("alan_wake_2_checked_storage_version");
+    const storedVersion = localStorage.getItem("game_short_name_checked_storage_version");
     console.log("stored version:", storedVersion);
     let shouldInitialize = false;
     if (storedVersion !== currentVersion) {
-    localStorage.removeItem('alan_wake_2_checked_statuses');
-    localStorage.setItem('alan_wake_2_checked_storage_version', currentVersion);
+    localStorage.removeItem('game_short_name_checked_statuses');
+    localStorage.setItem('game_short_name_checked_storage_version', currentVersion);
     shouldInitialize = true;
     }
     else {
     console.log("Up to date!")
     }
     let checklistItems;
-    if (localStorage.getItem('alan_wake_2_checked_statuses') == null)
+    if (localStorage.getItem('game_short_name_checked_statuses') == null)
     {
     shouldInitialize = true;
     }
     if (shouldInitialize) {
     checklistItems = {
-"""
+""".replace(
+        "game_short_name", doc.game_short_name
+    )
     store_script_text += ",\n".join(store_lines)
     store_script_text += """};
-    localStorage.setItem('alan_wake_2_checked_statuses', JSON.stringify(checklistItems));
+    localStorage.setItem('game_short_name_checked_statuses', JSON.stringify(checklistItems));
     console.log("Initialized storage");
     }
     else {
-    checklistItems = JSON.parse(localStorage.getItem('alan_wake_2_checked_statuses'));
+    checklistItems = JSON.parse(localStorage.getItem('game_short_name_checked_statuses'));
     console.log("Loaded from storage.")
     }
 
     function storeStatuses() {
-    localStorage.setItem('alan_wake_2_checked_statuses', JSON.stringify(checklistItems));
+    localStorage.setItem('game_short_name_checked_statuses', JSON.stringify(checklistItems));
     }"""
     store_script.append(store_script_text)
     head_tag.append(store_script)

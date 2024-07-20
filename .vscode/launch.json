@@ -9,7 +9,7 @@
       "program": "walkthrough.py",
       "console": "integratedTerminal",
       "justMyCode": true,
-      "args": ["compile", "data\\alan_wake_2.txt"]
+      "args": ["compile", "..\\heavens_vault\\heavens_vault.txt"]
     },
     {
       "name": "Parse",
