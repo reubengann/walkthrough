@@ -60,6 +60,7 @@ class DocumentItemType(Enum):
     PARAGRAPH = 2
     UNNUMBEREDLIST = 3
     SPOILER = 4
+    NUMBEREDLIST = 5
 
 
 class DocumentItem:
@@ -100,6 +101,17 @@ class UnnumberedList(DocumentItem):
 
     def __repr__(self) -> str:
         return f"Unnumbered list: [{', '.join(self.items)}]"
+
+
+class NumberedList(DocumentItem):
+    items: list[str]
+
+    def __init__(self) -> None:
+        self.items = []
+        self.item_type = DocumentItemType.NUMBEREDLIST
+
+    def __repr__(self) -> str:
+        return f"Numbered list: [{', '.join(self.items)}]"
 
 
 class Spoiler(DocumentItem):
@@ -219,6 +231,10 @@ class WalkthroughParser:
                 ul = self.read_ul()
                 doc.checklist_sections[-1].append_line_item(ul)
                 continue
+            if line.startswith(R"\begin{ol}"):
+                ul = self.read_ol()
+                doc.checklist_sections[-1].append_line_item(ul)
+                continue
             if line.startswith(R"\begin{spoiler}"):
                 spoiler = self.read_spoiler()
                 if spoiler is not None:
@@ -269,6 +285,23 @@ class WalkthroughParser:
                 continue
             if not line.strip().startswith(R"\item"):
                 print(f"Warning: on line {self.line_no}, while parsing ul, no item")
+            else:
+                item.items.append(line.split(R"\item")[1])
+            self.line_no += 1
+            line = self.lines[self.line_no]
+        self.line_no += 1  # skip past the ending tag
+        return item
+
+    def read_ol(self) -> NumberedList:
+        item = NumberedList()
+        line = self.lines[self.line_no]
+        while not line.startswith(R"\end{ol}"):
+            if line.strip() == "":
+                self.line_no += 1
+                line = self.lines[self.line_no]
+                continue
+            if not line.strip().startswith(R"\item"):
+                print(f"Warning: on line {self.line_no}, while parsing ol, no item")
             else:
                 item.items.append(line.split(R"\item")[1])
             self.line_no += 1

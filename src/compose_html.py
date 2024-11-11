@@ -13,6 +13,7 @@ from src.parse_document import (
     UnnumberedList,
     WalkthroughDocument,
     LinkParagraphChild,
+    NumberedList,
 )
 
 
@@ -87,6 +88,15 @@ def make_html_from_doc(doc: WalkthroughDocument) -> str:
                         li.append(actual_list_item)
                         ul_element.append(li)
                     main_container.append(ul_element)
+                case NumberedList():
+                    ol_element = html.new_tag(
+                        "ol", attrs={"class": "list-decimal ml-6 mt-4"}
+                    )
+                    for actual_list_item in section_item.items:
+                        li = html.new_tag("li", attrs={"class": "mb-2"})
+                        li.append(actual_list_item)
+                        ol_element.append(li)
+                    main_container.append(ol_element)
                 case Spoiler():
                     spoiler_element = html.new_tag("div")
                     main_container.append(
