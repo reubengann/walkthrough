@@ -63,7 +63,10 @@ def main() -> int:
             try:
                 for changes in watch(infile.parent):
                     for change, file in changes:
-                        if Path(file) == infile.resolve() and change == Change.modified:
+                        if (
+                            Path(file).resolve() == infile.resolve()
+                            and change == Change.modified
+                        ):
                             print(f"[{datetime.now()}] Recompiling.")
                             doc = parse_document(infile.read_text())
                             outfile.write_text(make_html_from_doc(doc))

@@ -9,6 +9,7 @@ from src.parse_document import (
     SectionHeading,
     Spoiler,
     TextParagraphChild,
+    UlParagraphChild,
     UnnumberedList,
     WalkthroughDocument,
     LinkParagraphChild,
@@ -88,7 +89,11 @@ def make_html_from_doc(doc: WalkthroughDocument) -> str:
                     main_container.append(ul_element)
                 case Spoiler():
                     spoiler_element = html.new_tag("div")
-                    main_container.append(make_collapsible(html, spoiler_element))
+                    main_container.append(
+                        make_collapsible(
+                            html, spoiler_element, doc.default_spoiler_title
+                        )
+                    )
                     for se in section_item.items:
                         match se:
                             case TextParagraphChild():
@@ -98,6 +103,15 @@ def make_html_from_doc(doc: WalkthroughDocument) -> str:
                             case ImageParagraphChild():
                                 tag = html.new_tag("img", attrs={"src": se.image_loc})
                                 spoiler_element.append(tag)
+                            case UlParagraphChild():
+                                ul_element = html.new_tag(
+                                    "ul", attrs={"class": "list-disc ml-6 mt-4"}
+                                )
+                                for actual_list_item in se.items:
+                                    li = html.new_tag("li", attrs={"class": "mb-2"})
+                                    li.append(actual_list_item)
+                                    ul_element.append(li)
+                                spoiler_element.append(ul_element)
                 case Paragraph():
                     element = html.new_tag("p", attrs={"class": "mt-4"})
                     for paragraph_child in section_item.items:
@@ -507,7 +521,7 @@ def make_checklist_tag(html: BeautifulSoup, s: str, this_id: str, loc: str) -> T
     return container
 
 
-def make_collapsible(html: BeautifulSoup, content: Tag):
+def make_collapsible(html: BeautifulSoup, content: Tag, collapsed_text: str):
     container_div = html.new_tag("div", attrs={"x-data": "{ open: false }"})
     button = html.new_tag(
         "button",
@@ -518,7 +532,7 @@ def make_collapsible(html: BeautifulSoup, content: Tag):
         },
     )
     sp = html.new_tag("span", attrs={"class": "text-base font-semibold leading-7"})
-    sp.string = "Click to show solution"
+    sp.string = collapsed_text
 
     container_div.append(button)
     button.append(

@@ -9,6 +9,7 @@ class ParagraphChildType(Enum):
     CHECK_ITEM = 2
     IMAGE = 3
     LINK = 4
+    UNNUMBEREDLIST = 5
 
 
 class ParagraphChild:
@@ -28,6 +29,12 @@ class ImageParagraphChild(ParagraphChild):
     def __init__(self, image_loc: str) -> None:
         self.part_type = ParagraphChildType.IMAGE
         self.image_loc = image_loc
+
+
+class UlParagraphChild(ParagraphChild):
+    def __init__(self, items: list[str]) -> None:
+        self.part_type = ParagraphChildType.UNNUMBEREDLIST
+        self.items = items
 
 
 class ChecklistParagraphChild(ParagraphChild):
@@ -126,6 +133,7 @@ class WalkthroughDocument:
         self.decl_map: dict[str, Declaration] = {}
         self.images: list[str] = []
         self.game_short_name = "untitled"
+        self.default_spoiler_title: str = "Click to show solution"
 
     def start_new_checklist_section(self):
         self.checklist_sections.append(ChecklistSection())
@@ -178,6 +186,13 @@ class WalkthroughParser:
                 else:
                     doc.title = title
                 continue
+            if line.startswith(R"\defaultspoilertitle"):
+                default_spoiler_title = read_between_braces(line)
+                if default_spoiler_title is None:
+                    print(f"Invalid default spoiler title on line {self.line_no}")
+                else:
+                    doc.default_spoiler_title = default_spoiler_title
+                continue
             if line.startswith(R"\section"):
                 section_title = read_between_braces(line)
                 foo = line.split("}")
@@ -221,7 +236,11 @@ class WalkthroughParser:
         line = self.lines[self.line_no]
         started = self.line_no
         while not line.startswith(R"\end{spoiler}"):
-            if R"\img" in line:
+            if line.startswith("\\begin{ul}"):
+                self.line_no += 1
+                ul = self.read_ul()
+                item.items.append(UlParagraphChild(ul.items))
+            elif R"\img" in line:
                 image_loc = read_between_braces(line)
                 if image_loc is None:
                     print(f"On line {self.line_no}, could not parse img tag")
@@ -244,6 +263,10 @@ class WalkthroughParser:
         item = UnnumberedList()
         line = self.lines[self.line_no]
         while not line.startswith(R"\end{ul}"):
+            if line.strip() == "":
+                self.line_no += 1
+                line = self.lines[self.line_no]
+                continue
             if not line.strip().startswith(R"\item"):
                 print(f"Warning: on line {self.line_no}, while parsing ul, no item")
             else:
