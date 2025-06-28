@@ -45,7 +45,7 @@ def main() -> int:
             else:
                 outfile = infile.parent / f"{infile.stem}.html"
             print(f"Compiling {infile} to {outfile}")
-            doc = parse_document(infile.read_text())
+            doc = parse_document(infile.read_text(encoding="utf-8"))
             outfile.write_text(make_html_from_doc(doc))
             return 0
         case "watch":
@@ -57,7 +57,7 @@ def main() -> int:
                 outfile = Path(args.outfile)
             else:
                 outfile = infile.parent / f"{infile.stem}.html"
-            doc = parse_document(infile.read_text())
+            doc = parse_document(infile.read_text(encoding="utf-8"))
             outfile.write_text(make_html_from_doc(doc))
             print(f"Watching {infile}. Press Ctrl+C to stop.")
             try:
@@ -68,7 +68,7 @@ def main() -> int:
                             and change == Change.modified
                         ):
                             print(f"[{datetime.now()}] Recompiling.")
-                            doc = parse_document(infile.read_text())
+                            doc = parse_document(infile.read_text(encoding="utf-8"))
                             outfile.write_text(make_html_from_doc(doc))
             except KeyboardInterrupt:
                 pass
@@ -88,7 +88,7 @@ def main() -> int:
             else:
                 outfile_zip = infile.parent / f"{infile.stem}.zip"
             print(f"Compiling {infile} to {outfile_zip}")
-            doc = parse_document(infile.read_text())
+            doc = parse_document(infile.read_text(encoding="utf-8"))
             for img in doc.images:
                 if not (infile.parent / img).exists():
                     print(f"Referenced image {infile.parent / img} does not exist")

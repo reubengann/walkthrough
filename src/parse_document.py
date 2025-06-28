@@ -402,8 +402,26 @@ def read_between_braces(line: str) -> str | None:
     return None
 
 
+smart_to_ascii = {
+    "’": "'",
+    "‘": "'",
+    "“": '"',
+    "”": '"',
+    "–": "-",  # en dash
+    "—": "-",  # em dash
+    "…": "...",
+    " ": " ",  # non-breaking space
+}
+
+
+def normalize_text(text: str) -> str:
+    for smart, ascii_equiv in smart_to_ascii.items():
+        text = text.replace(smart, ascii_equiv)
+    return text
+
+
 def parse_document(input_text: str) -> WalkthroughDocument:
-    p = WalkthroughParser(input_text)
+    p = WalkthroughParser(normalize_text(input_text))
     doc = p.parse()
     # print(doc.version)
     # print(doc.title)

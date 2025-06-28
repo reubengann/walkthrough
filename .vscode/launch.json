@@ -21,13 +21,22 @@
       "args": ["watch", "..\\heavens_vault\\heavens_vault.txt"]
     },
     {
-      "name": "Parse",
+      "name": "Watch Alan Wake 2",
       "type": "debugpy",
       "request": "launch",
       "program": "walkthrough.py",
       "console": "integratedTerminal",
       "justMyCode": true,
       "args": ["parse", "data\\alan_wake_2.txt"]
+    },
+    {
+      "name": "Watch Expedition",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "walkthrough.py",
+      "console": "integratedTerminal",
+      "justMyCode": true,
+      "args": ["watch", "..\\expedition_33\\expedition_33.txt"]
     }
   ]
 }

@@ -263,7 +263,9 @@ def make_html_from_doc(doc: WalkthroughDocument) -> str:
 
     function storeStatuses() {
     localStorage.setItem('game_short_name_checked_statuses', JSON.stringify(checklistItems));
-    }"""
+    }""".replace(
+        "game_short_name", doc.game_short_name
+    )
     store_script.append(store_script_text)
     head_tag.append(store_script)
 
@@ -381,6 +383,7 @@ def make_preamble(html: BeautifulSoup, title: str) -> tuple[Tag, Tag]:
     )
     html.append(html_tag)
     head_tag = html.new_tag("head")
+    head_tag.append(html.new_tag("meta", attrs={"charset": "UTF-8"}))
     html_tag.append(head_tag)
     actual_body_tag = html.new_tag(
         "body", attrs={"class": "bg-gray-100 dark:bg-gray-600"}
@@ -412,7 +415,7 @@ def make_preamble(html: BeautifulSoup, title: str) -> tuple[Tag, Tag]:
 
 
 def get_collectibles_by_type(
-    all_checklist_items: list[tuple[str, dict[str, list[ChecklistItem]]]]
+    all_checklist_items: list[tuple[str, dict[str, list[ChecklistItem]]]],
 ) -> dict[str, list[tuple[str, ChecklistItem]]]:
     all_collectibles_by_type: dict[str, list[tuple[str, ChecklistItem]]] = {}
     for checklist_item_section_name, foo_checklist_items in all_checklist_items:

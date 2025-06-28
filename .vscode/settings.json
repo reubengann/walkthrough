@@ -11,5 +11,6 @@
     "editor.formatOnType": true
   },
   "python.analysis.typeCheckingMode": "basic",
-  "testing.automaticallyOpenPeekView": "never"
+  "testing.automaticallyOpenPeekView": "never",
+  "liveServer.settings.port": 5501
 }
