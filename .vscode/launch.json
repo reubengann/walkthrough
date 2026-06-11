@@ -37,6 +37,15 @@
       "console": "integratedTerminal",
       "justMyCode": true,
       "args": ["watch", "..\\expedition_33\\expedition_33.txt"]
+    },
+    {
+      "name": "Watch Silksong",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "walkthrough.py",
+      "console": "integratedTerminal",
+      "justMyCode": true,
+      "args": ["watch", "..\\silksong\\silksong.txt"]
     }
   ]
 }
